@@ -2,7 +2,6 @@ package com.zhi.gui.guide.activity;
 
 import com.yangyu.mycustomtab02.R;
 
-import android.content.res.Resources;
 import android.os.Bundle;
 import android.support.v4.app.FragmentActivity;
 import android.support.v4.app.FragmentTabHost;
@@ -36,9 +35,6 @@ public class ActivityMainTab extends FragmentActivity {
         initView();
     }
 
-    /**
-     * 初始化组件
-     */
     private void initView() {
         layoutInflater = LayoutInflater.from(this);
 
