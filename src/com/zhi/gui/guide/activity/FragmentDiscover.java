@@ -1,6 +1,7 @@
 package com.zhi.gui.guide.activity;
 
-import com.yangyu.mycustomtab02.R;
+
+import com.zhi.gui.guide.R;
 
 import android.os.Bundle;
 import android.support.v4.app.Fragment;

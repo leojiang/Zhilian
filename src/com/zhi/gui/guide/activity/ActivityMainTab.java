@@ -1,6 +1,6 @@
 package com.zhi.gui.guide.activity;
 
-import com.yangyu.mycustomtab02.R;
+import com.zhi.gui.guide.R;
 
 import android.os.Bundle;
 import android.support.v4.app.FragmentActivity;
@@ -11,15 +11,12 @@ import android.widget.ImageView;
 import android.widget.TabHost.TabSpec;
 import android.widget.TextView;
 
-/**
- * @author Leo Jiang
- */
 public class ActivityMainTab extends FragmentActivity {
     private FragmentTabHost mTabHost;
     private LayoutInflater layoutInflater;
 
-    private Class fragmentArray[] = { FragmentHomePage.class, FragmentFriends.class,  FragmentDiscover.class,
-            FragmentPrentice.class, FragmentPersonal.class };
+    private Class fragmentArray[] = { FragmentHomePage.class, FragmentFriends.class,
+            FragmentDiscover.class, FragmentPrentice.class, FragmentPersonal.class };
 
     private int mImageViewArray[] = { R.drawable.tab_home_btn, R.drawable.tab_message_btn,
             R.drawable.tab_square_btn, R.drawable.tab_selfinfo_btn, R.drawable.tab_more_btn };
