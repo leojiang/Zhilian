@@ -2,6 +2,7 @@
 <resources>
 
     <string name="app_name">职龟</string>
+
     <string-array name="tab_names">
         <item >首页</item>
         <item >圈圈</item>
