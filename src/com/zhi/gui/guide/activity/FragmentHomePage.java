@@ -38,14 +38,12 @@ public class FragmentHomePage extends Fragment {
 
     private void initView() {
         mFragmentList = new ArrayList<Fragment>();
-        mFragmentList.add(new FragmentDiscover());
-        mFragmentList.add(new FragmentFriends());
-        mFragmentList.add(new FragmentPrentice());
+        mFragmentList.add(new FragmentLookAround());
+        mFragmentList.add(new FragmentCompetence());
 
         mTitleList = new ArrayList<String>();
-        mTitleList.add("∑¢œ÷");
-        mTitleList.add("»¶»¶");
-        mTitleList.add(" µœ∞");
+        mTitleList.add(getResources().getString(R.string.homepage_lookaround));
+        mTitleList.add(getResources().getString(R.string.homepage_competence));
 
         mViewPagerAdapter = new HomePageViewAdapter(getChildFragmentManager(), mFragmentList,
                 mTitleList);

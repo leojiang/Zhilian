@@ -10,5 +10,8 @@
         <item >实习</item>
         <item >我的</item>
     </string-array>
+    
+    <string name="homepage_lookaround">随便看看</string>
+    <string name="homepage_competence">我的求职力</string>
 
 </resources>
