@@ -30,6 +30,8 @@
     <string name="text_info_major">专业</string>
     <string name="text_info_degree">学位</string>
     <string name="text_info_grade">年级</string>
+    <string name="title_industry">职位类别</string>
+    <string name="title_ranking">求职力排名</string>
 
 
 </resources>
