@@ -10,8 +10,9 @@ import android.view.View;
 import android.view.View.OnClickListener;
 import android.widget.TextView;
 
-public class ActivityLogin extends Activity {
+public class ActivityLogin extends BaseActivity {
     private TextView mTextLookAround;
+    private TextView mTextRegister;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -25,6 +26,15 @@ public class ActivityLogin extends Activity {
             public void onClick(View arg0) {
                 startActivity(new Intent(getApplicationContext(), ActivityMainTab.class));
                 finish();
+
+            }
+        });
+
+        mTextRegister = (TextView) findViewById(R.id.text_register);
+        mTextRegister.setOnClickListener(new OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                startActivity(new Intent(getApplicationContext(), ActivityRegister.class));
             }
         });
     }

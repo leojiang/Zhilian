@@ -8,7 +8,7 @@
         android:layout_width="fill_parent"
         android:layout_height="fill_parent"
         android:scaleType="fitCenter"
-        android:src="@drawable/xianjian03" >
+        android:src="@drawable/xianjian04" >
     </ImageView>
 
 </LinearLayout>

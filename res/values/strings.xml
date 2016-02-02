@@ -22,5 +22,14 @@
     <string name="text_qq">QQ</string>
     <string name="text_weibo">微博</string>
     <string name="text_lookaround">随便看看</string>
+    <string name="text_skip">跳过</string>
+    <string name="text_next_step">下一步</string>
+    <string name="text_info_nickname">昵称</string>
+    <string name="text_info_name">姓名</string>
+    <string name="text_info_college">学校</string>
+    <string name="text_info_major">专业</string>
+    <string name="text_info_degree">学位</string>
+    <string name="text_info_grade">年级</string>
+
 
 </resources>

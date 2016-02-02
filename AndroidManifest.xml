@@ -25,6 +25,14 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity
+            android:name="com.zhi.gui.guide.activity.ActivityRegister"
+            android:label="@string/app_name" >
+        </activity>
+        <activity
+            android:name="com.zhi.gui.guide.activity.ActivityAddBasicInfo"
+            android:label="@string/app_name" >
+        </activity>
     </application>
 
 </manifest>
