@@ -5,6 +5,10 @@ import java.util.List;
 
 import com.zhi.gui.guide.R;
 import com.zhi.gui.guide.adapter.IndustryListAdapter;
+import com.zhi.gui.guide.adapter.InternshipBriefAdapter;
+import com.zhi.gui.guide.adapter.InternshipFullAdapter;
+import com.zhi.gui.guide.data.InternshipBrief;
+import com.zhi.gui.guide.data.InternshipFull;
 
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
@@ -18,29 +22,49 @@ public class FragmentInternship extends Fragment {
     private ListView mListIndustry;
     private ListView mListInternships;
     private List<String> mIndustryList;
-    // private List<Competence> mCompetenceList;
+    private List<InternshipBrief> mInternshipBriefList;
+    private List<InternshipFull> mInternshipFullList;
+
+    private boolean isLoggedIn = false;
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
             Bundle savedInstanceState) {
-        View root = inflater.inflate(R.layout.fragment_internship, null);
-        mListIndustry = (ListView) root.findViewById(R.id.list_industry);
-        mListInternships = (ListView) root.findViewById(R.id.list_internships);
-        initView();
+        View root = null;
+        if (isLoggedIn) {
+            root = inflater.inflate(R.layout.fragment_internship_brief, null);
+            mListIndustry = (ListView) root.findViewById(R.id.list_industry);
+            mListInternships = (ListView) root.findViewById(R.id.list_internships);
+            initViewWhenLoggedIn();
+        } else {
+            root = inflater.inflate(R.layout.fragment_internship_full, null);
+            mListInternships = (ListView) root.findViewById(R.id.list_internships);
+            initViewWhenNotLoggedIn();
+        }
         return root;
     }
 
-    private void initView() {
+    private void initViewWhenLoggedIn() {
         mIndustryList = new ArrayList<String>();
         for (int i = 0; i < 20; i++) {
             mIndustryList.add("leo" + i);
         }
         mListIndustry.setAdapter(new IndustryListAdapter(getActivity(), mIndustryList));
-        // mCompetenceList = new ArrayList<Competence>();
-        // for (int j = 0; j < 30; j++) {
-        // mCompetenceList.add(new Competence(j, "leo" + j, (20 - j) * 100));
-        // }
+        mInternshipBriefList = new ArrayList<InternshipBrief>();
+        for (int j = 0; j < 30; j++) {
+            mInternshipBriefList.add(
+                    new InternshipBrief("company" + j, "job" + j, "location" + j, (20 - j) * 100));
+        }
 
-        mListInternships.setAdapter(null);
+        mListInternships.setAdapter(new InternshipBriefAdapter(getActivity(), mInternshipBriefList));
+    }
+
+    private void initViewWhenNotLoggedIn() {
+        mInternshipFullList = new ArrayList<InternshipFull>();
+        for (int j = 0; j < 30; j++) {
+            mInternshipFullList.add(
+                    new InternshipFull("company" + j, "job" + j, "location" + j, (20 - j) * 100));
+        }
+        mListInternships.setAdapter(new InternshipFullAdapter(getActivity(), mInternshipFullList));
     }
 }
