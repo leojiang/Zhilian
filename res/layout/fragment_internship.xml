@@ -32,10 +32,10 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:gravity="center"
-            android:text="@string/title_ranking" />
+            android:text="@string/title_internships" />
 
         <ListView
-            android:id="@+id/list_ranking"
+            android:id="@+id/list_internships"
             android:layout_width="match_parent"
             android:layout_height="wrap_content" />
     </LinearLayout>

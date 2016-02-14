@@ -27,7 +27,7 @@ public class FragmentHomePage extends Fragment {
         mRootView = inflater.inflate(R.layout.fragment_homepage, null);
         mViewPager = (ViewPager) mRootView.findViewById(R.id.view_pager);
         initView();
-        mViewPager.setCurrentItem(2);
+        mViewPager.setCurrentItem(0);
         return mRootView;
     }
 

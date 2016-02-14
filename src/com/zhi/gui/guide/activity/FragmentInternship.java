@@ -4,9 +4,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 import com.zhi.gui.guide.R;
-import com.zhi.gui.guide.adapter.CompetenceListAdapter;
 import com.zhi.gui.guide.adapter.IndustryListAdapter;
-import com.zhi.gui.guide.data.Competence;
 
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
@@ -15,19 +13,19 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ListView;
 
-public class FragmentLookAround extends Fragment {
+public class FragmentInternship extends Fragment {
 
     private ListView mListIndustry;
-    private ListView mListRanking;
+    private ListView mListInternships;
     private List<String> mIndustryList;
-    private List<Competence> mCompetenceList;
+    // private List<Competence> mCompetenceList;
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
             Bundle savedInstanceState) {
-        View root = inflater.inflate(R.layout.fragment_lookaround, null);
+        View root = inflater.inflate(R.layout.fragment_internship, null);
         mListIndustry = (ListView) root.findViewById(R.id.list_industry);
-        mListRanking = (ListView) root.findViewById(R.id.list_ranking);
+        mListInternships = (ListView) root.findViewById(R.id.list_internships);
         initView();
         return root;
     }
@@ -38,11 +36,11 @@ public class FragmentLookAround extends Fragment {
             mIndustryList.add("leo" + i);
         }
         mListIndustry.setAdapter(new IndustryListAdapter(getActivity(), mIndustryList));
-        mCompetenceList = new ArrayList<Competence>();
-        for (int j = 0; j < 30; j++) {
-            mCompetenceList.add(new Competence(j, "leo" + j, (20 - j) * 100));
-        }
+        // mCompetenceList = new ArrayList<Competence>();
+        // for (int j = 0; j < 30; j++) {
+        // mCompetenceList.add(new Competence(j, "leo" + j, (20 - j) * 100));
+        // }
 
-        mListRanking.setAdapter(new CompetenceListAdapter(getActivity(), mCompetenceList));
+        mListInternships.setAdapter(null);
     }
 }
