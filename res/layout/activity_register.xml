@@ -89,7 +89,7 @@
         android:layout_height="40dp"
         android:textColor="#00a6ff"
         android:gravity="center"
-        android:layout_marginTop="10dp"
+        android:layout_marginTop="5dp"
         android:textSize="18dp"
         android:clickable="true"
         android:layout_gravity="center_horizontal"
