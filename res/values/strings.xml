@@ -13,10 +13,8 @@
     
     <string name="homepage_lookaround">随便看看</string>
     <string name="homepage_competence">我的求职力</string>
-    <string name="text_username">用户名：</string>
-    <string name="text_password">密    码：</string>
     <string name="text_login">登陆</string>
-    <string name="text_register">注册</string>
+    <string name="text_register">注    册</string>
     <string name="text_forget">忘记密码</string>
     <string name="text_weixin">微信</string>
     <string name="text_qq">QQ</string>
@@ -33,6 +31,7 @@
     <string name="title_industry">职位类别</string>
     <string name="title_ranking">求职力排名</string>
     <string name="title_internships">实习机会</string>
+    <string name="log_text">APP 智联</string>
 
 
 </resources>

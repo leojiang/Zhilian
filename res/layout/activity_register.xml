@@ -1,35 +1,101 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:orientation="vertical" >
-    <LinearLayout android:layout_width="fill_parent"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:background="@drawable/img_login_bg"
+              android:orientation="vertical">
+
+    <TextView
+        android:layout_width="fill_parent"
+        android:layout_height="200dp"
+        android:gravity="center"
+        android:textSize="40dp"
+        android:textColor="#FFFFFF"
+        android:text="@string/log_text"/>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:gravity="center">
-        <TextView android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="@string/text_username"/>
-        <EditText android:id="@+id/text_username"
+        android:background="@drawable/edit_text_layout_bg"
+        android:layout_gravity="center"
+        android:gravity="center_vertical">
+
+        <ImageView
+            android:background="@drawable/img_login_username"
+            android:scaleType="centerInside"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="5dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+
+        <EditText
+            android:id="@+id/text_username"
+            android:hint="用户名/手机/邮箱"
+            android:background="@color/edit_text__bg"
             android:layout_width="200dp"
             android:layout_height="40dp"/>
     </LinearLayout>
-    <LinearLayout android:layout_width="fill_parent"
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_marginTop="5dp"
         android:layout_height="wrap_content"
-        android:gravity="center">
-        <TextView android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="@string/text_password"/>
-        <EditText android:id="@+id/text_password"
+        android:background="@drawable/edit_text_layout_bg"
+        android:layout_gravity="center"
+        android:gravity="center_vertical">
+
+        <ImageView
+            android:scaleType="centerInside"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="5dp"
+            android:background="@drawable/img_login_password"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+
+        <EditText
+            android:id="@+id/text_password"
+            android:hint="设置密码"
+            android:background="@color/edit_text__bg"
             android:layout_width="200dp"
             android:layout_height="40dp"/>
     </LinearLayout>
-    <Button android:id="@+id/button_register"
-        android:layout_width="200dp"
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_marginTop="5dp"
         android:layout_height="wrap_content"
+        android:background="@drawable/edit_text_layout_bg"
+        android:layout_gravity="center"
+        android:gravity="center_vertical">
+
+        <ImageView
+            android:scaleType="centerInside"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="5dp"
+            android:background="@drawable/img_login_password"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+
+        <EditText
+            android:id="@+id/text_confirm_password"
+            android:hint="确认密码"
+            android:background="@color/edit_text__bg"
+            android:layout_width="200dp"
+            android:layout_height="40dp"/>
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/btn_register"
+        android:layout_width="223dp"
+        android:layout_height="40dp"
+        android:textColor="#00a6ff"
+        android:gravity="center"
+        android:layout_marginTop="10dp"
+        android:textSize="18dp"
+        android:clickable="true"
         android:layout_gravity="center_horizontal"
-        android:text="@string/text_register"/>
-    <ImageView android:layout_width="fill_parent"
-        android:layout_height="wrap_content"
-        android:layout_gravity="bottom"
-        android:src="@drawable/xianjian01"/>
+        android:background="@drawable/long_button_bg"
+        android:text="注       册"/>
+
+
+
 </LinearLayout>

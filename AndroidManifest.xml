@@ -11,11 +11,9 @@
     <application
         android:allowBackup="true"
         android:icon="@drawable/ic_launcher"
-        android:label="@string/app_name"
-        android:theme="@style/AppTheme" >
+        android:theme="@android:style/Theme.Light.NoTitleBar" >
         <activity
-            android:name="com.zhi.gui.guide.activity.ActivityMainTab"
-            android:label="@string/app_name" >
+            android:name="com.zhi.gui.guide.activity.ActivityMainTab">
         </activity>
         <activity 
             android:name="com.zhi.gui.guide.activity.ActivityLogin"
@@ -26,12 +24,10 @@
             </intent-filter>
         </activity>
         <activity
-            android:name="com.zhi.gui.guide.activity.ActivityRegister"
-            android:label="@string/app_name" >
+            android:name="com.zhi.gui.guide.activity.ActivityRegister">
         </activity>
         <activity
-            android:name="com.zhi.gui.guide.activity.ActivityAddBasicInfo"
-            android:label="@string/app_name" >
+            android:name="com.zhi.gui.guide.activity.ActivityAddBasicInfo">
         </activity>
     </application>
 
