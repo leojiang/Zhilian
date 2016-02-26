@@ -5,10 +5,13 @@ import com.zhi.gui.guide.R;
 import android.os.Bundle;
 import android.support.v4.app.FragmentActivity;
 import android.support.v4.app.FragmentTabHost;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.Window;
 import android.widget.ImageView;
+import android.widget.TabHost;
+import android.widget.TabHost.OnTabChangeListener;
 import android.widget.TabHost.TabSpec;
 import android.widget.TextView;
 
@@ -17,7 +20,7 @@ public class ActivityMainTab extends FragmentActivity {
     private LayoutInflater layoutInflater;
 
     private Class fragmentArray[] = { FragmentHomePage.class, FragmentFriends.class,
-            FragmentDiscover.class, FragmentInternship.class, FragmentPersonal.class};
+            FragmentDiscover.class, FragmentInternship.class, FragmentPersonal.class };
 
     private int mImageViewArray[] = { R.drawable.tab_home_btn, R.drawable.tab_message_btn,
             R.drawable.tab_square_btn, R.drawable.tab_selfinfo_btn, R.drawable.tab_more_btn };
@@ -49,6 +52,13 @@ public class ActivityMainTab extends FragmentActivity {
             mTabHost.getTabWidget().getChildAt(i)
                     .setBackgroundResource(R.drawable.selector_tab_background);
         }
+        updateTabBackground(mTabHost);
+
+        mTabHost.setOnTabChangedListener(new OnTabChangeListener() {
+            @Override
+            public void onTabChanged(String tabId) {
+            }
+        });
     }
 
     private View getTabItemView(int index) {
@@ -60,5 +70,12 @@ public class ActivityMainTab extends FragmentActivity {
         textView.setText(mTextviewArray[index]);
 
         return view;
+    }
+
+    private void updateTabBackground(final TabHost tabHost) {
+        for (int i = 0; i < tabHost.getTabWidget().getChildCount(); i++) {
+            View view = tabHost.getTabWidget().getChildAt(i);
+            view.setBackgroundColor(getResources().getColor(R.color.tab_host_bg_color));
+        }
     }
 }

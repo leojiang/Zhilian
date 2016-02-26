@@ -18,8 +18,8 @@
 
     <EditText
         android:id="@+id/text_username"
-        android:layout_width="225dp"
-        android:layout_height="40dp"
+        android:layout_width="@dimen/edit_text_width"
+        android:layout_height="@dimen/edit_text_height"
         android:layout_gravity="center_horizontal"
         android:background="@drawable/edit_text_layout_bg"
         android:drawableLeft="@drawable/img_login_username"
@@ -27,17 +27,17 @@
         android:hint="用户名/手机/邮箱"
         android:paddingLeft="5dp"
         android:textColorHint="@color/edit_text_hint"
-        android:textSize="18dp"/>
+        android:textSize="@dimen/edit_text_size"/>
     <TextView
-        android:layout_width="225dp"
+        android:layout_width="@dimen/edit_text_width"
         android:layout_height="1px"
         android:layout_gravity="center_horizontal"
         android:background="@drawable/edit_text_bottom_line"/>
 
     <EditText
         android:id="@+id/text_password"
-        android:layout_width="225dp"
-        android:layout_height="40dp"
+        android:layout_width="@dimen/edit_text_width"
+        android:layout_height="@dimen/edit_text_height"
         android:layout_gravity="center_horizontal"
         android:background="@drawable/edit_text_layout_bg"
         android:drawableLeft="@drawable/img_login_password"
@@ -46,9 +46,9 @@
         android:paddingLeft="5dp"
         android:layout_marginTop="10dp"
         android:textColorHint="@color/edit_text_hint"
-        android:textSize="18dp"/>
+        android:textSize="@dimen/edit_text_size"/>
     <TextView
-        android:layout_width="225dp"
+        android:layout_width="@dimen/edit_text_width"
         android:layout_height="1px"
         android:layout_gravity="center_horizontal"
         android:background="@drawable/edit_text_bottom_line"/>
@@ -56,8 +56,8 @@
 
     <EditText
         android:id="@+id/text_confirm_password"
-        android:layout_width="225dp"
-        android:layout_height="40dp"
+        android:layout_width="@dimen/edit_text_width"
+        android:layout_height="@dimen/edit_text_height"
         android:layout_gravity="center_horizontal"
         android:background="@drawable/edit_text_layout_bg"
         android:drawableLeft="@drawable/img_login_password"
@@ -66,16 +66,16 @@
         android:hint="确认密码"
         android:paddingLeft="5dp"
         android:textColorHint="@color/edit_text_hint"
-        android:textSize="18dp"/>
+        android:textSize="@dimen/edit_text_size"/>
     <TextView
-        android:layout_width="225dp"
+        android:layout_width="@dimen/edit_text_width"
         android:layout_height="1px"
         android:layout_gravity="center_horizontal"
         android:background="@drawable/edit_text_bottom_line"/>
 
     <TextView
         android:id="@+id/btn_register"
-        android:layout_width="225dp"
+        android:layout_width="@dimen/edit_text_width"
         android:layout_height="45dp"
         android:layout_gravity="center_horizontal"
         android:layout_marginTop="25dp"

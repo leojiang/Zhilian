@@ -2,4 +2,5 @@
 <resources>
     <color name="edit_text__bg">#00000000</color>
     <color name="edit_text_hint">#cccccc</color>
+    <color name="tab_host_bg_color">#f5f5f5</color>
 </resources>
