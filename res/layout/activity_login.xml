@@ -6,45 +6,61 @@
               android:orientation="vertical">
 
     <TextView
-        android:layout_width="fill_parent"
-        android:layout_height="200dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
         android:gravity="center"
-        android:paddingTop="20dp"
+        android:paddingBottom="50dp"
+        android:paddingTop="100dp"
         android:text="@string/log_text"
         android:textColor="#FFFFFF"
         android:textSize="40dp"/>
 
-
     <EditText
         android:id="@+id/text_username"
-        android:layout_width="240dp"
+        android:layout_width="225dp"
         android:layout_height="40dp"
         android:layout_gravity="center_horizontal"
         android:background="@drawable/edit_text_layout_bg"
         android:drawableLeft="@drawable/img_login_username"
         android:drawablePadding="5dp"
         android:hint="用户名/手机/邮箱"
-        android:paddingLeft="5dp"/>
+        android:paddingLeft="5dp"
+        android:textColorHint="@color/edit_text_hint"
+        android:textSize="18dp"/>
+
+    <TextView
+        android:layout_width="225dp"
+        android:layout_height="1px"
+        android:layout_gravity="center_horizontal"
+        android:background="@drawable/edit_text_bottom_line"/>
 
     <EditText
         android:id="@+id/img_login_password"
-        android:layout_width="240dp"
+        android:layout_width="225dp"
         android:layout_height="40dp"
         android:layout_gravity="center_horizontal"
-        android:layout_marginTop="5dp"
+        android:layout_marginTop="10dp"
         android:background="@drawable/edit_text_layout_bg"
         android:drawableLeft="@drawable/img_login_password"
         android:drawablePadding="5dp"
         android:hint="请输入密码"
-        android:paddingLeft="5dp"/>
+        android:paddingLeft="5dp"
+        android:textColorHint="@color/edit_text_hint"
+        android:textSize="18dp"/>
 
+    <TextView
+        android:layout_width="225dp"
+        android:layout_height="1px"
+        android:layout_gravity="center_horizontal"
+        android:background="@drawable/edit_text_bottom_line"/>
 
     <TextView
         android:id="@+id/button_login"
-        android:layout_width="240dp"
-        android:layout_height="40dp"
+        android:layout_width="225dp"
+        android:layout_height="45dp"
         android:layout_gravity="center_horizontal"
-        android:layout_marginTop="5dp"
+        android:layout_marginTop="25dp"
         android:background="@drawable/long_button_bg"
         android:clickable="true"
         android:gravity="center"
@@ -53,9 +69,10 @@
         android:textSize="18dp"/>
 
     <LinearLayout
-        android:layout_width="240dp"
-        android:layout_height="40dp"
+        android:layout_width="225dp"
+        android:layout_height="wrap_content"
         android:layout_gravity="center"
+        android:layout_marginTop="21dp"
         android:gravity="center_vertical">
 
         <TextView
@@ -66,7 +83,7 @@
             android:gravity="left"
             android:text="注册账号"
             android:textColor="#FFFFFF"
-            android:textSize="16dp"/>
+            android:textSize="18dp"/>
 
         <TextView
             android:id="@+id/forgot_password"
@@ -76,13 +93,13 @@
             android:gravity="right"
             android:text="忘记密码"
             android:textColor="#FFFFFF"
-            android:textSize="16dp"/>
+            android:textSize="18dp"/>
     </LinearLayout>
 
     <LinearLayout
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="10dp"
+        android:layout_marginTop="32dp"
         android:gravity="center">
 
         <TextView
@@ -111,11 +128,11 @@
         android:layout_width="150dp"
         android:layout_height="35dp"
         android:layout_gravity="right"
-        android:layout_marginTop="60dp"
+        android:layout_marginTop="80dp"
         android:background="#58bf5f"
         android:gravity="center"
         android:text="随便看看"
         android:textColor="#FFFFFF"
-        android:textSize="18dp"/>
+        android:textSize="15dp"/>
 
 </LinearLayout>
