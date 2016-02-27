@@ -30,6 +30,7 @@
     <string name="text_info_grade">年级</string>
     <string name="title_industry">职位类别</string>
     <string name="title_ranking">求职力排名</string>
+    <string name="tip_login_to_check_competence">登陆/注册查看我的求职力排名</string>
     <string name="title_internships">实习机会</string>
     <string name="log_text">APP 智联</string>
 

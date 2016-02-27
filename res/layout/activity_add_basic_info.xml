@@ -1,84 +1,116 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:orientation="vertical" >
-    <LinearLayout android:layout_width="fill_parent"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:orientation="vertical">
+
+    <TextView
+        android:layout_gravity="center_horizontal"
+        android:text="请完善基本信息，查看求职能力"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+    <LinearLayout
+        android:layout_width="fill_parent"
         android:layout_height="wrap_content"
         android:gravity="center">
-        <TextView android:layout_width="wrap_content"
+
+        <TextView
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="@string/text_info_name"/>
-        <EditText android:id="@+id/text_name"
+
+        <EditText
+            android:id="@+id/text_name"
             android:layout_width="200dp"
             android:layout_height="wrap_content"/>
     </LinearLayout>
-    <LinearLayout android:layout_width="fill_parent"
+
+    <LinearLayout
+        android:layout_width="fill_parent"
         android:layout_height="wrap_content"
         android:gravity="center">
-        <TextView android:layout_width="wrap_content"
+
+        <TextView
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="@string/text_info_nickname"/>
-        <EditText android:id="@+id/text_nickname"
+
+        <EditText
+            android:id="@+id/text_nickname"
             android:layout_width="200dp"
             android:layout_height="wrap_content"/>
     </LinearLayout>
-    <LinearLayout android:layout_width="fill_parent"
+
+    <LinearLayout
+        android:layout_width="fill_parent"
         android:layout_height="wrap_content"
         android:gravity="center">
-        <TextView android:layout_width="wrap_content"
+
+        <TextView
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="@string/text_info_college"/>
-        <EditText android:id="@+id/text_college"
+
+        <EditText
+            android:id="@+id/text_college"
             android:layout_width="200dp"
             android:layout_height="wrap_content"/>
     </LinearLayout>
-    <LinearLayout android:layout_width="fill_parent"
+
+    <LinearLayout
+        android:layout_width="fill_parent"
         android:layout_height="wrap_content"
         android:gravity="center">
-        <TextView android:layout_width="wrap_content"
+
+        <TextView
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="@string/text_info_major"/>
-        <EditText android:id="@+id/text_major"
+
+        <EditText
+            android:id="@+id/text_major"
             android:layout_width="200dp"
             android:layout_height="wrap_content"/>
     </LinearLayout>
-    <LinearLayout android:layout_width="fill_parent"
+
+    <LinearLayout
+        android:layout_width="fill_parent"
         android:layout_height="wrap_content"
         android:gravity="center">
-        <TextView android:layout_width="wrap_content"
+
+        <TextView
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="@string/text_info_degree"/>
-        <EditText android:id="@+id/text_degree"
+
+        <EditText
+            android:id="@+id/text_degree"
             android:layout_width="200dp"
             android:layout_height="wrap_content"/>
     </LinearLayout>
-    <LinearLayout android:layout_width="fill_parent"
+
+    <LinearLayout
+        android:layout_width="fill_parent"
         android:layout_height="wrap_content"
         android:gravity="center">
-        <TextView android:layout_width="wrap_content"
+
+        <TextView
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="@string/text_info_grade"/>
-        <EditText android:id="@+id/text_grade"
+
+        <EditText
+            android:id="@+id/text_grade"
             android:layout_width="200dp"
             android:layout_height="wrap_content"/>
     </LinearLayout>
-    <ImageView android:layout_width="match_parent"
-        android:layout_height="0dp"
-        android:layout_weight="1"
-        android:src="@drawable/xianjian01"/>
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:gravity="center">
-        <Button android:id="@+id/button_skip"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="@string/text_skip"/>
-        <Button android:id="@+id/button_next_step"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="@string/text_next_step"/>
 
-    </LinearLayout>
+
+    <TextView
+        android:layout_gravity="center_horizontal"
+        android:id="@+id/button_next_step"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/text_next_step"/>
+
 </LinearLayout>

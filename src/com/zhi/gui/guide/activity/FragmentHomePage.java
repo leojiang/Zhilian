@@ -5,6 +5,7 @@ import java.util.List;
 
 import com.zhi.gui.guide.R;
 import com.zhi.gui.guide.view.HomePageViewAdapter;
+import com.zhi.gui.guide.view.ViewPagerIndicator;
 
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
@@ -16,6 +17,7 @@ import android.view.ViewGroup;
 public class FragmentHomePage extends Fragment {
 
     private ViewPager mViewPager;
+    private ViewPagerIndicator mIndicator;
     private HomePageViewAdapter mViewPagerAdapter;
     private List<Fragment> mFragmentList;
     private List<String> mTitleList;
@@ -26,6 +28,7 @@ public class FragmentHomePage extends Fragment {
             Bundle savedInstanceState) {
         mRootView = inflater.inflate(R.layout.fragment_homepage, null);
         mViewPager = (ViewPager) mRootView.findViewById(R.id.view_pager);
+        mIndicator = (ViewPagerIndicator) mRootView.findViewById(R.id.viewpager_indicator);
         initView();
         mViewPager.setCurrentItem(0);
         return mRootView;
@@ -45,9 +48,12 @@ public class FragmentHomePage extends Fragment {
         mTitleList.add(getResources().getString(R.string.homepage_lookaround));
         mTitleList.add(getResources().getString(R.string.homepage_competence));
 
+        mIndicator.setTabItemTitles(mTitleList);
+
         mViewPagerAdapter = new HomePageViewAdapter(getChildFragmentManager(), mFragmentList,
                 mTitleList);
 
         mViewPager.setAdapter(mViewPagerAdapter);
+        mIndicator.setViewPager(mViewPager, 0);
     }
 }

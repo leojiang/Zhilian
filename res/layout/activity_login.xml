@@ -65,7 +65,7 @@
         android:clickable="true"
         android:gravity="center"
         android:text="登       录"
-        android:textColor="#00a6ff"
+        android:textColor="@color/color_text_blue"
         android:textSize="18dp"/>
 
     <LinearLayout

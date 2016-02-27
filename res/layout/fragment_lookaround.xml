@@ -1,43 +1,74 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:layout_width="fill_parent"
-    android:layout_height="fill_parent"
-    android:baselineAligned="false" >
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:background="@color/tab_page_bottom_color"
+              android:baselineAligned="false">
 
     <LinearLayout
+        android:layout_marginTop="@dimen/tab_page_border_size"
         android:layout_width="0dp"
         android:layout_height="match_parent"
         android:layout_weight="2"
-        android:orientation="vertical" >
+        android:orientation="vertical">
 
         <TextView
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_height="45dp"
+            android:textColor="#333333"
+            android:textSize="14dp"
             android:gravity="center"
-            android:text="@string/title_industry" />
+            android:background="@color/tab_page_content_bg"
+            android:text="@string/title_industry"/>
 
         <ListView
+            android:layout_marginTop="@dimen/tab_page_border_size"
             android:id="@+id/list_industry"
+            android:divider="#00000000"
+            android:overScrollMode="never"
+            android:scrollbars="none"
+            android:listSelector="@android:color/transparent"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content" />
+            android:layout_height="wrap_content"/>
     </LinearLayout>
 
     <LinearLayout
+        android:layout_marginTop="@dimen/tab_page_border_size"
         android:layout_width="0dp"
         android:layout_height="match_parent"
         android:layout_weight="3"
-        android:orientation="vertical" >
+        android:layout_marginLeft="@dimen/tab_page_border_size"
+        android:orientation="vertical">
 
         <TextView
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_height="45dp"
+            android:textColor="#333333"
+            android:background="@color/tab_page_content_bg"
+            android:textSize="14dp"
             android:gravity="center"
-            android:text="@string/title_ranking" />
+            android:text="@string/title_ranking"/>
 
         <ListView
+            android:layout_marginTop="@dimen/tab_page_border_size"
             android:id="@+id/list_ranking"
+            android:divider="#00000000"
+            android:overScrollMode="never"
+            android:scrollbars="none"
+            android:listSelector="@android:color/transparent"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content" />
+            android:layout_weight="1"
+            android:layout_height="0dp"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="25dp"
+            android:layout_marginTop="5dp"
+            android:textColor="@color/color_text_blue"
+            android:background="@color/tab_page_content_bg"
+            android:textSize="12dp"
+            android:gravity="center"
+            android:text="@string/tip_login_to_check_competence"/>
     </LinearLayout>
 
 </LinearLayout>

@@ -30,7 +30,7 @@ public class FragmentInternship extends Fragment {
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
             Bundle savedInstanceState) {
-        View root = null;
+        View root;
         if (isLoggedIn) {
             root = inflater.inflate(R.layout.fragment_internship_brief, null);
             mListIndustry = (ListView) root.findViewById(R.id.list_industry);
