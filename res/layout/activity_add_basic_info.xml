@@ -1,116 +1,202 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-              android:layout_width="match_parent"
-              android:layout_height="match_parent"
-              android:orientation="vertical">
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center_horizontal"
+    android:orientation="vertical" >
 
     <TextView
-        android:layout_gravity="center_horizontal"
-        android:text="请完善基本信息，查看求职能力"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:layout_width="match_parent" />
+
+    <TextView
+        android:textColor="@color/text_black"
+        android:layout_marginBottom="75dp"
+        android:textSize="@dimen/text_size_normal"
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content"/>
-    <LinearLayout
-        android:layout_width="fill_parent"
         android:layout_height="wrap_content"
-        android:gravity="center">
+        android:text="请完善基本信息，查看求职能力" />
+
+    <LinearLayout
+        android:layout_width="@dimen/edit_detail_width"
+        android:layout_height="@dimen/edit_detail_height" >
 
         <TextView
+            android:drawableLeft="@drawable/test_img"
+            android:drawablePadding="10dp"
+            android:paddingRight="10dp"
+            android:textSize="18dp"
+            android:textColor="@color/text_black"
+            android:gravity="center_vertical"
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="@string/text_info_name"/>
+            android:layout_height="match_parent"
+            android:text="@string/text_info_grade" />
 
         <EditText
-            android:id="@+id/text_name"
-            android:layout_width="200dp"
-            android:layout_height="wrap_content"/>
+            android:gravity="center_vertical"
+            android:textSize="@dimen/text_size_normal"
+            android:background="@drawable/edit_text_layout_bg"
+            android:layout_weight="1"
+            android:layout_width="0dp"
+            android:layout_height="match_parent" />
     </LinearLayout>
-
+    <TextView 
+        android:background="@color/edit_detail_seperator"
+        android:layout_height="1dp"
+        android:layout_width="@dimen/edit_detail_width"/>
     <LinearLayout
-        android:layout_width="fill_parent"
-        android:layout_height="wrap_content"
-        android:gravity="center">
+        android:layout_width="@dimen/edit_detail_width"
+        android:layout_height="@dimen/edit_detail_height" >
 
         <TextView
+            android:drawableLeft="@drawable/test_img"
+            android:drawablePadding="10dp"
+            android:paddingRight="10dp"
+            android:textSize="18dp"
+            android:textColor="@color/text_black"
+            android:gravity="center_vertical"
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="@string/text_info_nickname"/>
+            android:layout_height="match_parent"
+            android:text="@string/text_info_grade" />
 
         <EditText
-            android:id="@+id/text_nickname"
-            android:layout_width="200dp"
-            android:layout_height="wrap_content"/>
+            android:gravity="center_vertical"
+            android:textSize="@dimen/text_size_normal"
+            android:background="@drawable/edit_text_layout_bg"
+            android:layout_weight="1"
+            android:layout_width="0dp"
+            android:layout_height="match_parent" />
     </LinearLayout>
-
+    <TextView 
+        android:background="@color/edit_detail_seperator"
+        android:layout_height="1dp"
+        android:layout_width="@dimen/edit_detail_width"/>
     <LinearLayout
-        android:layout_width="fill_parent"
-        android:layout_height="wrap_content"
-        android:gravity="center">
+        android:layout_width="@dimen/edit_detail_width"
+        android:layout_height="@dimen/edit_detail_height" >
 
         <TextView
+            android:drawableLeft="@drawable/test_img"
+            android:drawablePadding="10dp"
+            android:paddingRight="10dp"
+            android:textSize="18dp"
+            android:textColor="@color/text_black"
+            android:gravity="center_vertical"
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="@string/text_info_college"/>
+            android:layout_height="match_parent"
+            android:text="@string/text_info_grade" />
+
+            android:id="@+id/text_grade"
+            android:gravity="center_vertical"
+            android:textSize="@dimen/text_size_normal"
+            android:background="@drawable/edit_text_layout_bg"
+            android:layout_weight="1"
+            android:layout_width="0dp"
+            android:layout_height="match_parent" />
+    </LinearLayout>
+    <TextView 
+        android:background="@color/edit_detail_seperator"
+        android:layout_height="1dp"
+        android:layout_width="@dimen/edit_detail_width"/>
+    <LinearLayout
+        android:layout_width="@dimen/edit_detail_width"
+        android:layout_height="@dimen/edit_detail_height" >
+
+        <TextView
+            android:drawableLeft="@drawable/test_img"
+            android:drawablePadding="10dp"
+            android:paddingRight="10dp"
+            android:textSize="18dp"
+            android:textColor="@color/text_black"
+            android:gravity="center_vertical"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:text="@string/text_info_grade" />
 
         <EditText
-            android:id="@+id/text_college"
-            android:layout_width="200dp"
-            android:layout_height="wrap_content"/>
+            android:gravity="center_vertical"
+            android:textSize="@dimen/text_size_normal"
+            android:background="@drawable/edit_text_layout_bg"
+            android:layout_weight="1"
+            android:layout_width="0dp"
+            android:layout_height="match_parent" />
     </LinearLayout>
-
+    <TextView 
+        android:background="@color/edit_detail_seperator"
+        android:layout_height="1dp"
+        android:layout_width="@dimen/edit_detail_width"/>
     <LinearLayout
-        android:layout_width="fill_parent"
-        android:layout_height="wrap_content"
-        android:gravity="center">
+        android:layout_width="@dimen/edit_detail_width"
+        android:layout_height="@dimen/edit_detail_height" >
 
         <TextView
+            android:drawableLeft="@drawable/test_img"
+            android:drawablePadding="10dp"
+            android:paddingRight="10dp"
+            android:textSize="18dp"
+            android:textColor="@color/text_black"
+            android:gravity="center_vertical"
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="@string/text_info_major"/>
+            android:layout_height="match_parent"
+            android:text="@string/text_info_grade" />
 
         <EditText
-            android:id="@+id/text_major"
-            android:layout_width="200dp"
-            android:layout_height="wrap_content"/>
+            android:gravity="center_vertical"
+            android:textSize="@dimen/text_size_normal"
+            android:background="@drawable/edit_text_layout_bg"
+            android:layout_weight="1"
+            android:layout_width="0dp"
+            android:layout_height="match_parent" />
     </LinearLayout>
-
+    <TextView 
+        android:background="@color/edit_detail_seperator"
+        android:layout_height="1dp"
+        android:layout_width="@dimen/edit_detail_width"/>
     <LinearLayout
-        android:layout_width="fill_parent"
-        android:layout_height="wrap_content"
-        android:gravity="center">
+        android:layout_width="@dimen/edit_detail_width"
+        android:layout_height="@dimen/edit_detail_height" >
 
         <TextView
+            android:drawableLeft="@drawable/test_img"
+            android:drawablePadding="10dp"
+            android:paddingRight="10dp"
+            android:textSize="18dp"
+            android:textColor="@color/text_black"
+            android:gravity="center_vertical"
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="@string/text_info_degree"/>
-
-        <EditText
-            android:id="@+id/text_degree"
-            android:layout_width="200dp"
-            android:layout_height="wrap_content"/>
-    </LinearLayout>
-
-    <LinearLayout
-        android:layout_width="fill_parent"
-        android:layout_height="wrap_content"
-        android:gravity="center">
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="@string/text_info_grade"/>
+            android:layout_height="match_parent"
+            android:text="@string/text_info_grade" />
 
         <EditText
             android:id="@+id/text_grade"
-            android:layout_width="200dp"
-            android:layout_height="wrap_content"/>
+            android:gravity="center_vertical"
+            android:textSize="@dimen/text_size_normal"
+            android:background="@drawable/edit_text_layout_bg"
+            android:layout_weight="1"
+            android:layout_width="0dp"
+            android:layout_height="match_parent" />
     </LinearLayout>
-
+    <TextView 
+        android:background="@color/edit_detail_seperator"
+        android:layout_height="1dp"
+        android:layout_width="@dimen/edit_detail_width"/>
+   
+    <TextView
+        android:layout_marginTop="75dp"
+        android:id="@+id/button_next_step"
+        android:layout_width="115dp"
+        android:layout_height="45dp"
+        android:textColor="#FFFFFF"
+        android:textSize="18dp"
+        android:gravity="center"
+        android:layout_gravity="center_horizontal"
+        android:background="@drawable/button_bg_green"
+        android:text="@string/text_next_step" />
 
     <TextView
-        android:layout_gravity="center_horizontal"
-        android:id="@+id/button_next_step"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/text_next_step"/>
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:layout_width="match_parent" />
 
 </LinearLayout>

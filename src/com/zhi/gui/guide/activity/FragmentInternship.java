@@ -25,7 +25,7 @@ public class FragmentInternship extends Fragment {
     private List<InternshipBrief> mInternshipBriefList;
     private List<InternshipFull> mInternshipFullList;
 
-    private boolean isLoggedIn = false;
+    private boolean isLoggedIn = true;
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
@@ -50,13 +50,13 @@ public class FragmentInternship extends Fragment {
             mIndustryList.add("leo" + i);
         }
         mListIndustry.setAdapter(new IndustryListAdapter(getActivity(), mIndustryList));
-        mInternshipBriefList = new ArrayList<InternshipBrief>();
-        for (int j = 0; j < 30; j++) {
-            mInternshipBriefList.add(
-                    new InternshipBrief("company" + j, "job" + j, "location" + j, (20 - j) * 100));
-        }
-
-        mListInternships.setAdapter(new InternshipBriefAdapter(getActivity(), mInternshipBriefList));
+//        mInternshipBriefList = new ArrayList<InternshipBrief>();
+//        for (int j = 0; j < 30; j++) {
+//            mInternshipBriefList.add(
+//                    new InternshipBrief("company" + j, "job" + j, "location" + j, (20 - j) * 100));
+//        }
+//
+//        mListInternships.setAdapter(new InternshipBriefAdapter(getActivity(), mInternshipBriefList));
     }
 
     private void initViewWhenNotLoggedIn() {

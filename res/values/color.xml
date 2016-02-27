@@ -1,12 +1,17 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <color name="edit_text__bg">#00000000</color>
-    <color name="edit_text_hint">#CCCCCCCC</color>
+    <color name="edit_text_hint_1">#cccccc</color>
     <color name="tab_host_bg_color">#F5F5F5</color>
     <color name="viewpager_tab_selected">#87CEFA</color>
     <color name="viewpager_tab_unselected">#FFFFFFFF</color>
     <color name="tab_page_bottom_color">#fafafa</color>
     <color name="tab_page_content_bg">#FFFFFF</color>
     <color name="color_text_blue">#00a6ff</color>
-    <color name="color_bg_green">#00FF00</color>
+    <color name="color_bg_green">#00bd71</color>
+    <color name="color_bg_white">#ffffff</color>
+        <color name="color_bg_red">#fe4a5d</color>
+    <color name="edit_detail_seperator">#cccccc</color>
+    <color name="text_black">#333333</color>
+    <color name="edit_text_hint_2">#cccccc</color>
 </resources>
