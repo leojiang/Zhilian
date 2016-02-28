@@ -6,7 +6,7 @@
               android:baselineAligned="false">
 
     <LinearLayout
-        android:layout_marginTop="@dimen/tab_page_border_size"
+        android:layout_marginTop="@dimen/padding_or_margin_size_3"
         android:layout_width="0dp"
         android:layout_height="match_parent"
         android:layout_weight="2"
@@ -14,15 +14,15 @@
 
         <TextView
             android:layout_width="match_parent"
-            android:layout_height="45dp"
-            android:textColor="#333333"
-            android:textSize="14dp"
+            android:layout_height="@dimen/list_item_height_15"
+            android:textColor="@color/text_black"
+            android:textSize="@dimen/text_size_13"
             android:gravity="center"
             android:background="@color/tab_page_content_bg"
             android:text="@string/title_industry"/>
 
         <ListView
-            android:layout_marginTop="@dimen/tab_page_border_size"
+            android:layout_marginTop="@dimen/padding_or_margin_size_3"
             android:id="@+id/list_industry"
             android:divider="#00000000"
             android:overScrollMode="never"
@@ -32,24 +32,24 @@
     </LinearLayout>
 
     <LinearLayout
-        android:layout_marginTop="@dimen/tab_page_border_size"
+        android:layout_marginTop="@dimen/padding_or_margin_size_3"
         android:layout_width="0dp"
         android:layout_height="match_parent"
         android:layout_weight="3"
-        android:layout_marginLeft="@dimen/tab_page_border_size"
+        android:layout_marginLeft="@dimen/padding_or_margin_size_3"
         android:orientation="vertical">
 
         <TextView
             android:layout_width="match_parent"
-            android:layout_height="45dp"
-            android:textColor="#333333"
+            android:layout_height="@dimen/list_item_height_15"
+            android:textColor="@color/text_black"
             android:background="@color/tab_page_content_bg"
-            android:textSize="14dp"
+            android:textSize="@dimen/text_size_13"
             android:gravity="center"
             android:text="@string/title_ranking"/>
 
         <ListView
-            android:layout_marginTop="@dimen/tab_page_border_size"
+            android:layout_marginTop="@dimen/padding_or_margin_size_3"
             android:id="@+id/list_ranking"
             android:divider="#00000000"
             android:overScrollMode="never"
@@ -60,11 +60,11 @@
 
         <TextView
             android:layout_width="match_parent"
-            android:layout_height="25dp"
-            android:layout_marginTop="5dp"
+            android:layout_height="@dimen/list_item_height_11"
+            android:layout_marginTop="@dimen/padding_or_margin_size_5"
             android:textColor="@color/color_text_blue"
             android:background="@color/tab_page_content_bg"
-            android:textSize="12dp"
+            android:textSize="@dimen/text_size_12"
             android:gravity="center"
             android:text="@string/tip_login_to_check_competence"/>
     </LinearLayout>

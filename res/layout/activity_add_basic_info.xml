@@ -6,197 +6,209 @@
     android:orientation="vertical" >
 
     <TextView
+        android:layout_width="match_parent"
         android:layout_height="0dp"
-        android:layout_weight="1"
-        android:layout_width="match_parent" />
+        android:layout_weight="1" />
 
     <TextView
-        android:textColor="@color/text_black"
-        android:layout_marginBottom="75dp"
-        android:textSize="@dimen/text_size_normal"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="请完善基本信息，查看求职能力" />
+        android:layout_marginBottom="75dp"
+        android:text="请完善基本信息，查看求职能力"
+        android:textColor="@color/text_black"
+        android:textSize="@dimen/text_size_13" />
 
     <LinearLayout
-        android:layout_width="@dimen/edit_detail_width"
-        android:layout_height="@dimen/edit_detail_height" >
+        android:layout_width="@dimen/list_item_width_16"
+        android:layout_height="@dimen/list_item_height_15" >
 
         <TextView
-            android:drawableLeft="@drawable/test_img"
-            android:drawablePadding="10dp"
-            android:paddingRight="10dp"
-            android:textSize="18dp"
-            android:textColor="@color/text_black"
-            android:gravity="center_vertical"
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
-            android:text="@string/text_info_grade" />
+            android:drawableLeft="@drawable/test_img"
+            android:drawablePadding="@dimen/padding_or_margin_size_10"
+            android:gravity="center_vertical"
+            android:paddingRight="10dp"
+            android:text="@string/text_info_grade"
+            android:textColor="@color/text_black"
+            android:textSize="@dimen/text_size_13" />
 
         <EditText
-            android:gravity="center_vertical"
-            android:textSize="@dimen/text_size_normal"
-            android:background="@drawable/edit_text_layout_bg"
-            android:layout_weight="1"
             android:layout_width="0dp"
-            android:layout_height="match_parent" />
-    </LinearLayout>
-    <TextView 
-        android:background="@color/edit_detail_seperator"
-        android:layout_height="1dp"
-        android:layout_width="@dimen/edit_detail_width"/>
-    <LinearLayout
-        android:layout_width="@dimen/edit_detail_width"
-        android:layout_height="@dimen/edit_detail_height" >
-
-        <TextView
-            android:drawableLeft="@drawable/test_img"
-            android:drawablePadding="10dp"
-            android:paddingRight="10dp"
-            android:textSize="18dp"
-            android:textColor="@color/text_black"
-            android:gravity="center_vertical"
-            android:layout_width="wrap_content"
             android:layout_height="match_parent"
-            android:text="@string/text_info_grade" />
-
-        <EditText
-            android:gravity="center_vertical"
-            android:textSize="@dimen/text_size_normal"
-            android:background="@drawable/edit_text_layout_bg"
             android:layout_weight="1"
-            android:layout_width="0dp"
-            android:layout_height="match_parent" />
-    </LinearLayout>
-    <TextView 
-        android:background="@color/edit_detail_seperator"
-        android:layout_height="1dp"
-        android:layout_width="@dimen/edit_detail_width"/>
-    <LinearLayout
-        android:layout_width="@dimen/edit_detail_width"
-        android:layout_height="@dimen/edit_detail_height" >
-
-        <TextView
-            android:drawableLeft="@drawable/test_img"
-            android:drawablePadding="10dp"
-            android:paddingRight="10dp"
-            android:textSize="18dp"
-            android:textColor="@color/text_black"
-            android:gravity="center_vertical"
-            android:layout_width="wrap_content"
-            android:layout_height="match_parent"
-            android:text="@string/text_info_grade" />
-
-            android:id="@+id/text_grade"
-            android:gravity="center_vertical"
-            android:textSize="@dimen/text_size_normal"
             android:background="@drawable/edit_text_layout_bg"
-            android:layout_weight="1"
-            android:layout_width="0dp"
-            android:layout_height="match_parent" />
+            android:gravity="center_vertical"
+            android:textSize="@dimen/text_size_13" />
     </LinearLayout>
-    <TextView 
-        android:background="@color/edit_detail_seperator"
-        android:layout_height="1dp"
-        android:layout_width="@dimen/edit_detail_width"/>
-    <LinearLayout
-        android:layout_width="@dimen/edit_detail_width"
-        android:layout_height="@dimen/edit_detail_height" >
 
-        <TextView
-            android:drawableLeft="@drawable/test_img"
-            android:drawablePadding="10dp"
-            android:paddingRight="10dp"
-            android:textSize="18dp"
-            android:textColor="@color/text_black"
-            android:gravity="center_vertical"
-            android:layout_width="wrap_content"
-            android:layout_height="match_parent"
-            android:text="@string/text_info_grade" />
-
-        <EditText
-            android:gravity="center_vertical"
-            android:textSize="@dimen/text_size_normal"
-            android:background="@drawable/edit_text_layout_bg"
-            android:layout_weight="1"
-            android:layout_width="0dp"
-            android:layout_height="match_parent" />
-    </LinearLayout>
-    <TextView 
-        android:background="@color/edit_detail_seperator"
-        android:layout_height="1dp"
-        android:layout_width="@dimen/edit_detail_width"/>
-    <LinearLayout
-        android:layout_width="@dimen/edit_detail_width"
-        android:layout_height="@dimen/edit_detail_height" >
-
-        <TextView
-            android:drawableLeft="@drawable/test_img"
-            android:drawablePadding="10dp"
-            android:paddingRight="10dp"
-            android:textSize="18dp"
-            android:textColor="@color/text_black"
-            android:gravity="center_vertical"
-            android:layout_width="wrap_content"
-            android:layout_height="match_parent"
-            android:text="@string/text_info_grade" />
-
-        <EditText
-            android:gravity="center_vertical"
-            android:textSize="@dimen/text_size_normal"
-            android:background="@drawable/edit_text_layout_bg"
-            android:layout_weight="1"
-            android:layout_width="0dp"
-            android:layout_height="match_parent" />
-    </LinearLayout>
-    <TextView 
-        android:background="@color/edit_detail_seperator"
-        android:layout_height="1dp"
-        android:layout_width="@dimen/edit_detail_width"/>
-    <LinearLayout
-        android:layout_width="@dimen/edit_detail_width"
-        android:layout_height="@dimen/edit_detail_height" >
-
-        <TextView
-            android:drawableLeft="@drawable/test_img"
-            android:drawablePadding="10dp"
-            android:paddingRight="10dp"
-            android:textSize="18dp"
-            android:textColor="@color/text_black"
-            android:gravity="center_vertical"
-            android:layout_width="wrap_content"
-            android:layout_height="match_parent"
-            android:text="@string/text_info_grade" />
-
-        <EditText
-            android:id="@+id/text_grade"
-            android:gravity="center_vertical"
-            android:textSize="@dimen/text_size_normal"
-            android:background="@drawable/edit_text_layout_bg"
-            android:layout_weight="1"
-            android:layout_width="0dp"
-            android:layout_height="match_parent" />
-    </LinearLayout>
-    <TextView 
-        android:background="@color/edit_detail_seperator"
-        android:layout_height="1dp"
-        android:layout_width="@dimen/edit_detail_width"/>
-   
     <TextView
-        android:layout_marginTop="75dp"
+        android:layout_width="@dimen/list_item_width_16"
+        android:layout_height="1dp"
+        android:background="@color/edit_detail_seperator" />
+
+    <LinearLayout
+        android:layout_width="@dimen/list_item_width_16"
+        android:layout_height="@dimen/list_item_height_15" >
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:drawableLeft="@drawable/test_img"
+            android:drawablePadding="@dimen/padding_or_margin_size_10"
+            android:gravity="center_vertical"
+            android:paddingRight="@dimen/padding_or_margin_size_10"
+            android:text="@string/text_info_grade"
+            android:textColor="@color/text_black"
+            android:textSize="@dimen/text_size_13" />
+
+        <EditText
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@drawable/edit_text_layout_bg"
+            android:gravity="center_vertical"
+            android:textSize="@dimen/text_size_13" />
+    </LinearLayout>
+
+    <TextView
+        android:layout_width="@dimen/list_item_width_16"
+        android:layout_height="1dp"
+        android:background="@color/edit_detail_seperator" />
+
+    <LinearLayout
+        android:layout_width="@dimen/list_item_width_16"
+        android:layout_height="@dimen/list_item_height_15" >
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:drawableLeft="@drawable/test_img"
+            android:drawablePadding="@dimen/padding_or_margin_size_10"
+            android:gravity="center_vertical"
+            android:paddingRight="@dimen/padding_or_margin_size_10"
+            android:text="@string/text_info_grade"
+            android:textColor="@color/text_black"
+            android:textSize="@dimen/text_size_13" />
+
+        <TextView
+            android:id="@+id/text_grade"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@drawable/edit_text_layout_bg"
+            android:gravity="center_vertical"
+            android:textSize="@dimen/text_size_13" />
+    </LinearLayout>
+
+    <TextView
+        android:layout_width="@dimen/list_item_width_16"
+        android:layout_height="1dp"
+        android:background="@color/edit_detail_seperator" />
+
+    <LinearLayout
+        android:layout_width="@dimen/list_item_width_16"
+        android:layout_height="@dimen/list_item_height_15" >
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:drawableLeft="@drawable/test_img"
+            android:drawablePadding="@dimen/padding_or_margin_size_10"
+            android:gravity="center_vertical"
+            android:paddingRight="@dimen/padding_or_margin_size_10"
+            android:text="@string/text_info_grade"
+            android:textColor="@color/text_black"
+            android:textSize="@dimen/text_size_13" />
+
+        <EditText
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@drawable/edit_text_layout_bg"
+            android:gravity="center_vertical"
+            android:textSize="@dimen/text_size_13" />
+    </LinearLayout>
+
+    <TextView
+        android:layout_width="@dimen/list_item_width_16"
+        android:layout_height="1dp"
+        android:background="@color/edit_detail_seperator" />
+
+    <LinearLayout
+        android:layout_width="@dimen/list_item_width_16"
+        android:layout_height="@dimen/list_item_height_15" >
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:drawableLeft="@drawable/test_img"
+            android:drawablePadding="@dimen/padding_or_margin_size_10"
+            android:gravity="center_vertical"
+            android:paddingRight="@dimen/padding_or_margin_size_10"
+            android:text="@string/text_info_grade"
+            android:textColor="@color/text_black"
+            android:textSize="@dimen/text_size_13" />
+
+        <EditText
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@drawable/edit_text_layout_bg"
+            android:gravity="center_vertical"
+            android:textSize="@dimen/text_size_13" />
+    </LinearLayout>
+
+    <TextView
+        android:layout_width="@dimen/list_item_width_16"
+        android:layout_height="1dp"
+        android:background="@color/edit_detail_seperator" />
+
+    <LinearLayout
+        android:layout_width="@dimen/list_item_width_16"
+        android:layout_height="@dimen/list_item_height_15" >
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:drawableLeft="@drawable/test_img"
+            android:drawablePadding="@dimen/padding_or_margin_size_10"
+            android:gravity="center_vertical"
+            android:paddingRight="@dimen/padding_or_margin_size_10"
+            android:text="@string/text_info_grade"
+            android:textColor="@color/text_black"
+            android:textSize="@dimen/text_size_13" />
+
+        <EditText
+            android:id="@+id/text_grade"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@drawable/edit_text_layout_bg"
+            android:gravity="center_vertical"
+            android:textSize="@dimen/text_size_13" />
+    </LinearLayout>
+
+    <TextView
+        android:layout_width="@dimen/list_item_width_16"
+        android:layout_height="1dp"
+        android:background="@color/edit_detail_seperator" />
+
+    <TextView
         android:id="@+id/button_next_step"
         android:layout_width="115dp"
         android:layout_height="45dp"
-        android:textColor="#FFFFFF"
-        android:textSize="18dp"
-        android:gravity="center"
         android:layout_gravity="center_horizontal"
+        android:layout_marginTop="75dp"
         android:background="@drawable/button_bg_green"
-        android:text="@string/text_next_step" />
+        android:gravity="center"
+        android:text="@string/text_next_step"
+        android:textColor="@color/color_bg_white"
+        android:textSize="@dimen/text_size_13" />
 
     <TextView
+        android:layout_width="match_parent"
         android:layout_height="0dp"
-        android:layout_weight="1"
-        android:layout_width="match_parent" />
+        android:layout_weight="1" />
 
 </LinearLayout>

@@ -1,110 +1,133 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-              android:layout_width="fill_parent"
-              android:layout_height="fill_parent"
-              android:orientation="vertical">
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical" >
 
     <RelativeLayout
-        android:background="#00F0F0"
         android:layout_width="match_parent"
-        android:layout_height="230dp">
+        android:layout_height="230dp"
+        android:background="#00F0F0" >
 
         <ImageView
             android:id="@+id/imageview"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:scaleType="fitStart"
-            android:src="@drawable/advertisement">
+            android:src="@drawable/advertisement" >
         </ImageView>
 
         <include
             android:id="@+id/login_promp"
-            layout="@layout/longin_promp"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_centerInParent="true"/>
+            android:layout_centerInParent="true"
+            layout="@layout/longin_promp" />
 
         <LinearLayout
+            android:visibility="gone"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:gravity="center_horizontal"
-            android:orientation="vertical">
+            android:orientation="vertical" >
 
             <ImageView
                 android:id="@+id/avatar"
-                android:layout_width="100dp"
-                android:layout_height="100dp"
-                android:background="#00FF00"/>
+                android:layout_width="80dp"
+                android:layout_height="80dp"
+                android:layout_marginTop="30dp"
+                android:background="#00FF00" />
 
             <TextView
                 android:id="@+id/real_name"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="真实姓名"/>
+                android:layout_marginTop="10dp"
+                android:text="小李子"
+                android:textColor="@color/color_bg_white"
+                android:textSize="@dimen/text_size_14" />
 
             <LinearLayout
                 android:layout_width="wrap_content"
-                android:layout_height="wrap_content">
+                android:layout_height="wrap_content" >
 
                 <LinearLayout
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:orientation="vertical">
+                    android:orientation="vertical"
+                    android:gravity="center_horizontal"
+                    android:padding="@dimen/padding_or_margin_size_5" >
 
                     <TextView
                         android:id="@+id/nick_name"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="昵称"/>
+                        android:text="小笼包子"
+                        android:textColor="@color/color_bg_white"
+                        android:textSize="@dimen/text_size_13" />
 
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="昵称"/>
+                        android:text="昵称"
+                        android:textColor="@color/color_bg_white"
+                        android:textSize="@dimen/text_size_12" />
                 </LinearLayout>
 
                 <ImageView
                     android:id="@+id/separator"
                     android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"/>
+                    android:layout_height="wrap_content" />
 
                 <LinearLayout
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:orientation="vertical">
+                    android:orientation="vertical"
+                    android:gravity="center_horizontal"
+                    android:padding="@dimen/padding_or_margin_size_5" >
 
                     <TextView
-                        android:id="@+id/career_target"
+                        android:id="@+id/position"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="昵称"/>
+                        android:text="销售经理"
+                        android:textColor="@color/color_bg_white"
+                        android:textSize="@dimen/text_size_13" />
 
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="昵称"/>
+                        android:text="职业目标"
+                        android:textColor="@color/color_bg_white"
+                        android:textSize="@dimen/text_size_12" />
                 </LinearLayout>
 
                 <ImageView
                     android:id="@+id/separator1"
                     android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"/>
+                    android:layout_height="wrap_content" />
 
                 <LinearLayout
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:orientation="vertical">
+                    android:orientation="vertical"
+                    android:gravity="center_horizontal"
+                    android:padding="@dimen/padding_or_margin_size_5" >
 
                     <TextView
                         android:id="@+id/competence"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="昵称"/>
+                        android:text="9000"
+                        android:textColor="@color/color_bg_white"
+                        android:textSize="@dimen/text_size_13" />
 
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="昵称"/>
+                        android:text="求职力"
+                        android:textColor="@color/color_bg_white"
+                        android:textSize="@dimen/text_size_12" />
                 </LinearLayout>
             </LinearLayout>
         </LinearLayout>
@@ -114,62 +137,85 @@
         android:layout_width="match_parent"
         android:layout_height="0dp"
         android:layout_weight="1"
-        android:orientation="vertical">
+        android:orientation="vertical" >
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_centerInParent="true"
             android:gravity="center"
-            android:text="职业规划\n积“龟”步以至千里"/>
+            android:text="职业规划\n积“龟”步以至千里" />
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:orientation="vertical">
-
-
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:drawableLeft="@drawable/test_img"
-                android:drawableRight="@drawable/test_img"
-                android:text="完善个人信息，提升求职力"
-                android:textSize="@dimen/text_size_normal"/>
+            android:orientation="vertical" >
 
             <TextView
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
+                android:layout_height="@dimen/list_item_height_15"
+                android:layout_marginBottom="@dimen/padding_or_margin_size_5"
+                android:background="@color/tab_page_content_bg"
                 android:drawableLeft="@drawable/test_img"
+                android:drawablePadding="@dimen/padding_or_margin_size_5"
                 android:drawableRight="@drawable/test_img"
-                android:text="完善个人信息，提升求职力"
-                android:textSize="@dimen/text_size_normal"/>
+                android:gravity="center_vertical"
+                android:padding="@dimen/padding_or_margin_size_5"
+                android:text="我的消息"
+                android:textSize="@dimen/text_size_15" />
 
             <TextView
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
+                android:layout_height="@dimen/list_item_height_15"
+                android:layout_marginBottom="@dimen/padding_or_margin_size_5"
+                android:background="@color/tab_page_content_bg"
                 android:drawableLeft="@drawable/test_img"
+                android:drawablePadding="@dimen/padding_or_margin_size_5"
                 android:drawableRight="@drawable/test_img"
-                android:text="完善个人信息，提升求职力"
-                android:textSize="@dimen/text_size_normal"/>
+                android:gravity="center_vertical"
+                android:padding="@dimen/padding_or_margin_size_5"
+                android:text="我的资料"
+                android:textSize="@dimen/text_size_15" />
 
             <TextView
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
+                android:layout_height="@dimen/list_item_height_15"
+                android:layout_marginBottom="@dimen/padding_or_margin_size_5"
+                android:background="@color/tab_page_content_bg"
                 android:drawableLeft="@drawable/test_img"
+                android:drawablePadding="@dimen/padding_or_margin_size_5"
                 android:drawableRight="@drawable/test_img"
-                android:text="完善个人信息，提升求职力"
-                android:textSize="@dimen/text_size_normal"/>
+                android:gravity="center_vertical"
+                android:padding="@dimen/padding_or_margin_size_5"
+                android:text="我的关注"
+                android:textSize="@dimen/text_size_15" />
 
             <TextView
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
+                android:layout_height="@dimen/list_item_height_15"
+                android:layout_marginBottom="@dimen/padding_or_margin_size_5"
+                android:background="@color/tab_page_content_bg"
                 android:drawableLeft="@drawable/test_img"
+                android:drawablePadding="@dimen/padding_or_margin_size_5"
                 android:drawableRight="@drawable/test_img"
-                android:text="完善个人信息，提升求职力"
-                android:textSize="@dimen/text_size_normal"/>
+                android:gravity="center_vertical"
+                android:padding="@dimen/padding_or_margin_size_5"
+                android:text="我的好友"
+                android:textSize="@dimen/text_size_15" />
 
-
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/list_item_height_15"
+                android:layout_marginBottom="@dimen/padding_or_margin_size_5"
+                android:background="@color/tab_page_content_bg"
+                android:drawableLeft="@drawable/test_img"
+                android:drawablePadding="@dimen/padding_or_margin_size_5"
+                android:drawableRight="@drawable/test_img"
+                android:gravity="center_vertical"
+                android:padding="@dimen/padding_or_margin_size_5"
+                android:text="我的设置"
+                android:textSize="@dimen/text_size_15" />
         </LinearLayout>
     </RelativeLayout>
+
 </LinearLayout>

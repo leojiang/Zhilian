@@ -5,16 +5,36 @@ public class InternshipFull {
     private String jobTitle;
     private String location;
     private int baseCompetence;
+    private String headImageUrl;
+    private String salaryRange;
+
+    public String getHeadImageUrl() {
+        return headImageUrl;
+    }
+
+    public void setHeadImageUrl(String headImageUrl) {
+        this.headImageUrl = headImageUrl;
+    }
+
+    public String getSalaryRange() {
+        return salaryRange;
+    }
+
+    public void setSalaryRange(String salaryRange) {
+        this.salaryRange = salaryRange;
+    }
 
     public InternshipFull() {
     }
 
     public InternshipFull(String companyName, String jobTitle, String location,
-            int baseCompetence) {
+            int baseCompetence, String imageUrl, String salaryRange) {
         this.companyName = companyName;
         this.jobTitle = jobTitle;
         this.location = location;
         this.baseCompetence = baseCompetence;
+        this.headImageUrl = imageUrl;
+        this.salaryRange = salaryRange;
     }
 
     public String getCompanyName() {

@@ -25,13 +25,15 @@ public class FragmentInternship extends Fragment {
     private List<InternshipBrief> mInternshipBriefList;
     private List<InternshipFull> mInternshipFullList;
 
-    private boolean isLoggedIn = true;
+    private boolean isLoggedIn = false;
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
             Bundle savedInstanceState) {
         View root;
-        if (isLoggedIn) {
+        int flag = (int)System.currentTimeMillis() % 2;
+
+        if (flag == 0) {
             root = inflater.inflate(R.layout.fragment_internship_brief, null);
             mListIndustry = (ListView) root.findViewById(R.id.list_industry);
             mListInternships = (ListView) root.findViewById(R.id.list_internships);
@@ -50,20 +52,21 @@ public class FragmentInternship extends Fragment {
             mIndustryList.add("leo" + i);
         }
         mListIndustry.setAdapter(new IndustryListAdapter(getActivity(), mIndustryList));
-//        mInternshipBriefList = new ArrayList<InternshipBrief>();
-//        for (int j = 0; j < 30; j++) {
-//            mInternshipBriefList.add(
-//                    new InternshipBrief("company" + j, "job" + j, "location" + j, (20 - j) * 100));
-//        }
-//
-//        mListInternships.setAdapter(new InternshipBriefAdapter(getActivity(), mInternshipBriefList));
+        mInternshipBriefList = new ArrayList<InternshipBrief>();
+        for (int j = 0; j < 30; j++) {
+            mInternshipBriefList.add(
+                    new InternshipBrief("company" + j, "job" + j, "location" + j, (20 - j) * 100));
+        }
+
+        mListInternships
+                .setAdapter(new InternshipBriefAdapter(getActivity(), mInternshipBriefList));
     }
 
     private void initViewWhenNotLoggedIn() {
         mInternshipFullList = new ArrayList<InternshipFull>();
         for (int j = 0; j < 30; j++) {
-            mInternshipFullList.add(
-                    new InternshipFull("company" + j, "job" + j, "location" + j, (20 - j) * 100));
+            mInternshipFullList.add(new InternshipFull("company" + j, "job" + j, "location" + j,
+                    (20 - j) * 100, "test_url", "15-25K"));
         }
         mListInternships.setAdapter(new InternshipFullAdapter(getActivity(), mInternshipFullList));
     }

@@ -7,296 +7,300 @@
 
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="30dp"
-        android:layout_marginBottom="5dp"
+        android:layout_height="@dimen/list_item_height_12"
+        android:layout_marginBottom="@dimen/padding_or_margin_size_5"
         android:background="@color/tab_page_content_bg"
         android:orientation="horizontal" >
 
         <TextView
-            android:gravity="center_vertical"
-            android:paddingLeft="10dp"
-            android:paddingRight="10dp"
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
             android:background="@color/color_bg_green"
-            android:textColor="@color/color_bg_white"
+            android:gravity="center_vertical"
+            android:paddingLeft="@dimen/padding_or_margin_size_10"
+            android:paddingRight="@dimen/padding_or_margin_size_10"
             android:text="我的职业目标方向"
-            android:textSize="@dimen/text_size_normal" />
+            android:textColor="@color/color_bg_white"
+            android:textSize="@dimen/text_size_14" />
 
         <TextView
-            android:layout_weight="1"
             android:layout_width="0dp"
             android:layout_height="match_parent"
+            android:layout_weight="1"
             android:gravity="center_vertical"
-            android:textSize="@dimen/text_size_normal" />
+            android:textSize="@dimen/text_size_14" />
     </LinearLayout>
 
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="30dp"
-        android:layout_marginBottom="5dp"
+        android:layout_height="@dimen/list_item_height_12"
+        android:layout_marginBottom="@dimen/padding_or_margin_size_5"
         android:background="@color/tab_page_content_bg" >
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
-            android:gravity="center_vertical"
-            android:paddingLeft="10dp"
-            android:drawablePadding="5dp"
+            android:drawablePadding="@dimen/padding_or_margin_size_5"
             android:drawableRight="@drawable/test_img"
+            android:gravity="center_vertical"
+            android:paddingLeft="@dimen/padding_or_margin_size_10"
             android:text="我的求职力:"
-            android:textSize="@dimen/text_size_normal" />
+            android:textSize="@dimen/text_size_14" />
 
         <TextView
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_weight="1"
             android:gravity="center_vertical"
-            android:textSize="@dimen/text_size_normal" />
+            android:textSize="@dimen/text_size_14" />
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
-            android:text="排名:"
-            android:drawablePadding="5dp"
+            android:drawablePadding="@dimen/padding_or_margin_size_5"
             android:drawableRight="@drawable/test_img"
             android:gravity="center_vertical"
-            android:textSize="@dimen/text_size_normal" />
+            android:text="排名:"
+            android:textSize="@dimen/text_size_14" />
 
         <TextView
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_weight="1"
             android:gravity="center_vertical"
-            android:textSize="@dimen/text_size_normal" />
+            android:textSize="@dimen/text_size_14" />
     </LinearLayout>
 
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="@dimen/competence_page_item_height"
-        android:layout_marginBottom="5dp"
-        android:paddingLeft="5dp"
-        android:background="@color/tab_page_content_bg" >
+        android:layout_height="@dimen/list_item_height_13"
+        android:layout_marginBottom="@dimen/padding_or_margin_size_5"
+        android:background="@color/tab_page_content_bg"
+        android:paddingRight="@dimen/padding_or_margin_size_5"
+        android:paddingLeft="@dimen/padding_or_margin_size_5" >
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
             android:drawableLeft="@drawable/test_img"
             android:drawablePadding="5dp"
-            android:textColor="@color/text_black"
             android:gravity="center_vertical"
             android:text="完善个人信息，提升求职力"
-            android:textSize="@dimen/text_size_normal" />
+            android:textColor="@color/text_black"
+            android:textSize="@dimen/text_size_14" />
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
             android:layout_weight="1"
-            android:textColor="@color/color_bg_green"
             android:gravity="center_vertical|right"
             android:text="未完成"
-            android:textSize="@dimen/text_size_normal" />
+            android:textColor="@color/color_bg_green"
+            android:textSize="@dimen/text_size_14" />
     </LinearLayout>
 
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="@dimen/competence_page_item_height"
-        android:layout_marginBottom="5dp"
-        android:paddingLeft="5dp"
-        android:background="@color/tab_page_content_bg" >
+        android:layout_height="@dimen/list_item_height_13"
+        android:layout_marginBottom="@dimen/padding_or_margin_size_5"
+        android:background="@color/tab_page_content_bg"
+        android:paddingRight="@dimen/padding_or_margin_size_5"
+        android:paddingLeft="@dimen/padding_or_margin_size_5" >
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
             android:drawableLeft="@drawable/test_img"
-            android:drawablePadding="5dp"
-            android:textColor="@color/text_black"
+            android:drawablePadding="@dimen/padding_or_margin_size_5"
             android:gravity="center_vertical"
             android:text="完善个人信息，提升求职力"
-            android:textSize="@dimen/text_size_normal" />
+            android:textColor="@color/text_black"
+            android:textSize="@dimen/text_size_14" />
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
             android:layout_weight="1"
-            android:textColor="@color/color_bg_green"
             android:gravity="center_vertical|right"
             android:text="未完成"
-            android:textSize="@dimen/text_size_normal" />
+            android:textColor="@color/color_bg_green"
+            android:textSize="@dimen/text_size_14" />
     </LinearLayout>
 
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="@dimen/competence_page_item_height"
-        android:layout_marginBottom="5dp"
-        android:paddingLeft="5dp"
-        android:background="@color/tab_page_content_bg" >
+        android:layout_height="@dimen/list_item_height_13"
+        android:layout_marginBottom="@dimen/padding_or_margin_size_5"
+        android:background="@color/tab_page_content_bg"
+        android:paddingRight="@dimen/padding_or_margin_size_5"
+        android:paddingLeft="@dimen/padding_or_margin_size_5" >
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
             android:drawableLeft="@drawable/test_img"
-            android:drawablePadding="5dp"
-            android:textColor="@color/text_black"
+            android:drawablePadding="@dimen/padding_or_margin_size_5"
             android:gravity="center_vertical"
             android:text="完善个人信息，提升求职力"
-            android:textSize="@dimen/text_size_normal" />
+            android:textColor="@color/text_black"
+            android:textSize="@dimen/text_size_14" />
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
             android:layout_weight="1"
-            android:textColor="@color/color_bg_green"
             android:gravity="center_vertical|right"
             android:text="未完成"
-            android:textSize="@dimen/text_size_normal" />
+            android:textColor="@color/color_bg_green"
+            android:textSize="@dimen/text_size_14" />
     </LinearLayout>
 
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="@dimen/competence_page_item_height"
-        android:layout_marginBottom="5dp"
-        android:paddingLeft="5dp"
-        android:background="@color/tab_page_content_bg" >
+        android:layout_height="@dimen/list_item_height_13"
+        android:layout_marginBottom="@dimen/padding_or_margin_size_5"
+        android:background="@color/tab_page_content_bg"
+        android:paddingRight="@dimen/padding_or_margin_size_5"
+        android:paddingLeft="@dimen/padding_or_margin_size_5" >
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
             android:drawableLeft="@drawable/test_img"
-            android:drawablePadding="5dp"
-            android:textColor="@color/text_black"
+            android:drawablePadding="@dimen/padding_or_margin_size_5"
             android:gravity="center_vertical"
             android:text="完善个人信息，提升求职力"
-            android:textSize="@dimen/text_size_normal" />
+            android:textColor="@color/text_black"
+            android:textSize="@dimen/text_size_14" />
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
             android:layout_weight="1"
-            android:textColor="@color/color_bg_green"
             android:gravity="center_vertical|right"
             android:text="未完成"
-            android:textSize="@dimen/text_size_normal" />
+            android:textColor="@color/color_bg_green"
+            android:textSize="@dimen/text_size_14" />
     </LinearLayout>
 
     <TextView
         android:layout_width="wrap_content"
-        android:layout_height="30dp"
+        android:layout_height="@dimen/list_item_height_12"
+        android:paddingLeft="@dimen/padding_or_margin_size_10"
+        android:paddingRight="@dimen/padding_or_margin_size_10"
         android:layout_marginTop="25dp"
-        android:layout_marginLeft="5dp"
-        android:gravity="center"
-        android:textColor="@color/color_bg_white"
         android:background="@color/color_bg_green"
+        android:gravity="center"
         android:text="本月目标"
-        android:textSize="@dimen/text_size_normal" />
+        android:textColor="@color/color_bg_white"
+        android:textSize="@dimen/text_size_14" />
 
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="@dimen/competence_page_item_height"
-        android:layout_marginBottom="5dp"
-        android:paddingLeft="5dp"
-        android:background="@color/tab_page_content_bg" >
+        android:layout_height="@dimen/list_item_height_13"
+        android:layout_marginBottom="@dimen/padding_or_margin_size_5"
+        android:background="@color/tab_page_content_bg"
+        android:paddingLeft="@dimen/padding_or_margin_size_5" >
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
             android:drawableLeft="@drawable/test_img"
-            android:drawablePadding="5dp"
-            android:textColor="@color/text_black"
+            android:drawablePadding="@dimen/padding_or_margin_size_5"
             android:gravity="center_vertical"
             android:text="参加社团"
-            android:textSize="@dimen/text_size_normal" />
+            android:textColor="@color/text_black"
+            android:textSize="@dimen/text_size_14" />
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
             android:layout_weight="1"
-            android:textColor="@color/color_bg_red"
             android:gravity="center_vertical|right"
             android:text="完成"
-            android:textSize="@dimen/text_size_normal" />
-    </LinearLayout>
-
-
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="@dimen/competence_page_item_height"
-        android:layout_marginBottom="5dp"
-        android:paddingLeft="5dp"
-        android:background="@color/tab_page_content_bg" >
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="match_parent"
-            android:drawableLeft="@drawable/test_img"
-            android:drawablePadding="5dp"
-            android:textColor="@color/text_black"
-            android:gravity="center_vertical"
-            android:text="参加社团"
-            android:textSize="@dimen/text_size_normal" />
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="match_parent"
-            android:layout_weight="1"
             android:textColor="@color/color_bg_red"
-            android:gravity="center_vertical|right"
-            android:text="完成"
-            android:textSize="@dimen/text_size_normal" />
+            android:textSize="@dimen/text_size_14" />
     </LinearLayout>
 
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="@dimen/competence_page_item_height"
-        android:layout_marginBottom="5dp"
-        android:paddingLeft="5dp"
-        android:background="@color/tab_page_content_bg" >
+        android:layout_height="@dimen/list_item_height_13"
+        android:layout_marginBottom="@dimen/padding_or_margin_size_5"
+        android:background="@color/tab_page_content_bg"
+        android:paddingLeft="@dimen/padding_or_margin_size_5" >
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
             android:drawableLeft="@drawable/test_img"
-            android:drawablePadding="5dp"
-            android:textColor="@color/text_black"
+            android:drawablePadding="@dimen/padding_or_margin_size_5"
             android:gravity="center_vertical"
             android:text="参加社团"
-            android:textSize="@dimen/text_size_normal" />
+            android:textColor="@color/text_black"
+            android:textSize="@dimen/text_size_14" />
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
             android:layout_weight="1"
-            android:textColor="@color/color_bg_red"
             android:gravity="center_vertical|right"
             android:text="完成"
-            android:textSize="@dimen/text_size_normal" />
+            android:textColor="@color/color_bg_red"
+            android:textSize="@dimen/text_size_14" />
     </LinearLayout>
 
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="@dimen/competence_page_item_height"
-        android:layout_marginBottom="5dp"
-        android:paddingLeft="5dp"
-        android:background="@color/tab_page_content_bg" >
+        android:layout_height="@dimen/list_item_height_13"
+        android:layout_marginBottom="@dimen/padding_or_margin_size_5"
+        android:background="@color/tab_page_content_bg"
+        android:paddingLeft="@dimen/padding_or_margin_size_5" >
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
             android:drawableLeft="@drawable/test_img"
             android:drawablePadding="5dp"
-            android:textColor="@color/text_black"
             android:gravity="center_vertical"
             android:text="参加社团"
-            android:textSize="@dimen/text_size_normal" />
+            android:textColor="@color/text_black"
+            android:textSize="@dimen/text_size_14" />
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
             android:layout_weight="1"
-            android:textColor="@color/color_bg_red"
             android:gravity="center_vertical|right"
             android:text="完成"
-            android:textSize="@dimen/text_size_normal" />
+            android:textColor="@color/color_bg_red"
+            android:textSize="@dimen/text_size_14" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/list_item_height_13"
+        android:layout_marginBottom="@dimen/padding_or_margin_size_5"
+        android:background="@color/tab_page_content_bg"
+        android:paddingLeft="@dimen/padding_or_margin_size_5" >
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:drawableLeft="@drawable/test_img"
+            android:drawablePadding="@dimen/padding_or_margin_size_5"
+            android:gravity="center_vertical"
+            android:text="参加社团"
+            android:textColor="@color/text_black"
+            android:textSize="@dimen/text_size_14" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center_vertical|right"
+            android:text="完成"
+            android:textColor="@color/color_bg_red"
+            android:textSize="@dimen/text_size_14" />
     </LinearLayout>
 
 </LinearLayout>

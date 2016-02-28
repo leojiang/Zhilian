@@ -5,7 +5,7 @@
               android:orientation="horizontal">
 
     <TextView
-        android:id="@+id/rank"
+        android:id="@+id/index"
         android:layout_width="0dp"
         android:layout_height="@dimen/list_item_height_11"
         android:layout_marginBottom="@dimen/padding_or_margin_size_1"
@@ -15,7 +15,7 @@
         android:textSize="@dimen/text_size_12"/>
 
     <TextView
-        android:id="@+id/nickname"
+        android:id="@+id/industry"
         android:layout_width="0dp"
         android:layout_height="@dimen/list_item_height_11"
         android:layout_marginBottom="@dimen/padding_or_margin_size_1"
@@ -26,7 +26,7 @@
         android:textSize="@dimen/text_size_12"/>
 
     <TextView
-        android:id="@+id/competence"
+        android:id="@+id/percentage"
         android:layout_width="0dp"
         android:layout_height="@dimen/list_item_height_11"
         android:layout_marginBottom="@dimen/padding_or_margin_size_1"

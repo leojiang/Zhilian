@@ -29,6 +29,9 @@
         <activity
             android:name="com.zhi.gui.guide.activity.ActivityAddBasicInfo">
         </activity>
+        <activity
+            android:name="com.zhi.gui.guide.activity.ActivityChooseIndustry">
+        </activity>
     </application>
 
 </manifest>

@@ -40,11 +40,12 @@ public class InternshipFullAdapter extends BaseAdapter {
         ViewHolder viewHolder;
         if (convertView == null) {
             viewHolder = new ViewHolder();
-            convertView = mInflater.inflate(R.layout.internship_brief_list_item, null);
+            convertView = mInflater.inflate(R.layout.internship_full_list_item, null);
             viewHolder.companyName = (TextView) convertView.findViewById(R.id.companyName);
             viewHolder.jobTitle = (TextView) convertView.findViewById(R.id.jobTitle);
             viewHolder.location = (TextView) convertView.findViewById(R.id.location);
             viewHolder.baseCompetence = (TextView) convertView.findViewById(R.id.baseCompetence);
+            viewHolder.salaryRange = (TextView) convertView.findViewById(R.id.salary);
             convertView.setTag(viewHolder);
         } else {
             viewHolder = (ViewHolder) convertView.getTag();
@@ -55,7 +56,7 @@ public class InternshipFullAdapter extends BaseAdapter {
         viewHolder.jobTitle.setText(internship.getJobTitle());
         viewHolder.location.setText(internship.getLocation());
         viewHolder.baseCompetence.setText(String.valueOf(internship.getBaseCompetence()));
-
+        viewHolder.salaryRange.setText(internship.getSalaryRange());
         return convertView;
     }
 
@@ -74,5 +75,6 @@ public class InternshipFullAdapter extends BaseAdapter {
         TextView jobTitle;
         TextView location;
         TextView baseCompetence;
+        TextView salaryRange;
     }
 }
