@@ -200,6 +200,7 @@
         android:layout_height="@dimen/list_item_height_13"
         android:layout_marginBottom="@dimen/padding_or_margin_size_5"
         android:background="@color/tab_page_content_bg"
+        android:paddingRight="@dimen/padding_or_margin_size_5"
         android:paddingLeft="@dimen/padding_or_margin_size_5" >
 
         <TextView
@@ -227,6 +228,7 @@
         android:layout_height="@dimen/list_item_height_13"
         android:layout_marginBottom="@dimen/padding_or_margin_size_5"
         android:background="@color/tab_page_content_bg"
+        android:paddingRight="@dimen/padding_or_margin_size_5"
         android:paddingLeft="@dimen/padding_or_margin_size_5" >
 
         <TextView
@@ -254,6 +256,7 @@
         android:layout_height="@dimen/list_item_height_13"
         android:layout_marginBottom="@dimen/padding_or_margin_size_5"
         android:background="@color/tab_page_content_bg"
+        android:paddingRight="@dimen/padding_or_margin_size_5"
         android:paddingLeft="@dimen/padding_or_margin_size_5" >
 
         <TextView
@@ -267,7 +270,7 @@
             android:textSize="@dimen/text_size_14" />
 
         <TextView
-            android:layout_width="wrap_content"
+            android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_weight="1"
             android:gravity="center_vertical|right"
@@ -281,6 +284,7 @@
         android:layout_height="@dimen/list_item_height_13"
         android:layout_marginBottom="@dimen/padding_or_margin_size_5"
         android:background="@color/tab_page_content_bg"
+        android:paddingRight="@dimen/padding_or_margin_size_5"
         android:paddingLeft="@dimen/padding_or_margin_size_5" >
 
         <TextView
