@@ -26,7 +26,7 @@ public class ActivityChooseIndustry extends BaseActivity {
 
     private void initListView() {
         for (int j = 0; j < 30; j++) {
-            mData.add(new CareerTarget(j, "ÐÐÒµ" + j, (39 - j) + "%"));
+            mData.add(new CareerTarget(j, "career " + j, (39 - j) + "%"));
         }
 
         mListView.setAdapter(new CareerTargetAdapter(this, mData));

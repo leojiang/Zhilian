@@ -3,13 +3,16 @@ package com.zhi.gui.guide.activity;
 
 import android.content.Intent;
 import android.os.Bundle;
-import android.util.DisplayMetrics;
-import android.util.Log;
 import android.view.View;
 import android.view.View.OnClickListener;
 import android.widget.EditText;
 
 import com.zhi.gui.guide.R;
+import com.zhi.gui.guide.network.NetworkTask;
+import com.zhi.gui.guide.network.ThreadPoolManager;
+
+import org.json.JSONException;
+import org.json.JSONObject;
 
 public class ActivityLogin extends BaseActivity implements OnClickListener {
     private View mBtnLookRound;
@@ -72,6 +75,13 @@ public class ActivityLogin extends BaseActivity implements OnClickListener {
     }
 
     public void login() {
-
+        try {
+            JSONObject object = new JSONObject();
+            object.put("ACTION", "fuck zhuangzhuang");
+            NetworkTask task = new NetworkTask("http://139.196.240.222:55500/", object, null);
+            ThreadPoolManager.getInstance().runTask(task);
+        } catch (JSONException e) {
+            e.printStackTrace();
+        }
     }
 }

@@ -8,17 +8,21 @@ import org.apache.http.NameValuePair;
 import org.apache.http.client.ClientProtocolException;
 import org.apache.http.client.HttpClient;
 import org.apache.http.client.entity.UrlEncodedFormEntity;
+import org.apache.http.client.methods.HttpGet;
 import org.apache.http.client.methods.HttpPost;
 import org.apache.http.entity.StringEntity;
 import org.apache.http.impl.client.DefaultHttpClient;
 import org.apache.http.util.EntityUtils;
 import org.json.JSONObject;
+import org.json.JSONTokener;
 
 import java.io.IOException;
+import java.io.InputStreamReader;
 import java.io.UnsupportedEncodingException;
 import java.util.List;
 
 public class NetworkRequest {
+    public static String TAG = "NetworkRequest";
 
     public static String postRequest(String Url, List<NameValuePair> pairlist) {
         HttpClient httpClient = new DefaultHttpClient();
@@ -89,9 +93,37 @@ public class NetworkRequest {
 
             HttpResponse res = client.execute(post);
             if (res.getStatusLine().getStatusCode() == 202) {
+                String string = EntityUtils.toString(res.getEntity(), "utf-8");
+                Log.i("TAG", "response date :" + string);
+//                response = new JSONObject(new JSONTokener(new InputStreamReader(entity.getContent(), charset)));
+                response = new JSONObject(string);
+            }
+        } catch (Exception e) {
+            throw new RuntimeException(e);
+        }
+        return response;
+    }
+
+
+    public static JSONObject get(String url, JSONObject json) {
+        HttpClient client = new DefaultHttpClient();
+        HttpGet get = new HttpGet(url);
+        JSONObject response = null;
+        try {
+//            StringEntity s = new StringEntity(json.toString());
+//            s.setContentEncoding("UTF-8");
+//            s.setContentType("application/json");
+//            post.setEntity(s);
+
+            HttpResponse res = client.execute(get);
+            if (res.getStatusLine().getStatusCode() == 202) {
                 HttpEntity entity = res.getEntity();
                 String charset = EntityUtils.getContentCharSet(entity);
+                Log.i("leojiang", "response date, get method1:" + charset);
+                String string = EntityUtils.toString(entity, "utf-8");
+                Log.i("leojiang", "response date get method2:" + string);
 //                response = new JSONObject(new JSONTokener(new InputStreamReader(entity.getContent(), charset)));
+                response = new JSONObject(string);
             }
         } catch (Exception e) {
             throw new RuntimeException(e);

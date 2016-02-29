@@ -17,6 +17,9 @@ public class NetworkTask {
 
 
     public void execute() {
-        mJsonHandler.parse(NetworkRequest.post(url, json));
+        JSONObject result = NetworkRequest.post(url, json);
+        if (mJsonHandler != null) {
+            mJsonHandler.parse(result);
+        }
     }
 }

@@ -6,12 +6,12 @@ import java.util.concurrent.Executors;
 public class ThreadPoolManager {
     public ExecutorService singleThreadExecutor = Executors.newSingleThreadExecutor();
 
-    private ThreadPoolManager instance = null;
+    private static ThreadPoolManager instance = null;
 
     private ThreadPoolManager() {
     }
 
-    public ThreadPoolManager getInstance() {
+    public static ThreadPoolManager getInstance() {
         if (instance == null) {
             instance = new ThreadPoolManager();
         }
@@ -19,7 +19,7 @@ public class ThreadPoolManager {
         return instance;
     }
 
-    private void runTask(final NetworkTask task) {
+    public void runTask(final NetworkTask task) {
         if (!singleThreadExecutor.isShutdown() && !singleThreadExecutor.isTerminated()) {
             singleThreadExecutor.execute(new Runnable() {
                 @Override
