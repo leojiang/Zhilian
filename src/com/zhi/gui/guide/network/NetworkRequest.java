@@ -14,10 +14,8 @@ import org.apache.http.entity.StringEntity;
 import org.apache.http.impl.client.DefaultHttpClient;
 import org.apache.http.util.EntityUtils;
 import org.json.JSONObject;
-import org.json.JSONTokener;
 
 import java.io.IOException;
-import java.io.InputStreamReader;
 import java.io.UnsupportedEncodingException;
 import java.util.List;
 
@@ -94,7 +92,7 @@ public class NetworkRequest {
             HttpResponse res = client.execute(post);
             if (res.getStatusLine().getStatusCode() == 202) {
                 String string = EntityUtils.toString(res.getEntity(), "utf-8");
-                Log.i("TAG", "response date :" + string);
+                Log.i(TAG, "response date :" + string);
 //                response = new JSONObject(new JSONTokener(new InputStreamReader(entity.getContent(), charset)));
                 response = new JSONObject(string);
             }
