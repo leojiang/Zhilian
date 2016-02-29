@@ -52,6 +52,7 @@ public class ActivityLogin extends BaseActivity implements OnClickListener {
         int id = view.getId();
         switch (id) {
             case R.id.button_login:
+                login();
                 break;
             case R.id.forgot_password:
                 break;
@@ -68,5 +69,9 @@ public class ActivityLogin extends BaseActivity implements OnClickListener {
             case R.id.btn_share_weibo:
                 break;
         }
+    }
+
+    public void login() {
+
     }
 }

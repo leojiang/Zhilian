@@ -8,9 +8,6 @@ import com.zhi.gui.guide.data.JSONEntityBase;
 
 import org.json.JSONObject;
 
-/**
- * Created by admin on 2016/2/29.
- */
 public class FastJsonCommonHandler<T extends JSONEntityBase> {
     final String TAG = FastJsonCommonHandler.class.getSimpleName();
 
