@@ -7,9 +7,11 @@ import com.zhi.gui.guide.R;
 import com.zhi.gui.guide.adapter.CompetenceListAdapter;
 import com.zhi.gui.guide.adapter.IndustryListAdapter;
 import com.zhi.gui.guide.data.Competence;
+import com.zhi.gui.guide.view.RefreshableView;
 
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -21,18 +23,31 @@ public class FragmentLookAround extends Fragment {
     private ListView mListRanking;
     private List<String> mIndustryList;
     private List<Competence> mCompetenceList;
+    private RefreshableView mRefreshableView;
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
-            Bundle savedInstanceState) {
+                             Bundle savedInstanceState) {
         View root = inflater.inflate(R.layout.fragment_lookaround, null);
         mListIndustry = (ListView) root.findViewById(R.id.list_industry);
         mListRanking = (ListView) root.findViewById(R.id.list_ranking);
-        initView();
+        mRefreshableView = (RefreshableView) root.findViewById(R.id.refreshable_view);
+        mRefreshableView.setOnRefreshListener(new RefreshableView.PullToRefreshListener() {
+            @Override
+            public void onRefresh() {
+                try {
+                    Thread.sleep(3000);
+                } catch (InterruptedException e) {
+                    e.printStackTrace();
+                }
+            }
+        }, 0);
+
+        initListView();
         return root;
     }
 
-    private void initView() {
+    private void initListView() {
         mIndustryList = new ArrayList<String>();
         for (int i = 0; i < 20; i++) {
             mIndustryList.add("leo" + i);
