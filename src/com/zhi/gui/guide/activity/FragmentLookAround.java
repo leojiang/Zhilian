@@ -60,7 +60,7 @@ public class FragmentLookAround extends FragmentBase implements RefreshableView.
     public void onRefresh() {
         try {
             Thread.sleep(3000);
-            mCompetenceList.add(new Competence(31, "leo" + 31, (20 - 31) * 100));
+            mCompetenceList.add(0, new Competence(31, "leo" + 31, (20 - 31) * 100));
 
             mHandler.post(new Runnable() {
                 @Override

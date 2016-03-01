@@ -79,20 +79,26 @@ public class NetworkRequest {
 
             HttpResponse res = client.execute(post);
             int statusCode = res.getStatusLine().getStatusCode();
-            switch(statusCode) {
-                case 202:
-                    String string = EntityUtils.toString(res.getEntity(), "utf-8");
-                    Log.i(TAG, "response date :" + string);
-                    response = new JSONObject(string);
-                    break;
-                case 403://服务器拒绝请求
-                    break;
-                case 404://找不到请求的页面
-                    break;
-                case 408: //请求超时
-                    break;
-                default:
-                    break;
+            Log.i(TAG, "response statusCode :" + statusCode);
+            switch (statusCode) {
+            case 200:
+                String string = EntityUtils.toString(res.getEntity(), "utf-8");
+                response = new JSONObject(string);
+                Log.i(TAG, "response date :" + string);
+                break;
+            case 202:
+                String string1 = EntityUtils.toString(res.getEntity(), "utf-8");
+                response = new JSONObject(string1);
+                Log.i(TAG, "response date :" + string1);
+                break;
+            case 403:// 服务器拒绝请求
+                break;
+            case 404:// 找不到请求的页面
+                break;
+            case 408: // 请求超时
+                break;
+            default:
+                break;
             }
         } catch (IOException e) {
             e.printStackTrace();
