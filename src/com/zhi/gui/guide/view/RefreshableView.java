@@ -1,11 +1,12 @@
 package com.zhi.gui.guide.view;
 
+import com.zhi.gui.guide.R;
+
 import android.content.Context;
 import android.content.SharedPreferences;
 import android.os.AsyncTask;
 import android.preference.PreferenceManager;
 import android.util.AttributeSet;
-import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.MotionEvent;
 import android.view.View;
@@ -18,13 +19,6 @@ import android.widget.ListView;
 import android.widget.ProgressBar;
 import android.widget.TextView;
 
-import com.zhi.gui.guide.R;
-
-/**
- * 可进行下拉刷新的自定义控件。
- *
- * @author guolin
- */
 public class RefreshableView extends LinearLayout implements OnTouchListener {
 
     /**

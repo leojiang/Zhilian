@@ -59,6 +59,8 @@ public class ActivityMainTab extends FragmentActivity {
             public void onTabChanged(String tabId) {
             }
         });
+
+        mTabHost.setCurrentTab(3);
     }
 
     private View getTabItemView(int index) {

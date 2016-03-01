@@ -24,8 +24,8 @@ public class FragmentLookAround extends FragmentBase implements RefreshableView.
     private ListView mListRanking;
     private List<String> mIndustryList;
     private List<Competence> mCompetenceList;
-    private RefreshableView mRefreshableView;
     private CompetenceListAdapter mCompetenceListAdapter;
+    private RefreshableView mRefreshableView;
     private Handler mHandler = new Handler();
 
     @Override

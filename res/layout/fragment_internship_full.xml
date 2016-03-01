@@ -191,10 +191,17 @@
         </LinearLayout>
     </LinearLayout>
 
-    <ListView
-        android:id="@+id/list_internships"
+    <com.zhi.gui.guide.view.RefreshableView
+        android:id="@+id/refreshable_view"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:overScrollMode="never" />
+        android:layout_height="0dp"
+        android:layout_weight="1" >
+
+        <ListView
+            android:id="@+id/list_internships"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:overScrollMode="never" />
+    </com.zhi.gui.guide.view.RefreshableView>
 
 </LinearLayout>

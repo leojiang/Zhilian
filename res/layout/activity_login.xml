@@ -1,9 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-              android:layout_width="match_parent"
-              android:layout_height="match_parent"
-              android:background="@drawable/img_login_bg"
-              android:orientation="vertical">
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/img_login_bg"
+    android:orientation="vertical" >
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1" />
 
     <TextView
         android:layout_width="wrap_content"
@@ -11,10 +16,9 @@
         android:layout_gravity="center_horizontal"
         android:gravity="center"
         android:paddingBottom="50dp"
-        android:paddingTop="100dp"
         android:text="@string/log_text"
         android:textColor="@color/color_bg_white"
-        android:textSize="@dimen/text_size_21"/>
+        android:textSize="@dimen/text_size_21" />
 
     <EditText
         android:id="@+id/text_username"
@@ -27,13 +31,13 @@
         android:hint="用户名/手机/邮箱"
         android:paddingLeft="@dimen/padding_or_margin_size_5"
         android:textColorHint="@color/edit_text_hint_1"
-        android:textSize="@dimen/text_size_13"/>
+        android:textSize="@dimen/text_size_13" />
 
     <TextView
         android:layout_width="@dimen/list_item_width_14.5"
         android:layout_height="1px"
         android:layout_gravity="center_horizontal"
-        android:background="@drawable/edit_text_bottom_line"/>
+        android:background="@drawable/edit_text_bottom_line" />
 
     <EditText
         android:id="@+id/img_login_password"
@@ -47,13 +51,13 @@
         android:hint="请输入密码"
         android:paddingLeft="@dimen/padding_or_margin_size_5"
         android:textColorHint="@color/edit_text_hint_1"
-        android:textSize="@dimen/text_size_13"/>
+        android:textSize="@dimen/text_size_13" />
 
     <TextView
         android:layout_width="@dimen/list_item_width_14.5"
         android:layout_height="@dimen/padding_or_margin_size_1"
         android:layout_gravity="center_horizontal"
-        android:background="@drawable/edit_text_bottom_line"/>
+        android:background="@drawable/edit_text_bottom_line" />
 
     <TextView
         android:id="@+id/button_login"
@@ -66,14 +70,14 @@
         android:gravity="center"
         android:text="登       录"
         android:textColor="@color/color_text_blue"
-        android:textSize="@dimen/text_size_14"/>
+        android:textSize="@dimen/text_size_14" />
 
     <LinearLayout
         android:layout_width="@dimen/list_item_width_14.5"
         android:layout_height="wrap_content"
         android:layout_gravity="center"
         android:layout_marginTop="21dp"
-        android:gravity="center_vertical">
+        android:gravity="center_vertical" >
 
         <TextView
             android:id="@+id/btn_register"
@@ -83,7 +87,7 @@
             android:gravity="left"
             android:text="注册账号"
             android:textColor="#FFFFFF"
-            android:textSize="18dp"/>
+            android:textSize="18dp" />
 
         <TextView
             android:id="@+id/forgot_password"
@@ -93,34 +97,34 @@
             android:gravity="right"
             android:text="忘记密码"
             android:textColor="#FFFFFF"
-            android:textSize="@dimen/text_size_14"/>
+            android:textSize="@dimen/text_size_14" />
     </LinearLayout>
 
     <LinearLayout
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="32dp"
-        android:gravity="center">
+        android:gravity="center" >
 
         <TextView
             android:id="@+id/btn_share_weixin"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:background="@drawable/img_share_weixin"/>
+            android:background="@drawable/img_share_weixin" />
 
         <TextView
             android:id="@+id/btn_share_qq"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginLeft="40dp"
-            android:background="@drawable/img_share_qq"/>
+            android:background="@drawable/img_share_qq" />
 
         <TextView
             android:id="@+id/btn_share_weibo"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginLeft="40dp"
-            android:background="@drawable/img_share_weibo"/>
+            android:background="@drawable/img_share_weibo" />
     </LinearLayout>
 
     <TextView
@@ -133,6 +137,11 @@
         android:gravity="center"
         android:text="随便看看"
         android:textColor="@color/color_bg_white"
-        android:textSize="@dimen/text_size_13"/>
+        android:textSize="@dimen/text_size_13" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1" />
 
 </LinearLayout>

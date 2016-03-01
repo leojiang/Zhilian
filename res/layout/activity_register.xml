@@ -6,12 +6,16 @@
     android:orientation="vertical" >
 
     <TextView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1" />
+
+    <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="center_horizontal"
         android:gravity="center"
         android:paddingBottom="50dp"
-        android:paddingTop="100dp"
         android:text="@string/log_text"
         android:textColor="@color/color_bg_white"
         android:textSize="@dimen/text_size_21" />
@@ -87,5 +91,10 @@
         android:text="注       册"
         android:textColor="#00a6ff"
         android:textSize="@dimen/text_size_15" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1" />
 
 </LinearLayout>

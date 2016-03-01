@@ -7,39 +7,52 @@ import com.zhi.gui.guide.R;
 import com.zhi.gui.guide.adapter.IndustryListAdapter;
 import com.zhi.gui.guide.adapter.InternshipBriefAdapter;
 import com.zhi.gui.guide.adapter.InternshipFullAdapter;
+import com.zhi.gui.guide.data.Competence;
 import com.zhi.gui.guide.data.InternshipBrief;
 import com.zhi.gui.guide.data.InternshipFull;
+import com.zhi.gui.guide.view.RefreshableView;
 
 import android.os.Bundle;
+import android.os.Handler;
 import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ListView;
 
-public class FragmentInternship extends FragmentBase {
+public class FragmentInternship extends FragmentBase
+        implements RefreshableView.PullToRefreshListener {
 
     private ListView mListIndustry;
     private ListView mListInternships;
     private List<String> mIndustryList;
     private List<InternshipBrief> mInternshipBriefList;
     private List<InternshipFull> mInternshipFullList;
+    private InternshipBriefAdapter mBriefAdapter;
+    private InternshipFullAdapter mFullAdapter;
+    private IndustryListAdapter mIndustryAdapter;
+    private RefreshableView mRefreshableView;
 
     private boolean isLoggedIn = false;
 
     @Override
     protected View createView(LayoutInflater inflater) {
-        int flag = (int)System.currentTimeMillis() % 2;
+        int flag = (int) System.currentTimeMillis() % 2;
 
         View root;
         if (flag == 0) {
             root = inflater.inflate(R.layout.fragment_internship_brief, null);
             mListIndustry = (ListView) root.findViewById(R.id.list_industry);
-            mListInternships = (ListView) root.findViewById(R.id.list_internships);
-            initViewWhenLoggedIn();
         } else {
             root = inflater.inflate(R.layout.fragment_internship_full, null);
-            mListInternships = (ListView) root.findViewById(R.id.list_internships);
+        }
+        mListInternships = (ListView) root.findViewById(R.id.list_internships);
+        mRefreshableView = (RefreshableView) root.findViewById(R.id.refreshable_view);
+        mRefreshableView.setOnRefreshListener(this, 0);
+
+        if (flag == 0) {
+            initViewWhenLoggedIn();
+        } else {
             initViewWhenNotLoggedIn();
         }
 
@@ -51,15 +64,17 @@ public class FragmentInternship extends FragmentBase {
         for (int i = 0; i < 20; i++) {
             mIndustryList.add("leo" + i);
         }
-        mListIndustry.setAdapter(new IndustryListAdapter(getActivity(), mIndustryList));
+        mIndustryAdapter = new IndustryListAdapter(getActivity(), mIndustryList);
+        mListIndustry.setAdapter(mIndustryAdapter);
         mInternshipBriefList = new ArrayList<InternshipBrief>();
+
         for (int j = 0; j < 30; j++) {
             mInternshipBriefList.add(
                     new InternshipBrief("company" + j, "job" + j, "location" + j, (20 - j) * 100));
         }
 
-        mListInternships
-                .setAdapter(new InternshipBriefAdapter(getActivity(), mInternshipBriefList));
+        mBriefAdapter = new InternshipBriefAdapter(getActivity(), mInternshipBriefList);
+        mListInternships.setAdapter(mBriefAdapter);
     }
 
     private void initViewWhenNotLoggedIn() {
@@ -68,6 +83,16 @@ public class FragmentInternship extends FragmentBase {
             mInternshipFullList.add(new InternshipFull("company" + j, "job" + j, "location" + j,
                     (20 - j) * 100, "test_url", "15-25K"));
         }
-        mListInternships.setAdapter(new InternshipFullAdapter(getActivity(), mInternshipFullList));
+        mFullAdapter = new InternshipFullAdapter(getActivity(), mInternshipFullList);
+        mListInternships.setAdapter(mFullAdapter);
+    }
+
+    @Override
+    public void onRefresh() {
+        try {
+            Thread.sleep(3000);
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        }
     }
 }
