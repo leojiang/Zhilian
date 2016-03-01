@@ -18,7 +18,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ListView;
 
-public class FragmentLookAround extends Fragment implements RefreshableView.PullToRefreshListener {
+public class FragmentLookAround extends FragmentBase implements RefreshableView.PullToRefreshListener {
 
     private ListView mListIndustry;
     private ListView mListRanking;
@@ -26,29 +26,19 @@ public class FragmentLookAround extends Fragment implements RefreshableView.Pull
     private List<Competence> mCompetenceList;
     private RefreshableView mRefreshableView;
     private CompetenceListAdapter mCompetenceListAdapter;
-    private Handler mHandler = new Handler() {
-    };
-
-    private View mRootView;
+    private Handler mHandler = new Handler();
 
     @Override
-    public View onCreateView(LayoutInflater inflater, ViewGroup container,
-                             Bundle savedInstanceState) {
-        if (mRootView == null) {
-            mRootView = inflater.inflate(R.layout.fragment_lookaround, null);
-            mListIndustry = (ListView) mRootView.findViewById(R.id.list_industry);
-            mListRanking = (ListView) mRootView.findViewById(R.id.list_ranking);
-            mRefreshableView = (RefreshableView) mRootView.findViewById(R.id.refreshable_view);
-            mRefreshableView.setOnRefreshListener(this, 0);
+    protected View createView(LayoutInflater inflater) {
+        View root = inflater.inflate(R.layout.fragment_lookaround, null);
+        mListIndustry = (ListView) root.findViewById(R.id.list_industry);
+        mListRanking = (ListView) root.findViewById(R.id.list_ranking);
+        mRefreshableView = (RefreshableView) root.findViewById(R.id.refreshable_view);
+        mRefreshableView.setOnRefreshListener(this, 0);
 
-            initListView();
-        }
+        initListView();
 
-        ViewGroup parent = (ViewGroup) mRootView.getParent();
-        if (parent != null) {
-            parent.removeView(mRootView);
-        }
-        return mRootView;
+        return root;
     }
 
     private void initListView() {

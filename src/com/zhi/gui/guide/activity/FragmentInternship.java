@@ -17,7 +17,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ListView;
 
-public class FragmentInternship extends Fragment {
+public class FragmentInternship extends FragmentBase {
 
     private ListView mListIndustry;
     private ListView mListInternships;
@@ -28,11 +28,10 @@ public class FragmentInternship extends Fragment {
     private boolean isLoggedIn = false;
 
     @Override
-    public View onCreateView(LayoutInflater inflater, ViewGroup container,
-            Bundle savedInstanceState) {
-        View root;
+    protected View createView(LayoutInflater inflater) {
         int flag = (int)System.currentTimeMillis() % 2;
 
+        View root;
         if (flag == 0) {
             root = inflater.inflate(R.layout.fragment_internship_brief, null);
             mListIndustry = (ListView) root.findViewById(R.id.list_industry);
@@ -43,6 +42,7 @@ public class FragmentInternship extends Fragment {
             mListInternships = (ListView) root.findViewById(R.id.list_internships);
             initViewWhenNotLoggedIn();
         }
+
         return root;
     }
 

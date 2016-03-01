@@ -14,24 +14,24 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
-public class FragmentHomePage extends Fragment {
+public class FragmentHomePage extends FragmentBase {
 
     private ViewPager mViewPager;
     private ViewPagerIndicator mIndicator;
     private HomePageViewAdapter mViewPagerAdapter;
     private List<Fragment> mFragmentList;
     private List<String> mTitleList;
-    private View mRootView;
 
     @Override
-    public View onCreateView(LayoutInflater inflater, ViewGroup container,
-            Bundle savedInstanceState) {
-        mRootView = inflater.inflate(R.layout.fragment_homepage, null);
-        mViewPager = (ViewPager) mRootView.findViewById(R.id.view_pager);
-        mIndicator = (ViewPagerIndicator) mRootView.findViewById(R.id.viewpager_indicator);
+    protected View createView(LayoutInflater inflater) {
+        View root = inflater.inflate(R.layout.fragment_homepage, null);
+        mViewPager = (ViewPager) root.findViewById(R.id.view_pager);
+        mIndicator = (ViewPagerIndicator) root.findViewById(R.id.viewpager_indicator);
         initView();
+
         mViewPager.setCurrentItem(0);
-        return mRootView;
+
+        return root;
     }
 
     @Override

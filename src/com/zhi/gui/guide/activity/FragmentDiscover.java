@@ -10,12 +10,10 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
-public class FragmentDiscover extends Fragment {
+public class FragmentDiscover extends FragmentBase {
 
     @Override
-    public View onCreateView(LayoutInflater inflater, ViewGroup container,
-            Bundle savedInstanceState) {
-        Log.i("leojiang", "onCreateView");
+    protected View createView(LayoutInflater inflater) {
         return inflater.inflate(R.layout.fragment_discovery, null);
     }
 
