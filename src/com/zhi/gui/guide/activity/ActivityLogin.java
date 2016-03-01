@@ -8,6 +8,7 @@ import android.view.View.OnClickListener;
 import android.widget.EditText;
 
 import com.zhi.gui.guide.R;
+import com.zhi.gui.guide.network.NetRequestListener;
 import com.zhi.gui.guide.network.NetworkTask;
 import com.zhi.gui.guide.network.ThreadPoolManager;
 
@@ -79,6 +80,27 @@ public class ActivityLogin extends BaseActivity implements OnClickListener {
             JSONObject object = new JSONObject();
             object.put("ACTION", "fuck zhuangzhuang");
             NetworkTask task = new NetworkTask("http://139.196.240.222:55500/", object, null);
+            task.setNetRequestListener(new NetRequestListener() {
+                @Override
+                public void onSucceed() {
+
+                }
+
+                @Override
+                public void onFail() {
+
+                }
+
+                @Override
+                public void onTimeout() {
+
+                }
+
+                @Override
+                public void onError() {
+
+                }
+            });
             ThreadPoolManager.getInstance().runTask(task);
         } catch (JSONException e) {
             e.printStackTrace();

@@ -12,7 +12,10 @@ import org.apache.http.client.methods.HttpGet;
 import org.apache.http.client.methods.HttpPost;
 import org.apache.http.entity.StringEntity;
 import org.apache.http.impl.client.DefaultHttpClient;
+import org.apache.http.params.BasicHttpParams;
+import org.apache.http.params.HttpConnectionParams;
 import org.apache.http.util.EntityUtils;
+import org.json.JSONException;
 import org.json.JSONObject;
 
 import java.io.IOException;
@@ -42,47 +45,32 @@ public class NetworkRequest {
 
                 return response;
             } else {
-                Log.e("error", "Httpresponse error");
+                Log.e(TAG, "Httpresponse error");
             }
         } catch (UnsupportedEncodingException e) {
-            Log.e("error", e.toString());
+            Log.e(TAG, e.toString());
             e.printStackTrace();
         } catch (ClientProtocolException e) {
-            Log.e("error", e.toString());
+            Log.e(TAG, e.toString());
             e.printStackTrace();
         } catch (IOException e) {
-            Log.e("error", e.toString());
+            Log.e(TAG, e.toString());
             e.printStackTrace();
         }
         return "";
     }
 
+    public static JSONObject post(String url, JSONObject json, NetRequestListener listener) {
+        BasicHttpParams httpParams = new BasicHttpParams();
+        HttpConnectionParams.setConnectionTimeout(httpParams, 5000);
+        HttpConnectionParams.setSoTimeout(httpParams, 5000);
 
-//    public void test() {
-//        new Thread() {
-//            @Override
-//            public void run() {
-//                super.run();
-//                JSONObject object = new JSONObject();
-//                try {
-//                    Log.d(TAG, "DEBUG " + mRecvIdentifier);
-//                    object.put(Util.EXTRA_ROOM_NUM, roomNum);
-//                    System.out.println(object.toString());
-//                    List<NameValuePair> list = new ArrayList<NameValuePair>();
-//                    list.add(new BasicNameValuePair("closedata", object.toString()));
-//                    String ret = HttpUtil.PostUrl(HttpUtil.liveCloseUrl, list);
-//                    Log.d(TAG, "close room" + ret);
-//                } catch (JSONException e) {
-//                    e.printStackTrace();
-//                }
-//            }
-//        }.start();
-//    }
+        DefaultHttpClient client = new DefaultHttpClient();
+        client.setParams(httpParams);
 
-    public static JSONObject post(String url, JSONObject json) {
-        HttpClient client = new DefaultHttpClient();
         HttpPost post = new HttpPost(url);
         JSONObject response = null;
+
         try {
             StringEntity s = new StringEntity(json.toString());
             s.setContentEncoding("UTF-8");
@@ -90,43 +78,28 @@ public class NetworkRequest {
             post.setEntity(s);
 
             HttpResponse res = client.execute(post);
-            if (res.getStatusLine().getStatusCode() == 202) {
-                String string = EntityUtils.toString(res.getEntity(), "utf-8");
-                Log.i(TAG, "response date :" + string);
-//                response = new JSONObject(new JSONTokener(new InputStreamReader(entity.getContent(), charset)));
-                response = new JSONObject(string);
+            int statusCode = res.getStatusLine().getStatusCode();
+            switch(statusCode) {
+                case 202:
+                    String string = EntityUtils.toString(res.getEntity(), "utf-8");
+                    Log.i(TAG, "response date :" + string);
+                    response = new JSONObject(string);
+                    break;
+                case 403://服务器拒绝请求
+                    break;
+                case 404://找不到请求的页面
+                    break;
+                case 408: //请求超时
+                    break;
+                default:
+                    break;
             }
-        } catch (Exception e) {
-            throw new RuntimeException(e);
+        } catch (IOException e) {
+            e.printStackTrace();
+        } catch (JSONException e) {
+            e.printStackTrace();
         }
+
         return response;
     }
-
-
-    public static JSONObject get(String url, JSONObject json) {
-        HttpClient client = new DefaultHttpClient();
-        HttpGet get = new HttpGet(url);
-        JSONObject response = null;
-        try {
-//            StringEntity s = new StringEntity(json.toString());
-//            s.setContentEncoding("UTF-8");
-//            s.setContentType("application/json");
-//            post.setEntity(s);
-
-            HttpResponse res = client.execute(get);
-            if (res.getStatusLine().getStatusCode() == 202) {
-                HttpEntity entity = res.getEntity();
-                String charset = EntityUtils.getContentCharSet(entity);
-                Log.i("leojiang", "response date, get method1:" + charset);
-                String string = EntityUtils.toString(entity, "utf-8");
-                Log.i("leojiang", "response date get method2:" + string);
-//                response = new JSONObject(new JSONTokener(new InputStreamReader(entity.getContent(), charset)));
-                response = new JSONObject(string);
-            }
-        } catch (Exception e) {
-            throw new RuntimeException(e);
-        }
-        return response;
-    }
-
 }
