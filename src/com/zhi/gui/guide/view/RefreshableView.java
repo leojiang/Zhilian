@@ -91,52 +91,57 @@ public class RefreshableView extends LinearLayout implements OnTouchListener, Ab
     @Override
     public boolean onTouch(View v, MotionEvent event) {
         setIsAbleToPull(event);
-        if (ableToPull) {
-            switch (event.getAction()) {
-                case MotionEvent.ACTION_DOWN:
-                    yDown = event.getRawY();
-                    break;
-                case MotionEvent.ACTION_MOVE:
-                    float yMove = event.getRawY();
-                    int distance = (int) (yMove - yDown);
-                    // if header is hiding and finger is moving up, do nothing
-                    if (distance <= 0 && headerLayoutParams.topMargin <= hideHeaderHeight) {
-                        return false;
-                    }
-                    if (distance < touchSlop) {
-                        return false;
-                    }
-                    if (currentStatus != STATUS_REFRESHING) {
-                        if (headerLayoutParams.topMargin > 0) {
-                            currentStatus = STATUS_RELEASE_TO_REFRESH;
-                        } else {
-                            currentStatus = STATUS_PULL_TO_REFRESH;
-                        }
-                        //adjust header margin size in order to show animation.
-                        headerLayoutParams.topMargin = (distance / 2) + hideHeaderHeight;
-                        header.setLayoutParams(headerLayoutParams);
-                    }
-                    break;
-                case MotionEvent.ACTION_UP:
-                default:
-                    if (currentStatus == STATUS_RELEASE_TO_REFRESH) {
-                        new RefreshingTask().execute();
-                    } else if (currentStatus == STATUS_PULL_TO_REFRESH) {
-                        new HideHeaderTask().execute();
-                    }
-                    break;
-            }
-            if (currentStatus == STATUS_PULL_TO_REFRESH
-                    || currentStatus == STATUS_RELEASE_TO_REFRESH) {
-                updateHeaderView();
-                // remember to clear focus of ListView so that the highlighted item is reset to norma color.
-                listView.setPressed(false);
-                listView.setFocusable(false);
-                listView.setFocusableInTouchMode(false);
-                lastStatus = currentStatus;
-                // return true to intercept touch event of ListView.
-                return true;
-            }
+
+        if (!ableToPull) {
+            return false;
+        }
+
+        switch (event.getAction()) {
+            case MotionEvent.ACTION_DOWN:
+                yDown = event.getRawY();
+                break;
+            case MotionEvent.ACTION_MOVE:
+                float yMove = event.getRawY();
+                int distance = (int) (yMove - yDown);
+                // if header is hiding and finger is moving up, do nothing
+                if (distance <= 0 && headerLayoutParams.topMargin <= hideHeaderHeight) {
+                    return false;
+                }
+                if (distance < touchSlop) {
+                    return false;
+                }
+                if (currentStatus == STATUS_REFRESHING) {
+                    return false;
+                }
+
+                if (headerLayoutParams.topMargin > 0) {
+                    currentStatus = STATUS_RELEASE_TO_REFRESH;
+                } else {
+                    currentStatus = STATUS_PULL_TO_REFRESH;
+                }
+                //adjust header margin size in order to show animation.
+                headerLayoutParams.topMargin = (distance / 2) + hideHeaderHeight;
+                header.setLayoutParams(headerLayoutParams);
+                break;
+            case MotionEvent.ACTION_UP:
+            default:
+                if (currentStatus == STATUS_RELEASE_TO_REFRESH) {
+                    new RefreshingTask().execute();
+                } else if (currentStatus == STATUS_PULL_TO_REFRESH) {
+                    new HideHeaderTask().execute();
+                }
+                break;
+        }
+
+        if (currentStatus == STATUS_PULL_TO_REFRESH || currentStatus == STATUS_RELEASE_TO_REFRESH) {
+            updateHeaderView();
+            // remember to clear focus of ListView so that the highlighted item is reset to norma color.
+            listView.setPressed(false);
+            listView.setFocusable(false);
+            listView.setFocusableInTouchMode(false);
+            lastStatus = currentStatus;
+            // return true to intercept touch event of ListView.
+            return true;
         }
         return false;
     }
