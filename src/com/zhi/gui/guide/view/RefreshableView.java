@@ -202,25 +202,26 @@ public class RefreshableView extends LinearLayout implements OnTouchListener, Ab
     }
 
     private void updateHeaderView() {
-        if (lastStatus != currentStatus) {
-            if (currentStatus == STATUS_PULL_TO_REFRESH) {
-                description.setText(getResources().getString(R.string.pull_to_refresh));
-                headArrow.setVisibility(View.VISIBLE);
-                headerProgress.setVisibility(View.GONE);
-                rotateArrow();
-            } else if (currentStatus == STATUS_RELEASE_TO_REFRESH) {
-                description.setText(getResources().getString(R.string.release_to_refresh));
-                headArrow.setVisibility(View.VISIBLE);
-                headerProgress.setVisibility(View.GONE);
-                rotateArrow();
-            } else if (currentStatus == STATUS_REFRESHING) {
-                description.setText(getResources().getString(R.string.refreshing));
-                headerProgress.setVisibility(View.VISIBLE);
-                headArrow.clearAnimation();
-                headArrow.setVisibility(View.GONE);
-            }
-            refreshUpdatedAtValue();
+        if (lastStatus == currentStatus)
+            return;
+
+        if (currentStatus == STATUS_PULL_TO_REFRESH) {
+            description.setText(getResources().getString(R.string.pull_to_refresh));
+            headArrow.setVisibility(View.VISIBLE);
+            headerProgress.setVisibility(View.GONE);
+            rotateArrow();
+        } else if (currentStatus == STATUS_RELEASE_TO_REFRESH) {
+            description.setText(getResources().getString(R.string.release_to_refresh));
+            headArrow.setVisibility(View.VISIBLE);
+            headerProgress.setVisibility(View.GONE);
+            rotateArrow();
+        } else if (currentStatus == STATUS_REFRESHING) {
+            description.setText(getResources().getString(R.string.refreshing));
+            headerProgress.setVisibility(View.VISIBLE);
+            headArrow.clearAnimation();
+            headArrow.setVisibility(View.GONE);
         }
+        refreshUpdatedAtValue();
     }
 
     private void rotateArrow() {
