@@ -9,16 +9,12 @@ import com.zhi.gui.guide.adapter.IndustryListAdapter;
 import com.zhi.gui.guide.data.Competence;
 import com.zhi.gui.guide.view.RefreshableView;
 
-import android.os.Bundle;
 import android.os.Handler;
-import android.support.v4.app.Fragment;
-import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
-import android.view.ViewGroup;
 import android.widget.ListView;
 
-public class FragmentLookAround extends FragmentBase implements RefreshableView.PullToRefreshListener {
+public class FragmentLookAround extends FragmentBase implements RefreshableView.RefreshAndLoadListener {
 
     private ListView mListIndustry;
     private ListView mListRanking;
@@ -60,7 +56,9 @@ public class FragmentLookAround extends FragmentBase implements RefreshableView.
     public void onRefresh() {
         try {
             Thread.sleep(3000);
-            mCompetenceList.add(0, new Competence(31, "leo" + 31, (20 - 31) * 100));
+            for(int i = 0; i < 2; i++) {
+                mCompetenceList.add(0, new Competence(31, "leo" + 31, (20 - 31) * 100));
+            }
 
             mHandler.post(new Runnable() {
                 @Override
@@ -74,4 +72,23 @@ public class FragmentLookAround extends FragmentBase implements RefreshableView.
         }
     }
 
+    @Override
+    public void onLoad() {
+        try {
+            Thread.sleep(3000);
+            for(int i = 0; i < 5; i++) {
+                mCompetenceList.add(new Competence(2, "leo" + 31, (20 - 31) * 100));
+            }
+
+            mHandler.post(new Runnable() {
+                @Override
+                public void run() {
+                    mCompetenceListAdapter.notifyDataSetChanged();
+                }
+            });
+
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        }
+    }
 }

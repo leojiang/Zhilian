@@ -7,21 +7,16 @@ import com.zhi.gui.guide.R;
 import com.zhi.gui.guide.adapter.IndustryListAdapter;
 import com.zhi.gui.guide.adapter.InternshipBriefAdapter;
 import com.zhi.gui.guide.adapter.InternshipFullAdapter;
-import com.zhi.gui.guide.data.Competence;
 import com.zhi.gui.guide.data.InternshipBrief;
 import com.zhi.gui.guide.data.InternshipFull;
 import com.zhi.gui.guide.view.RefreshableView;
 
-import android.os.Bundle;
-import android.os.Handler;
-import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
-import android.view.ViewGroup;
 import android.widget.ListView;
 
 public class FragmentInternship extends FragmentBase
-        implements RefreshableView.PullToRefreshListener {
+        implements RefreshableView.RefreshAndLoadListener {
 
     private ListView mListIndustry;
     private ListView mListInternships;
@@ -94,5 +89,10 @@ public class FragmentInternship extends FragmentBase
         } catch (InterruptedException e) {
             e.printStackTrace();
         }
+    }
+
+    @Override
+    public void onLoad() {
+
     }
 }
