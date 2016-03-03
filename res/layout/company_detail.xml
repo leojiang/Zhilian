@@ -90,7 +90,7 @@
                 <com.zhi.gui.guide.view.HorizontalListView
                     android:id="@+id/gallery"
                     android:layout_width="match_parent"
-                    android:layout_height="100dp"/>
+                    android:layout_height="110dp"/>
             </LinearLayout>
         </ScrollView>
 

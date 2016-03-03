@@ -8,6 +8,7 @@ import android.view.ViewGroup;
 import android.widget.BaseAdapter;
 import android.widget.ImageView;
 
+import com.squareup.picasso.Picasso;
 import com.zhi.gui.guide.R;
 
 import java.util.List;
@@ -46,8 +47,8 @@ public class ImageListAdapter extends BaseAdapter {
         if (convertView == null) {
             convertView = mInflater.inflate(R.layout.image_list_item, null);
         }
-        ImageView iamgeView = (ImageView) convertView.findViewById(R.id.imageview);
-        iamgeView.setImageResource(R.drawable.ic_launcher);
+        ImageView imageView = (ImageView) convertView.findViewById(R.id.imageview);
+        Picasso.with(mContext).load(imageUrlList.get(position)).into(imageView);
 
         return convertView;
     }

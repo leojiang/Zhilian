@@ -45,9 +45,20 @@ public class CompanyActivity extends BaseActivity implements View.OnClickListene
     }
 
     private void initGallery() {
-        for (int i = 0; i < 10; i++) {
-            mImageURLs.add(" ");
-        }
+        mImageURLs.add("http://pic37.nipic.com/20140121/7180085_092436783000_2.jpg");
+        mImageURLs.add("http://a2.att.hudong.com/14/06/20300001244055130863068274072.jpg");
+        mImageURLs.add("http://img2.imgtn.bdimg.com/it/u=1062894030,187965380&fm=21&gp=0.jpg");
+        mImageURLs.add("http://mg.soupingguo.com/bizhi/big/10/054/203/10054203.jpg");
+        mImageURLs.add("http://a0.att.hudong.com/51/47/01300000098168123480478377186.jpg");
+        mImageURLs.add("http://pic33.nipic.com/20131011/2531170_115542187000_2.jpg");
+        mImageURLs.add("http://pica.nipic.com/2007-11-15/20071115132542605_2.jpg");
+        mImageURLs.add("http://pic20.nipic.com/20120406/6113596_150042568000_2.jpg");
+        mImageURLs.add("http://5.66825.com/download/pic/000/326/719d548e256e2677aeb91a7a9c464571.jpg");
+        mImageURLs.add("http://i1.17173cdn.com/9ih5jd/YWxqaGBf/forum/images/2014/08/01/231302zkvvgn1ng0lnglzn.jpg");
+        mImageURLs.add("http://www.bz55.com/uploads/allimg/101227/1_101227162638_1.jpg");
+        mImageURLs.add("http://www.impcas.ac.cn/kxcb/kxtp/201010/W020101028494020681011.jpg");
+
+
         mGallery.setAdapter(new ImageListAdapter(this, mImageURLs));
     }
 

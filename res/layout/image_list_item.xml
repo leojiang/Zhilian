@@ -6,8 +6,12 @@
 
     <ImageView
         android:id="@+id/imageview"
+        android:layout_marginTop="@dimen/padding_or_margin_size_3"
+        android:layout_marginLeft="@dimen/padding_or_margin_size_3"
+        android:layout_marginRight="@dimen/padding_or_margin_size_3"
+        android:layout_marginBottom="@dimen/padding_or_margin_size_3"
         android:layout_width="100dp"
         android:layout_height="100dp"
-        android:scaleType="centerInside"/>
+        android:scaleType="centerCrop"/>
 
 </LinearLayout>
