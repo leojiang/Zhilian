@@ -78,7 +78,7 @@
             android:background="@drawable/button_bg_green"
             android:gravity="center"
             android:text="@string/text_next_step"
-            android:textColor="#FFFFFF"
+            android:textColor="@color/color_bg_white"
             android:textSize="@dimen/text_size_14" />
 
         <TextView

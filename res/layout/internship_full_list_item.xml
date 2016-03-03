@@ -8,10 +8,11 @@
     android:padding="@dimen/padding_or_margin_size_5" >
 
     <ImageView
+        android:src="@drawable/ic_launcher"
+        android:scaleType="centerInside"
         android:id="@+id/avatar"
         android:layout_width="50dp"
-        android:layout_height="50dp"
-        android:background="#FF0000" />
+        android:layout_height="50dp"/>
 
     <LinearLayout
         android:paddingLeft="@dimen/padding_or_margin_size_5"

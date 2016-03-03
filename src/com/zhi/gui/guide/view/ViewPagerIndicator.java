@@ -160,7 +160,7 @@ public class ViewPagerIndicator extends LinearLayout {
         View view = getChildAt(position);
         if (view instanceof TextView) {
             ((TextView) view).setTextColor(COLOR_TEXT_HIGHLIGHTCOLOR);
-            view.setBackgroundColor(getResources().getColor(R.color.viewpager_tab_selected));
+            view.setBackgroundColor(getResources().getColor(R.color.color_shllow_blue));
         }
 
     }

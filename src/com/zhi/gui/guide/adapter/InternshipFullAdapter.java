@@ -12,6 +12,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.BaseAdapter;
+import android.widget.ImageView;
 import android.widget.TextView;
 
 public class InternshipFullAdapter extends BaseAdapter {
@@ -71,6 +72,7 @@ public class InternshipFullAdapter extends BaseAdapter {
     }
 
     private static class ViewHolder {
+        ImageView headImageUrl;
         TextView companyName;
         TextView jobTitle;
         TextView location;

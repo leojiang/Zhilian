@@ -4,7 +4,7 @@
     <color name="edit_text__bg">#00000000</color>
     <color name="edit_text_hint_1">#cccccc</color>
     <color name="tab_host_bg_color">#F5F5F5</color>
-    <color name="viewpager_tab_selected">#87CEFA</color>
+    <color name="color_shllow_blue">#87CEFA</color>
     <color name="viewpager_tab_unselected">#FFFFFFFF</color>
     <color name="tab_page_bottom_color">#fafafa</color>
     <color name="tab_page_content_bg">#FFFFFF</color>

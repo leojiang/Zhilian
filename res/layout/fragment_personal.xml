@@ -6,8 +6,7 @@
 
     <RelativeLayout
         android:layout_width="match_parent"
-        android:layout_height="230dp"
-        android:background="#00F0F0" >
+        android:layout_height="210dp" >
 
         <ImageView
             android:id="@+id/imageview"
@@ -147,6 +146,7 @@
             android:text="职业规划\n积“龟”步以至千里" />
 
         <LinearLayout
+            android:padding="@dimen/padding_or_margin_size_5"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:orientation="vertical" >

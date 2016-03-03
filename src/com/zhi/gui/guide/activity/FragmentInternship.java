@@ -11,12 +11,14 @@ import com.zhi.gui.guide.data.InternshipBrief;
 import com.zhi.gui.guide.data.InternshipFull;
 import com.zhi.gui.guide.view.RefreshableView;
 
+import android.content.Intent;
 import android.view.LayoutInflater;
 import android.view.View;
+import android.widget.AdapterView;
 import android.widget.ListView;
 
 public class FragmentInternship extends FragmentBase
-        implements RefreshableView.RefreshAndLoadListener {
+        implements RefreshableView.RefreshAndLoadListener, AdapterView.OnItemClickListener {
 
     private ListView mListIndustry;
     private ListView mListInternships;
@@ -32,20 +34,21 @@ public class FragmentInternship extends FragmentBase
 
     @Override
     protected View createView(LayoutInflater inflater) {
-        int flag = (int) System.currentTimeMillis() % 2;
+//        int flag = (int) System.currentTimeMillis() % 2;
 
         View root;
-        if (flag == 0) {
+        if (isLoggedIn) {
             root = inflater.inflate(R.layout.fragment_internship_brief, null);
             mListIndustry = (ListView) root.findViewById(R.id.list_industry);
         } else {
             root = inflater.inflate(R.layout.fragment_internship_full, null);
         }
         mListInternships = (ListView) root.findViewById(R.id.list_internships);
+        mListInternships.setOnItemClickListener(this);
         mRefreshableView = (RefreshableView) root.findViewById(R.id.refreshable_view);
         mRefreshableView.setOnRefreshListener(this, 0);
 
-        if (flag == 0) {
+        if (isLoggedIn) {
             initViewWhenLoggedIn();
         } else {
             initViewWhenNotLoggedIn();
@@ -80,6 +83,11 @@ public class FragmentInternship extends FragmentBase
         }
         mFullAdapter = new InternshipFullAdapter(getActivity(), mInternshipFullList);
         mListInternships.setAdapter(mFullAdapter);
+    }
+
+    @Override
+    public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+        startActivity(new Intent(getActivity(), InternshipDetailActivity.class));
     }
 
     @Override
