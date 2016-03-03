@@ -82,11 +82,13 @@
             android:textSize="@dimen/text_size_14"/>
 
         <TextView
+            android:id="@+id/follow"
+            android:clickable="true"
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_marginLeft="@dimen/padding_or_margin_size_5"
             android:layout_weight="1"
-            android:background="@drawable/button_bg_orange"
+            android:background="@drawable/button_bg_selector"
             android:gravity="center"
             android:text="现在关注"
             android:textColor="@color/color_bg_white"

@@ -13,15 +13,14 @@
     <android.support.v4.app.FragmentTabHost
         android:id="@android:id/tabhost"
         android:layout_width="fill_parent"
-        android:layout_height="50dp"
+        android:layout_height="60dp"
         android:paddingTop="@dimen/padding_or_margin_size_5"
         android:background="@color/tab_host_bg_color">
 
         <FrameLayout
             android:id="@android:id/tabcontent"
-            android:layout_width="0dp"
-            android:layout_height="0dp"
-            android:layout_weight="0" />
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"/>
     </android.support.v4.app.FragmentTabHost>
 
 </LinearLayout>

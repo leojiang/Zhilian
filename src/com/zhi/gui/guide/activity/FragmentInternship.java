@@ -87,7 +87,7 @@ public class FragmentInternship extends FragmentBase
 
     @Override
     public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
-        startActivity(new Intent(getActivity(), InternshipDetailActivity.class));
+        startActivity(new Intent(getActivity(), ActivityInternshipDetail.class));
     }
 
     @Override

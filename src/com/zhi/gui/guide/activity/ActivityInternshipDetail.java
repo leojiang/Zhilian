@@ -6,9 +6,10 @@ import android.view.View;
 
 import com.zhi.gui.guide.R;
 
-public class InternshipDetailActivity extends BaseActivity implements View.OnClickListener {
+public class ActivityInternshipDetail extends BaseActivity implements View.OnClickListener {
 
     private View mCompanyDescription;
+    private View mBtnFollow;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -17,6 +18,9 @@ public class InternshipDetailActivity extends BaseActivity implements View.OnCli
 
         mCompanyDescription = findViewById(R.id.company_description);
         mCompanyDescription.setOnClickListener(this);
+
+        mBtnFollow = findViewById(R.id.follow);
+        mBtnFollow.setOnClickListener(this);
     }
 
     @Override
@@ -25,6 +29,8 @@ public class InternshipDetailActivity extends BaseActivity implements View.OnCli
         switch (id) {
             case R.id.company_description:
                 startActivity(new Intent(this, CompanyActivity.class));
+                break;
+            case R.id.follow:
                 break;
         }
 

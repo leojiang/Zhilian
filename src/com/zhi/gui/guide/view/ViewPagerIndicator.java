@@ -153,6 +153,7 @@ public class ViewPagerIndicator extends LinearLayout {
             }
         });
         mViewPager.setCurrentItem(pos);
+        resetTextViewColor();
         highLightTextView(pos);
     }
 

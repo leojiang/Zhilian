@@ -36,7 +36,7 @@
             android:name="com.zhi.gui.guide.activity.ActivityChooseIndustry">
         </activity>
         <activity
-            android:name="com.zhi.gui.guide.activity.InternshipDetailActivity">
+            android:name=".activity.ActivityInternshipDetail">
         </activity>
         <activity
             android:name="com.zhi.gui.guide.activity.CompanyActivity">
