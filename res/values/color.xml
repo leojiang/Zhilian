@@ -2,7 +2,7 @@
 <resources>
 
     <color name="edit_text__bg">#00000000</color>
-    <color name="edit_text_hint_1">#cccccc</color>
+    <color name="edit_text_hint_1">#d6edf7</color>
     <color name="tab_host_bg_color">#339933</color>
     <color name="color_shllow_blue">#87CEFA</color>
     <color name="viewpager_tab_unselected">#FFFFFFFF</color>
