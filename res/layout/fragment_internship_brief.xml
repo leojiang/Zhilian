@@ -3,67 +3,104 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/tab_page_bottom_color"
-    android:baselineAligned="false" >
+    android:baselineAligned="false"
+    android:orientation="vertical">
 
     <LinearLayout
-        android:layout_width="0dp"
-        android:layout_height="match_parent"
-        android:layout_marginTop="@dimen/padding_or_margin_size_3"
-        android:layout_weight="2"
-        android:orientation="vertical" >
+        android:layout_width="match_parent"
+        android:layout_height="44dp"
+        android:background="#fafafa">
+
+        <ImageView
+            android:layout_width="44dp"
+            android:layout_height="44dp"
+            android:background="@drawable/selector_navigation_bg"
+            android:clickable="true"
+            android:scaleType="centerInside"
+            android:src="@drawable/navigation_back_img" />
 
         <TextView
-            android:layout_width="match_parent"
-            android:layout_height="@dimen/list_item_height_15"
-            android:background="@color/tab_page_content_bg"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
             android:gravity="center"
-            android:text="@string/title_industry"
+            android:text="实习"
             android:textColor="@color/text_black"
-            android:textSize="@dimen/text_size_13" />
+            android:textSize="@dimen/text_size_15" />
 
-        <ListView
-            android:id="@+id/list_industry"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="@dimen/padding_or_margin_size_3"
-            android:divider="#00000000"
-            android:overScrollMode="never"
-            android:scrollbars="none" />
+        <ImageView
+            android:layout_width="44dp"
+            android:layout_height="44dp"
+            android:background="@drawable/selector_navigation_bg"
+            android:clickable="true"
+            android:scaleType="centerInside"
+            android:src="@drawable/navigation_more_img" />
     </LinearLayout>
 
     <LinearLayout
-        android:layout_width="0dp"
-        android:layout_height="match_parent"
-        android:layout_marginLeft="@dimen/padding_or_margin_size_3"
-        android:layout_marginTop="@dimen/padding_or_margin_size_3"
-        android:layout_weight="3"
-        android:orientation="vertical" >
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
 
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="@dimen/list_item_height_15"
-            android:background="@color/tab_page_content_bg"
-            android:gravity="center"
-            android:text="实习机会"
-            android:textColor="@color/text_black"
-            android:textSize="@dimen/text_size_13" />
 
-        <com.zhi.gui.guide.view.RefreshableView
-            android:id="@+id/refreshable_view"
-            android:layout_width="match_parent"
-            android:layout_height="0dp"
-            android:layout_weight="1" >
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_marginTop="@dimen/padding_or_margin_size_3"
+            android:layout_weight="2"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/list_item_height_15"
+                android:background="@color/tab_page_content_bg"
+                android:gravity="center"
+                android:text="@string/title_industry"
+                android:textColor="@color/text_black"
+                android:textSize="@dimen/text_size_13" />
 
             <ListView
-                android:id="@+id/list_internships"
+                android:id="@+id/list_industry"
                 android:layout_width="match_parent"
-                android:layout_height="0dp"
+                android:layout_height="wrap_content"
                 android:layout_marginTop="@dimen/padding_or_margin_size_3"
-                android:layout_weight="1"
                 android:divider="#00000000"
                 android:overScrollMode="never"
                 android:scrollbars="none" />
-        </com.zhi.gui.guide.view.RefreshableView>
-    </LinearLayout>
+        </LinearLayout>
 
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="@dimen/padding_or_margin_size_3"
+            android:layout_marginTop="@dimen/padding_or_margin_size_3"
+            android:layout_weight="3"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/list_item_height_15"
+                android:background="@color/tab_page_content_bg"
+                android:gravity="center"
+                android:text="实习机会"
+                android:textColor="@color/text_black"
+                android:textSize="@dimen/text_size_13" />
+
+            <com.zhi.gui.guide.view.RefreshableView
+                android:id="@+id/refreshable_view"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1">
+
+                <ListView
+                    android:id="@+id/list_internships"
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_marginTop="@dimen/padding_or_margin_size_3"
+                    android:layout_weight="1"
+                    android:divider="#00000000"
+                    android:overScrollMode="never"
+                    android:scrollbars="none" />
+            </com.zhi.gui.guide.view.RefreshableView>
+        </LinearLayout>
+    </LinearLayout>
 </LinearLayout>
