@@ -17,4 +17,7 @@
     <color name="text_black">#333333</color>
     <color name="edit_text_hint_2">#cccccc</color>
 
+    <color name="color_navigation_bg">#fafafa</color>
+    <color name="color_selected_bg">#eef6f3</color>
+
 </resources>
