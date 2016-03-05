@@ -3,7 +3,15 @@
     android:layout_width="fill_parent"
     android:layout_height="fill_parent"
     android:orientation="vertical" >
-
+    
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="43dp">
+        <ImageView
+            android:src=""
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"/>
+    </LinearLayout>
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="210dp" >
@@ -11,8 +19,8 @@
         <ImageView
             android:id="@+id/imageview"
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:scaleType="fitStart"
+            android:layout_height="194dp"
+            android:scaleType="centerInside"
             android:src="@drawable/advertisement" >
         </ImageView>
 

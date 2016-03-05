@@ -13,13 +13,13 @@
         android:textSize="@dimen/text_size_15" />
 
     <TextView
-        android:layout_marginTop="20dp"
+        android:layout_marginTop="@dimen/padding_or_margin_size_10"
+        android:gravity="center"
         android:background="@drawable/button_bg_white"
-        android:padding="@dimen/padding_or_margin_size_5"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="@dimen/list_item_width_12"
+        android:layout_height="@dimen/list_item_height_12"
         android:text="登陆/注册"
         android:textColor="@color/color_bg_white"
-        android:textSize="@dimen/text_size_15" />
+        android:textSize="@dimen/text_size_13.5" />
 
 </LinearLayout>

@@ -77,7 +77,8 @@ public class ActivityMainTab extends FragmentActivity {
     private void updateTabBackground(final TabHost tabHost) {
         for (int i = 0; i < tabHost.getTabWidget().getChildCount(); i++) {
             View view = tabHost.getTabWidget().getChildAt(i);
-            view.setBackgroundColor(getResources().getColor(R.color.tab_host_bg_color));
+//            view.setBackgroundColor(getResources().getColor(R.color.tab_host_bg_color));
+            view.setBackgroundDrawable(getResources().getDrawable(R.drawable.selector_tab_background));
         }
     }
 }
