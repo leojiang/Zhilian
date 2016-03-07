@@ -37,17 +37,15 @@
     <ImageView
         android:id="@+id/imageview"
         android:layout_width="match_parent"
-        android:layout_height="210dp"
+        android:layout_height="wrap_content"
         android:scaleType="fitStart"
         android:src="@drawable/advertisement">
     </ImageView>
 
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="@dimen/list_item_height_13"
+        android:layout_height="@dimen/list_item_height_14"
         android:layout_marginBottom="@dimen/padding_or_margin_size_5"
-        android:layout_marginLeft="@dimen/padding_or_margin_size_5"
-        android:layout_marginRight="@dimen/padding_or_margin_size_5"
         android:layout_marginTop="@dimen/padding_or_margin_size_5">
 
         <TextView
@@ -58,7 +56,7 @@
             android:gravity="center"
             android:text="职位名称"
             android:textColor="@color/color_bg_white"
-            android:textSize="@dimen/text_size_14"/>
+            android:textSize="16dp"/>
 
         <TextView
             android:layout_width="0dp"
@@ -66,10 +64,13 @@
             android:layout_weight="1"
             android:gravity="center"
             android:text="求职分数"
-            android:textSize="@dimen/text_size_14"/>
+            android:textSize="16dp"/>
     </LinearLayout>
 
     <TextView
+        android:padding="10dp"
+        android:textColor="#666666"
+        android:textSize="10dp"
         android:id="@+id/job_description"
         android:layout_width="match_parent"
         android:layout_height="100dp"/>
@@ -78,13 +79,15 @@
         android:paddingLeft="@dimen/padding_or_margin_size_10"
         android:gravity="center_vertical"
         android:text="XXX科技有限公司"
-        android:textSize="@dimen/text_size_14"
+        android:textSize="16dp"
         android:background="#55CCCCCC"
         android:id="@+id/company_name"
         android:layout_width="match_parent"
-        android:layout_height="50dp"/>
+        android:layout_height="40dp"/>
 
     <TextView
+        android:padding="10dp"
+        android:textSize="10dp"
         android:textColor="@color/color_bg_red"
         android:gravity="center"
         android:text="点我试试~~"
@@ -95,11 +98,11 @@
 
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="@dimen/list_item_height_13"
-        android:layout_marginBottom="@dimen/padding_or_margin_size_10"
-        android:layout_marginTop="@dimen/padding_or_margin_size_10"
-        android:paddingLeft="@dimen/padding_or_margin_size_10"
-        android:paddingRight="@dimen/padding_or_margin_size_10">
+        android:layout_height="@dimen/list_item_height_14"
+        android:layout_marginBottom="23dp"
+        android:layout_marginTop="30dp"
+        android:layout_marginLeft="13dp"
+        android:layout_marginRight="13dp">
 
         <TextView
             android:layout_width="0dp"
@@ -116,7 +119,7 @@
             android:clickable="true"
             android:layout_width="0dp"
             android:layout_height="match_parent"
-            android:layout_marginLeft="@dimen/padding_or_margin_size_5"
+            android:layout_marginLeft="13dp"
             android:layout_weight="1"
             android:background="@drawable/button_bg_selector"
             android:gravity="center"
