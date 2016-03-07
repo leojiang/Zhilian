@@ -6,10 +6,9 @@
     <TextView
         android:id="@+id/text"
         android:background="@color/tab_page_content_bg"
-        android:textSize="@dimen/text_size_14"
+        android:textSize="@dimen/text_size_12"
         android:gravity="center"
         android:layout_width="match_parent"
-        android:layout_marginTop="@dimen/padding_or_margin_size_1"
         android:layout_height="@dimen/list_item_height_15"/>
 
 </LinearLayout>

@@ -3,11 +3,16 @@ package com.zhi.gui.guide.activity;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.os.Handler;
+import android.text.TextUtils;
 import android.view.View;
 import android.view.View.OnClickListener;
 import android.widget.EditText;
+import android.widget.Toast;
 
 import com.zhi.gui.guide.R;
+import com.zhi.gui.guide.common.Constants;
+import com.zhi.gui.guide.common.Preferences;
 import com.zhi.gui.guide.network.NetRequestListener;
 import com.zhi.gui.guide.network.NetworkTask;
 import com.zhi.gui.guide.network.ThreadPoolManager;
@@ -25,11 +30,15 @@ public class ActivityLogin extends BaseActivity implements OnClickListener {
     private View mBtnShareWeixin;
     private View mBtnShareQQ;
     private View mBtnShareWeibo;
+    private boolean mIsFromMain = false;
+    private int mBackKeyPressedCount = 0;
 
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        mIsFromMain = getIntent().getBooleanExtra(Constants.KEY_IS_LOGIN_FROM_MAIN, false);
+
         setContentView(R.layout.activity_login);
 
         mEditTextUsername = (EditText) findViewById(R.id.text_username);
@@ -48,6 +57,14 @@ public class ActivityLogin extends BaseActivity implements OnClickListener {
         mBtnLookRound.setOnClickListener(this);
         mBtnRegister = findViewById(R.id.btn_register);
         mBtnRegister.setOnClickListener(this);
+
+        setViewVisibility();
+    }
+
+    private void setViewVisibility() {
+        if (mIsFromMain) {
+            mBtnLookRound.setVisibility(View.GONE);
+        }
     }
 
 
@@ -56,7 +73,18 @@ public class ActivityLogin extends BaseActivity implements OnClickListener {
         int id = view.getId();
         switch (id) {
             case R.id.button_login:
-                login();
+//                login();
+                if (!TextUtils.isEmpty(mEditTextUsername.getText().toString())) {
+                    Preferences.setUserLoggedInState(getApplicationContext(), true);
+                } else {
+                    Preferences.setUserLoggedInState(getApplicationContext(), false);
+                }
+                if (mIsFromMain) {
+                    sendBroadcast(new Intent(FragmentBase.BROADCAST_USER_LOG_IN));
+                } else {
+                    startActivity(new Intent(this, ActivityMainTab.class));
+                }
+                finish();
                 break;
             case R.id.forgot_password:
                 break;
@@ -64,6 +92,7 @@ public class ActivityLogin extends BaseActivity implements OnClickListener {
                 startActivity(new Intent(getApplicationContext(), ActivityRegister.class));
                 break;
             case R.id.text_lookaround:
+                Preferences.setUserLoggedInState(getApplicationContext(), false);
                 startActivity(new Intent(getApplicationContext(), ActivityMainTab.class));
                 break;
             case R.id.btn_share_weixin:
@@ -104,6 +133,22 @@ public class ActivityLogin extends BaseActivity implements OnClickListener {
             ThreadPoolManager.getInstance().runTask(task);
         } catch (JSONException e) {
             e.printStackTrace();
+        }
+    }
+
+    @Override
+    public void onBackPressed() {
+        if (mBackKeyPressedCount == 0) {
+            mBackKeyPressedCount++;
+            new Handler().postDelayed(new Runnable() {
+                @Override
+                public void run() {
+                    mBackKeyPressedCount = 0;
+                }
+            }, 2000);
+            Toast.makeText(this, "再按一次退出", Toast.LENGTH_SHORT).show();
+        } else {
+            finish();
         }
     }
 }

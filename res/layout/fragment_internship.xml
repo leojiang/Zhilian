@@ -1,13 +1,15 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:layout_width="fill_parent"
-    android:layout_height="fill_parent"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
     android:orientation="vertical">
 
     <LinearLayout
+        android:id="@+id/navigation"
         android:layout_width="match_parent"
         android:layout_height="44dp"
-        android:background="#fafafa">
+        android:background="#fafafa"
+        android:visibility="gone">
 
         <ImageView
             android:layout_width="44dp"
@@ -22,7 +24,7 @@
             android:layout_height="match_parent"
             android:layout_weight="1"
             android:gravity="center"
-            android:text="首页"
+            android:text="实习"
             android:textColor="@color/text_black"
             android:textSize="@dimen/text_size_15" />
 
@@ -35,18 +37,10 @@
             android:src="@drawable/navigation_more_img" />
     </LinearLayout>
 
-    <FrameLayout
+    <include
+        android:id="@+id/intership_full"
+        layout="@layout/fragment_internship_full"
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
-        <include
-            android:visibility="visible"
-            android:id="@+id/look_around_page"
-            layout="@layout/fragment_lookaround"/>
-        <include
-            android:visibility="gone"
-            android:id="@+id/self_competence_page"
-            layout="@layout/fragment_competence"/>
-
-    </FrameLayout>
-
+        android:layout_height="match_parent"
+        android:visibility="visible" />
 </LinearLayout>

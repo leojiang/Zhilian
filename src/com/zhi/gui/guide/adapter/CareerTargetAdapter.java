@@ -7,6 +7,7 @@ import com.zhi.gui.guide.data.CareerTarget;
 
 import android.app.Service;
 import android.content.Context;
+import android.graphics.Color;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -43,6 +44,7 @@ public class CareerTargetAdapter extends BaseAdapter {
             viewHolder.index = (TextView) convertView.findViewById(R.id.index);
             viewHolder.industry = (TextView) convertView.findViewById(R.id.industry);
             viewHolder.percentage = (TextView) convertView.findViewById(R.id.percentage);
+            viewHolder.level = (TextView) convertView.findViewById(R.id.career_level);
             convertView.setTag(viewHolder);
         } else {
             viewHolder = (ViewHolder) convertView.getTag();
@@ -52,8 +54,28 @@ public class CareerTargetAdapter extends BaseAdapter {
         viewHolder.index.setText(String.valueOf(careerTarget.getIndex()));
         viewHolder.industry.setText(careerTarget.getIndustry());
         viewHolder.percentage.setText(String.valueOf(careerTarget.getPercentage()));
+        setLevel(viewHolder.level, careerTarget.getCareerLevel());
 
         return convertView;
+    }
+
+    private void setLevel(TextView view, int level) {
+        switch (level) {
+            case 0:
+                view.setBackgroundColor(mContext.getResources().getColor(R.color.tab_page_content_bg));
+                view.setText(null);
+                break;
+            case 1:
+                view.setBackgroundColor(Color.parseColor("#7fc369"));
+                view.setText("主要方向");
+                break;
+            case 2:
+                view.setBackgroundColor(Color.parseColor("#fd909e"));
+                view.setText("次要方向");
+                break;
+            default:
+                throw new RuntimeException("career level not supported");
+        }
     }
 
     @Override
@@ -70,5 +92,6 @@ public class CareerTargetAdapter extends BaseAdapter {
         TextView index;
         TextView industry;
         TextView percentage;
+        TextView level;
     }
 }

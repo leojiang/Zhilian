@@ -3,16 +3,16 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@drawable/img_login_bg"
-    android:orientation="vertical" >
+    android:orientation="vertical">
 
 
     <TextView
         android:layout_width="@dimen/list_item_width_15.5"
         android:layout_height="133dp"
         android:layout_gravity="center_horizontal"
-        android:gravity="center"
-        android:layout_marginTop="@dimen/padding_or_margin_size_50"
         android:layout_marginBottom="3dp"
+        android:layout_marginTop="@dimen/padding_or_margin_size_50"
+        android:gravity="center"
         android:text="@string/log_text"
         android:textColor="@color/color_bg_white"
         android:textSize="@dimen/text_size_30" />
@@ -27,6 +27,7 @@
         android:drawablePadding="@dimen/padding_or_margin_size_5"
         android:hint="用户名/手机/邮箱"
         android:paddingLeft="@dimen/padding_or_margin_size_5"
+        android:textColor="@color/color_bg_white"
         android:textColorHint="@color/edit_text_hint_1"
         android:textSize="@dimen/text_size_13.5" />
 
@@ -47,6 +48,7 @@
         android:drawablePadding="@dimen/padding_or_margin_size_5"
         android:hint="请输入密码"
         android:paddingLeft="@dimen/padding_or_margin_size_5"
+        android:textColor="@color/color_bg_white"
         android:textColorHint="@color/edit_text_hint_1"
         android:textSize="@dimen/text_size_13.5" />
 
@@ -73,26 +75,26 @@
         android:layout_width="@dimen/list_item_width_15.5"
         android:layout_height="wrap_content"
         android:layout_gravity="center"
-        android:gravity="center_vertical" >
+        android:gravity="center_vertical">
 
         <TextView
-            android:paddingTop="12dp"
             android:id="@+id/btn_register"
             android:layout_width="0dp"
             android:layout_height="40dp"
             android:layout_weight="1"
             android:gravity="left"
+            android:paddingTop="12dp"
             android:text="注册账号"
             android:textColor="@color/color_bg_white"
             android:textSize="@dimen/text_size_13.5" />
 
         <TextView
-            android:paddingTop="12dp"
-            android:layout_height="40dp"
             android:id="@+id/forgot_password"
             android:layout_width="0dp"
+            android:layout_height="40dp"
             android:layout_weight="1"
             android:gravity="right"
+            android:paddingTop="12dp"
             android:text="忘记密码"
             android:textColor="@color/color_bg_white"
             android:textSize="@dimen/text_size_13.5" />
@@ -102,7 +104,7 @@
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="20dp"
-        android:gravity="center" >
+        android:gravity="center">
 
         <TextView
             android:id="@+id/btn_share_weixin"

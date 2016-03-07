@@ -39,49 +39,60 @@
 
     <TextView
         android:layout_width="match_parent"
-        android:layout_height="@dimen/list_item_height_15"
-        android:layout_marginBottom="@dimen/padding_or_margin_size_2"
+        android:layout_height="@dimen/list_item_height_16"
+        android:layout_marginBottom="@dimen/padding_or_margin_size_3"
         android:background="@color/tab_page_content_bg"
         android:gravity="center"
         android:text="该专业的就业排名如下："
-        android:textSize="@dimen/text_size_14" />
+        android:textSize="@dimen/text_size_13.5" />
 
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="@dimen/list_item_height_11"
-        android:layout_marginBottom="@dimen/padding_or_margin_size_2" >
+        android:layout_height="@dimen/list_item_height_14"
+        android:layout_marginBottom="4px" >
 
         <TextView
-            android:layout_width="0dp"
+            android:layout_width="65dp"
             android:layout_height="match_parent"
-            android:layout_weight="1"
             android:background="@color/tab_page_content_bg"
+            android:layout_weight="1"
             android:gravity="center"
             android:text="序号"
             android:textColor="@color/text_black"
-            android:textSize="@dimen/text_size_14" />
+            android:textSize="@dimen/text_size_12" />
 
         <TextView
-            android:layout_width="0dp"
+            android:layout_width="150dp"
             android:layout_height="match_parent"
             android:layout_marginLeft="@dimen/padding_or_margin_size_1"
-            android:layout_weight="1"
             android:background="@color/tab_page_content_bg"
             android:gravity="center"
+            android:layout_weight="1"
             android:text="就业方向"
             android:textColor="@color/text_black"
-            android:textSize="@dimen/text_size_14" />
+            android:textSize="@dimen/text_size_12" />
 
         <TextView
-            android:layout_width="0dp"
+        android:layout_width="67dp"
+        android:layout_height="match_parent"
+        android:layout_marginLeft="@dimen/padding_or_margin_size_1"
+        android:background="@color/tab_page_content_bg"
+        android:gravity="center"
+            android:layout_weight="1"
+        android:text="百分比"
+        android:textColor="@color/text_black"
+        android:textSize="@dimen/text_size_12" />
+
+        <TextView
+            android:layout_width="77dp"
             android:layout_height="match_parent"
             android:layout_marginLeft="@dimen/padding_or_margin_size_1"
-            android:layout_weight="1"
             android:background="@color/tab_page_content_bg"
             android:gravity="center"
-            android:text="百分比"
+            android:layout_weight="1"
+            android:text="方向分析"
             android:textColor="@color/text_black"
-            android:textSize="@dimen/text_size_14" />
+            android:textSize="@dimen/text_size_12" />
     </LinearLayout>
 
     <ListView
@@ -94,7 +105,7 @@
 
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="@dimen/list_item_height_13"
+        android:layout_height="@dimen/list_item_height_14"
         android:layout_marginBottom="@dimen/padding_or_margin_size_10"
         android:layout_marginTop="@dimen/padding_or_margin_size_10"
         android:paddingLeft="@dimen/padding_or_margin_size_10"
@@ -102,28 +113,28 @@
 
         <TextView
             android:id="@+id/choose_btn"
-            android:layout_width="0dp"
+            android:layout_width="260dp"
             android:layout_height="match_parent"
             android:layout_gravity="center_horizontal"
-            android:layout_weight="3"
+            android:layout_weight="1"
             android:background="@drawable/button_bg_green"
             android:gravity="center"
             android:text="@string/text_next_step"
             android:textColor="@color/color_bg_white"
-            android:textSize="@dimen/text_size_14" />
+            android:textSize="@dimen/text_size_13" />
 
         <TextView
             android:id="@+id/more"
-            android:layout_width="0dp"
+            android:layout_width="67dp"
             android:layout_height="match_parent"
             android:layout_gravity="center_horizontal"
-            android:layout_marginLeft="@dimen/padding_or_margin_size_5"
+            android:layout_marginLeft="@dimen/padding_or_margin_size_6"
             android:layout_weight="1"
             android:background="@drawable/button_bg_orange"
             android:gravity="center"
             android:text="更多..."
             android:textColor="@color/color_bg_white"
-            android:textSize="@dimen/text_size_14" />
+            android:textSize="@dimen/text_size_13" />
     </LinearLayout>
 
 </LinearLayout>

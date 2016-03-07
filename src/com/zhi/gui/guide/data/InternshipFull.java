@@ -7,6 +7,15 @@ public class InternshipFull {
     private int baseCompetence;
     private String headImageUrl;
     private String salaryRange;
+    private Boolean isApplied;
+
+    public Boolean getIsApplied() {
+        return isApplied;
+    }
+
+    public void setIsApplied(Boolean isApplied) {
+        this.isApplied = isApplied;
+    }
 
     public String getHeadImageUrl() {
         return headImageUrl;
@@ -28,13 +37,19 @@ public class InternshipFull {
     }
 
     public InternshipFull(String companyName, String jobTitle, String location,
-            int baseCompetence, String imageUrl, String salaryRange) {
+                          int baseCompetence, String imageUrl, String salaryRange) {
+        this(companyName, jobTitle, location, baseCompetence, imageUrl, salaryRange, false);
+    }
+
+    public InternshipFull(String companyName, String jobTitle, String location,
+                          int baseCompetence, String imageUrl, String salaryRange, boolean isApplied) {
         this.companyName = companyName;
         this.jobTitle = jobTitle;
         this.location = location;
         this.baseCompetence = baseCompetence;
         this.headImageUrl = imageUrl;
         this.salaryRange = salaryRange;
+        this.isApplied = isApplied;
     }
 
     public String getCompanyName() {

@@ -1,52 +1,55 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:gravity="center_vertical"
-    android:orientation="horizontal"
+    android:layout_height="78dp"
     android:background="@color/tab_page_content_bg"
-    android:padding="@dimen/padding_or_margin_size_5" >
+    android:gravity="center_vertical"
+    android:minHeight="78dp"
+    android:orientation="horizontal"
+    android:paddingLeft="13dp"
+    android:paddingRight="13dp">
 
     <ImageView
-        android:src="@drawable/ic_launcher"
-        android:scaleType="centerInside"
         android:id="@+id/avatar"
-        android:layout_width="50dp"
-        android:layout_height="50dp"/>
+        android:layout_width="53dp"
+        android:layout_height="53dp"
+        android:scaleType="centerInside"
+        android:src="@drawable/ic_launcher" />
 
     <LinearLayout
-        android:paddingLeft="@dimen/padding_or_margin_size_5"
-        android:layout_weight="1"
         android:layout_width="0dp"
         android:layout_height="match_parent"
+        android:layout_weight="1"
         android:gravity="center_vertical"
-        android:orientation="vertical" >
+        android:orientation="vertical"
+        android:paddingLeft="@dimen/padding_or_margin_size_5">
 
         <TextView
             android:id="@+id/jobTitle"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:gravity="center"
-            android:textSize="@dimen/text_size_13" />
+            android:textSize="@dimen/text_size_13.5" />
 
         <TextView
             android:id="@+id/companyName"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:gravity="center"
+            android:textColor="#666666"
             android:textSize="@dimen/text_size_12" />
 
         <LinearLayout
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content" >
+            android:layout_height="wrap_content">
 
             <TextView
                 android:id="@+id/location"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:gravity="center"
-                android:textColor="@color/color_bg_green"
-                android:textSize="@dimen/text_size_12" />
+                android:textColor="@color/color_bg_green_1"
+                android:textSize="@dimen/text_size_11" />
 
             <TextView
                 android:id="@+id/baseCompetence"
@@ -54,38 +57,44 @@
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="@dimen/padding_or_margin_size_5"
                 android:gravity="center"
-                android:textColor="@color/color_bg_green"
-                android:textSize="@dimen/text_size_12" />
+                android:textColor="@color/color_bg_green_1"
+                android:textSize="@dimen/text_size_11" />
         </LinearLayout>
     </LinearLayout>
 
     <LinearLayout
-        android:layout_width="wrap_content"
+        android:layout_width="43dp"
         android:layout_height="match_parent"
         android:gravity="center"
-        android:orientation="vertical" >
+        android:orientation="vertical">
 
         <TextView
             android:id="@+id/salary"
-            android:layout_width="wrap_content"
+            android:layout_width="match_parent"
             android:layout_height="0dp"
             android:layout_weight="1"
-            android:gravity="center"
+            android:gravity="center_horizontal|bottom"
+            android:text="ddddd"
             android:textColor="@color/color_bg_red"
             android:textSize="@dimen/text_size_12" />
 
-        <TextView
-            android:id="@+id/application"
-            android:layout_width="wrap_content"
+        <LinearLayout
+            android:layout_width="match_parent"
             android:layout_height="0dp"
             android:layout_weight="1"
-            android:paddingLeft="@dimen/padding_or_margin_size_5"
-            android:paddingRight="@dimen/padding_or_margin_size_5"
-            android:background="@drawable/button_bg_green2"
-            android:gravity="center"
-            android:text="投简历"
-            android:textColor="@color/color_bg_white"
-            android:textSize="@dimen/text_size_12" />
+            android:gravity="center">
+
+            <TextView
+                android:id="@+id/apply"
+                android:layout_width="match_parent"
+                android:layout_height="18dp"
+                android:background="@drawable/button_bg_green2"
+                android:gravity="center"
+                android:text="投一发"
+                android:textColor="@color/color_bg_white"
+                android:textSize="@dimen/text_size_12" />
+        </LinearLayout>
+
     </LinearLayout>
 
 </LinearLayout>

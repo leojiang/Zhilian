@@ -4,6 +4,7 @@
     <dimen name="padding_or_margin_size_50">50dp</dimen>
     <dimen name="padding_or_margin_size_20">20dp</dimen>
     <dimen name="padding_or_margin_size_10">10dp</dimen>
+    <dimen name="padding_or_margin_size_6">6dp</dimen>
     <dimen name="padding_or_margin_size_5">5dp</dimen>
     <dimen name="padding_or_margin_size_3">3dp</dimen>
     <dimen name="padding_or_margin_size_2">2dp</dimen>
@@ -30,7 +31,7 @@
     <dimen name="text_size_16">24dp</dimen>
     <dimen name="text_size_15">21dp</dimen>
     <dimen name="text_size_14">18dp</dimen>
-    <dimen name="text_size_13.5">15dp</dimen>
+    <dimen name="text_size_13.5">16dp</dimen>
     <dimen name="text_size_13">15dp</dimen>
     <dimen name="text_size_12">12dp</dimen>
     <dimen name="text_size_11">10dp</dimen>

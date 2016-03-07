@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
               android:layout_width="match_parent"
-              android:layout_height="@dimen/list_item_height_13"
-              android:layout_marginBottom="@dimen/padding_or_margin_size_3"
+              android:layout_height="@dimen/list_item_height_14"
+              android:layout_marginBottom="@dimen/padding_or_margin_size_6"
               android:background="@color/color_shllow_blue"
               android:gravity="center_vertical"
               android:paddingLeft="@dimen/padding_or_margin_size_10"
@@ -14,7 +14,7 @@
         android:gravity="center"
         android:text="您的专业是："
         android:textColor="@color/color_bg_white"
-        android:textSize="@dimen/text_size_15"/>
+        android:textSize="@dimen/text_size_13.5"/>
 
     <TextView
         android:layout_width="0dp"
@@ -22,12 +22,12 @@
         android:layout_weight="1"
         android:gravity="center"
         android:textColor="@color/color_bg_white"
-        android:textSize="@dimen/text_size_14"/>
+        android:textSize="@dimen/text_size_13.5"/>
 
     <ImageView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="40dp"
+        android:layout_height="match_parent"
         android:scaleType="centerInside"
-        android:src="@drawable/img_share_qq"/>
+        android:src="@drawable/search_icon"/>
 
 </LinearLayout>

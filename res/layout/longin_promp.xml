@@ -13,6 +13,7 @@
         android:textSize="@dimen/text_size_15" />
 
     <TextView
+        android:id="@+id/login_btn"
         android:layout_marginTop="@dimen/padding_or_margin_size_10"
         android:gravity="center"
         android:background="@drawable/button_bg_white"

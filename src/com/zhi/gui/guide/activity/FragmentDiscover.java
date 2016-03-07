@@ -77,4 +77,14 @@ public class FragmentDiscover extends FragmentBase {
         super.onDestroyView();
         Log.i("leojiang", "onDestroyView");
     }
+
+    @Override
+    protected void onUserLogIn() {
+
+    }
+
+    @Override
+    protected void onUserLogOut() {
+
+    }
 }

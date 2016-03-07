@@ -13,4 +13,14 @@ public class FragmentFriends extends FragmentBase {
     protected View createView(LayoutInflater inflater) {
         return inflater.inflate(R.layout.fragment_friends, null);
     }
+
+    @Override
+    protected void onUserLogIn() {
+
+    }
+
+    @Override
+    protected void onUserLogOut() {
+
+    }
 }

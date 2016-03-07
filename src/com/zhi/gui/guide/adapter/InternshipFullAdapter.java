@@ -20,11 +20,16 @@ public class InternshipFullAdapter extends BaseAdapter {
     private List<InternshipFull> mList;
     private Context mContext;
     private LayoutInflater mInflater;
+    private Boolean mIsCompetenceEnough = false;
 
     public InternshipFullAdapter(Context context, List<InternshipFull> list) {
         mContext = context;
         setContent(list);
         mInflater = ((LayoutInflater) mContext.getSystemService(Service.LAYOUT_INFLATER_SERVICE));
+    }
+
+    public void setmIsCompetenceEnough(boolean flag) {
+        mIsCompetenceEnough = flag;
     }
 
     public void setContent(List<InternshipFull> list) {
@@ -47,6 +52,7 @@ public class InternshipFullAdapter extends BaseAdapter {
             viewHolder.location = (TextView) convertView.findViewById(R.id.location);
             viewHolder.baseCompetence = (TextView) convertView.findViewById(R.id.baseCompetence);
             viewHolder.salaryRange = (TextView) convertView.findViewById(R.id.salary);
+            viewHolder.apply = (TextView) convertView.findViewById(R.id.apply);
             convertView.setTag(viewHolder);
         } else {
             viewHolder = (ViewHolder) convertView.getTag();
@@ -58,6 +64,19 @@ public class InternshipFullAdapter extends BaseAdapter {
         viewHolder.location.setText(internship.getLocation());
         viewHolder.baseCompetence.setText(String.valueOf(internship.getBaseCompetence()));
         viewHolder.salaryRange.setText(internship.getSalaryRange());
+        if (!mIsCompetenceEnough) {
+            viewHolder.apply.setVisibility(View.GONE);
+        } else {
+            if (internship.getIsApplied()) {
+                viewHolder.apply.setText("已投");
+                viewHolder.apply.setEnabled(false);
+                viewHolder.apply.setBackgroundResource(R.drawable.button_bg_gray);
+            } else {
+                viewHolder.apply.setText("投一发");
+                viewHolder.apply.setEnabled(true);
+                viewHolder.apply.setBackgroundResource(R.drawable.button_bg_green2);
+            }
+        }
         return convertView;
     }
 
@@ -78,5 +97,6 @@ public class InternshipFullAdapter extends BaseAdapter {
         TextView location;
         TextView baseCompetence;
         TextView salaryRange;
+        TextView apply;
     }
 }

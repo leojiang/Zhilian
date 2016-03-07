@@ -45,13 +45,14 @@
         </ImageView>
 
         <include
-            android:id="@+id/login_promp"
+            android:id="@+id/login_prompt"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_centerInParent="true"
             layout="@layout/longin_promp" />
 
         <LinearLayout
+            android:id="@+id/user_info"
             android:visibility="gone"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
@@ -167,6 +168,7 @@
         android:orientation="vertical" >
 
         <TextView
+            android:id="@+id/empty_text"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_centerInParent="true"
@@ -174,6 +176,7 @@
             android:text="职业规划\n积“龟”步以至千里" />
 
         <LinearLayout
+            android:id="@+id/items"
             android:padding="@dimen/padding_or_margin_size_5"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
