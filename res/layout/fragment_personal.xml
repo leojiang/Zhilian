@@ -41,7 +41,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:scaleType="centerInside"
-            android:src="@drawable/advertisement" >
+            android:src="@drawable/my_info_bg" >
         </ImageView>
 
         <include
@@ -188,7 +188,7 @@
                 android:background="@color/tab_page_content_bg"
                 android:drawableLeft="@drawable/my_message"
                 android:drawablePadding="@dimen/padding_or_margin_size_6"
-                android:drawableRight="@drawable/test_img"
+                android:drawableRight="@drawable/right_arrow"
                 android:gravity="center_vertical"
                 android:paddingLeft="13dp"
                 android:paddingRight="13dp"
@@ -202,7 +202,7 @@
                 android:background="@color/tab_page_content_bg"
                 android:drawableLeft="@drawable/personal_information"
                 android:drawablePadding="@dimen/padding_or_margin_size_6"
-                android:drawableRight="@drawable/test_img"
+                android:drawableRight="@drawable/right_arrow"
                 android:gravity="center_vertical"
                 android:paddingLeft="13dp"
                 android:paddingRight="13dp"
@@ -215,7 +215,7 @@
                 android:background="@color/tab_page_content_bg"
                 android:drawableLeft="@drawable/followed"
                 android:drawablePadding="@dimen/padding_or_margin_size_6"
-                android:drawableRight="@drawable/test_img"
+                android:drawableRight="@drawable/right_arrow"
                 android:gravity="center_vertical"
                 android:paddingLeft="13dp"
                 android:paddingRight="13dp"
@@ -228,7 +228,7 @@
                 android:background="@color/tab_page_content_bg"
                 android:drawableLeft="@drawable/my_friends"
                 android:drawablePadding="@dimen/padding_or_margin_size_6"
-                android:drawableRight="@drawable/test_img"
+                android:drawableRight="@drawable/right_arrow"
                 android:gravity="center_vertical"
                 android:paddingLeft="13dp"
                 android:paddingRight="13dp"
@@ -241,7 +241,7 @@
                 android:background="@color/tab_page_content_bg"
                 android:drawableLeft="@drawable/my_settings"
                 android:drawablePadding="@dimen/padding_or_margin_size_6"
-                android:drawableRight="@drawable/test_img"
+                android:drawableRight="@drawable/right_arrow"
                 android:gravity="center_vertical"
                 android:paddingLeft="13dp"
                 android:paddingRight="13dp"

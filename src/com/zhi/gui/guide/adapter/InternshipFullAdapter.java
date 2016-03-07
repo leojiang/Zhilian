@@ -58,8 +58,6 @@ public class InternshipFullAdapter extends BaseAdapter {
             viewHolder.salaryRange = (TextView) convertView.findViewById(R.id.salary);
             viewHolder.apply = (TextView) convertView.findViewById(R.id.apply);
             convertView.setTag(viewHolder);
-            Picasso.with(mContext).load(Uri.parse("http://img1.imgtn.bdimg.com/it/u=781850496,3957428669&fm=21&gp=0.jpg"))
-                    .transform(new CropToCircleTransformation()).into(viewHolder.headImageUrl);
         } else {
             viewHolder = (ViewHolder) convertView.getTag();
         }
@@ -67,9 +65,10 @@ public class InternshipFullAdapter extends BaseAdapter {
         InternshipFull internship = (InternshipFull) getItem(i);
         viewHolder.companyName.setText(internship.getCompanyName());
         viewHolder.jobTitle.setText(internship.getJobTitle());
-        viewHolder.location.setText(internship.getLocation());
-        viewHolder.baseCompetence.setText(String.valueOf(internship.getBaseCompetence()));
+        viewHolder.location.setText("地点:" + internship.getLocation());
+        viewHolder.baseCompetence.setText("求职力:" + internship.getBaseCompetence());
         viewHolder.salaryRange.setText(internship.getSalaryRange());
+        Picasso.with(mContext).load(Uri.parse(internship.getHeadImageUrl())).transform(new CropToCircleTransformation()).into(viewHolder.headImageUrl);
         if (!mIsCompetenceEnough) {
             viewHolder.apply.setVisibility(View.GONE);
         } else {

@@ -79,11 +79,11 @@ public class FragmentInternship extends FragmentBase
         mInternshipFullList = new ArrayList<InternshipFull>();
         for (int j = 0; j < 30; j++) {
             if (j < 5) {
-                mInternshipFullList.add(new InternshipFull("company" + j, "job" + j, "location" + j,
-                        (20 - j) * 100, "test_url", "15-25K", true));
+                mInternshipFullList.add(new InternshipFull("某科技公司", "软件开发工程师", "南京",
+                        (20 - j) * 100, "http://img1.imgtn.bdimg.com/it/u=781850496,3957428669&fm=21&gp=0.jpg", "15-25K", true));
             } else {
-                mInternshipFullList.add(new InternshipFull("company" + j, "job" + j, "location" + j,
-                        (20 - j) * 100, "test_url", "15-25K"));
+                mInternshipFullList.add(new InternshipFull("某科技公司", "软件开发工程师", "南京",
+                        (20 - j) * 100, "http://down.tutu001.com/d/file/20110721/05f70880ffe6f19251c7c523df_560.jpg", "15-25K"));
             }
         }
         mFullAdapter = new InternshipFullAdapter(getActivity(), mInternshipFullList);

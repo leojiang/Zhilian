@@ -70,8 +70,8 @@ public class CompanyActivity extends BaseActivity implements View.OnClickListene
     private void initViewWhenNotLoggedIn() {
         mInternshipFullList = new ArrayList<InternshipFull>();
         for (int j = 0; j < 30; j++) {
-            mInternshipFullList.add(new InternshipFull("company" + j, "job" + j, "location" + j,
-                    (20 - j) * 100, "test_url", "15-25K"));
+            mInternshipFullList.add(new InternshipFull("某科技公司", "软件开发工程师", "南京",
+                    (20 - j) * 100, "http://picm.bbzhi.com/dongmanbizhi/gaodazhuomian/game_manwall_178671_m.jpg", "15-25K"));
         }
         mFullAdapter = new InternshipFullAdapter(this, mInternshipFullList);
         mJobLIstView.setAdapter(mFullAdapter);
