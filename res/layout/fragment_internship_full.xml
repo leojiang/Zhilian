@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:layout_width="fill_parent"
-    android:layout_height="fill_parent"
-    android:background="@color/tab_page_bottom_color"
-    android:baselineAligned="false"
-    android:orientation="vertical">
+              android:layout_width="fill_parent"
+              android:layout_height="fill_parent"
+              android:background="@color/tab_page_bottom_color"
+              android:baselineAligned="false"
+              android:orientation="vertical">
 
     <LinearLayout
         android:id="@+id/search_bar"
@@ -28,7 +28,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:scaleType="centerInside"
-                android:src="@drawable/search_icon" />
+                android:src="@drawable/search_icon"/>
 
             <TextView
                 android:layout_width="wrap_content"
@@ -36,7 +36,7 @@
                 android:paddingLeft="13dp"
                 android:text="输入职位或公司名"
                 android:textColor="#a3d1bb"
-                android:textSize="@dimen/text_size_14" />
+                android:textSize="@dimen/text_size_14"/>
         </LinearLayout>
     </LinearLayout>
 
@@ -44,17 +44,18 @@
         android:id="@+id/advertisement"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="7dp"
+        android:layout_marginBottom="2dp"
+
         android:scaleType="centerInside"
         android:src="@drawable/advertisement"
-        android:visibility="visible" />
+        android:visibility="visible"/>
+
 
     <LinearLayout
-        android:id="@+id/competence_view"
+        android:id="@+id/competence_info"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="vertical"
-        android:visibility="gone">
+        android:orientation="vertical">
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -72,20 +73,20 @@
                 android:paddingLeft="13dp"
                 android:text="我的职业目标方向"
                 android:textColor="@color/color_bg_white"
-                android:textSize="@dimen/text_size_13.5" />
+                android:textSize="@dimen/text_size_13.5"/>
 
             <TextView
                 android:layout_width="200dp"
                 android:layout_height="match_parent"
                 android:layout_weight="1"
                 android:gravity="center_vertical"
-                android:textSize="@dimen/text_size_13.5" />
+                android:textSize="@dimen/text_size_13.5"/>
         </LinearLayout>
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="@dimen/list_item_height_14"
-            android:layout_marginBottom="1dp"
+            android:layout_marginBottom="30dp"
             android:background="@color/tab_page_content_bg">
 
             <LinearLayout
@@ -101,14 +102,14 @@
                     android:gravity="center_vertical"
                     android:paddingLeft="13dp"
                     android:text="我的求职力:"
-                    android:textSize="@dimen/text_size_13.5" />
+                    android:textSize="@dimen/text_size_13.5"/>
 
                 <TextView
                     android:layout_width="0dp"
                     android:layout_height="match_parent"
                     android:layout_weight="1"
                     android:gravity="center_vertical"
-                    android:textSize="@dimen/text_size_13.5" />
+                    android:textSize="@dimen/text_size_13.5"/>
             </LinearLayout>
 
             <LinearLayout
@@ -126,40 +127,22 @@
                     android:gravity="center_vertical"
                     android:paddingLeft="13dp"
                     android:text="排名:"
-                    android:textSize="@dimen/text_size_13.5" />
+                    android:textSize="@dimen/text_size_13.5"/>
 
                 <TextView
                     android:layout_width="0dp"
                     android:layout_height="match_parent"
                     android:layout_weight="1"
                     android:gravity="center_vertical"
-                    android:textSize="@dimen/text_size_13.5" />
+                    android:textSize="@dimen/text_size_13.5"/>
             </LinearLayout>
         </LinearLayout>
+    </LinearLayout>
 
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="@dimen/list_item_height_14"
-            android:background="@color/tab_page_content_bg"
-            android:orientation="horizontal">
-
-            <TextView
-                android:layout_width="160dp"
-                android:layout_height="match_parent"
-                android:layout_weight="1"
-                android:background="#ff8e9f"
-                android:gravity="center"
-                android:text="我的职业目标方向"
-                android:textColor="@color/color_bg_white"
-                android:textSize="@dimen/text_size_13.5" />
-
-            <TextView
-                android:layout_width="200dp"
-                android:layout_height="match_parent"
-                android:layout_weight="1"
-                android:gravity="center_vertical"
-                android:textSize="@dimen/text_size_13.5" />
-        </LinearLayout>
+    <LinearLayout
+        android:id="@+id/target_list"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -171,7 +154,6 @@
                 android:layout_width="match_parent"
                 android:layout_height="@dimen/list_item_height_15"
                 android:layout_marginBottom="@dimen/padding_or_margin_size_3"
-                android:layout_marginTop="30dp"
                 android:background="@color/tab_page_content_bg"
                 android:paddingLeft="13dp"
                 android:paddingRight="13dp">
@@ -184,7 +166,7 @@
                     android:gravity="center_vertical"
                     android:text="完善个人信息，提升求职力"
                     android:textColor="@color/text_black"
-                    android:textSize="@dimen/text_size_13.5" />
+                    android:textSize="@dimen/text_size_13.5"/>
 
                 <TextView
                     android:layout_width="wrap_content"
@@ -193,7 +175,7 @@
                     android:gravity="center_vertical|right"
                     android:text="未完成"
                     android:textColor="@color/color_bg_green_1"
-                    android:textSize="@dimen/text_size_13.5" />
+                    android:textSize="@dimen/text_size_13.5"/>
             </LinearLayout>
 
             <LinearLayout
@@ -212,7 +194,7 @@
                     android:gravity="center_vertical"
                     android:text="完善个人信息，提升求职力"
                     android:textColor="@color/text_black"
-                    android:textSize="@dimen/text_size_13.5" />
+                    android:textSize="@dimen/text_size_13.5"/>
 
                 <TextView
                     android:layout_width="wrap_content"
@@ -221,7 +203,7 @@
                     android:gravity="center_vertical|right"
                     android:text="未完成"
                     android:textColor="@color/color_bg_green_1"
-                    android:textSize="@dimen/text_size_13.5" />
+                    android:textSize="@dimen/text_size_13.5"/>
             </LinearLayout>
 
             <LinearLayout
@@ -240,7 +222,7 @@
                     android:gravity="center_vertical"
                     android:text="完善个人信息，提升求职力"
                     android:textColor="@color/text_black"
-                    android:textSize="@dimen/text_size_13.5" />
+                    android:textSize="@dimen/text_size_13.5"/>
 
                 <TextView
                     android:layout_width="wrap_content"
@@ -249,7 +231,7 @@
                     android:gravity="center_vertical|right"
                     android:text="未完成"
                     android:textColor="@color/color_bg_green_1"
-                    android:textSize="@dimen/text_size_13.5" />
+                    android:textSize="@dimen/text_size_13.5"/>
             </LinearLayout>
 
             <LinearLayout
@@ -268,7 +250,7 @@
                     android:gravity="center_vertical"
                     android:text="完善个人信息，提升求职力"
                     android:textColor="@color/text_black"
-                    android:textSize="@dimen/text_size_13.5" />
+                    android:textSize="@dimen/text_size_13.5"/>
 
                 <TextView
                     android:layout_width="wrap_content"
@@ -277,7 +259,7 @@
                     android:gravity="center_vertical|right"
                     android:text="未完成"
                     android:textColor="@color/color_bg_green_1"
-                    android:textSize="@dimen/text_size_13.5" />
+                    android:textSize="@dimen/text_size_13.5"/>
             </LinearLayout>
         </LinearLayout>
     </LinearLayout>
@@ -294,7 +276,7 @@
             android:id="@+id/list_internships"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:overScrollMode="never" />
+            android:overScrollMode="never"/>
     </com.zhi.gui.guide.view.RefreshableView>
 
 </LinearLayout>

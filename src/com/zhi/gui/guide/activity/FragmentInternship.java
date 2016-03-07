@@ -25,7 +25,8 @@ public class FragmentInternship extends FragmentBase
     private InternshipFullAdapter mFullAdapter;
     private IndustryListAdapter mIndustryAdapter;
     private RefreshableView mRefreshableView;
-    private View mComptenceView;
+    private View mCompetenceView;
+    private View mTargetList;
     private View mAdvertisement;
     private View mNavigation;
     private View mSearchBar;
@@ -37,7 +38,8 @@ public class FragmentInternship extends FragmentBase
         View root = inflater.inflate(R.layout.fragment_internship, null);
         mNavigation = root.findViewById(R.id.navigation);
         mFull = root.findViewById(R.id.intership_full);
-        mComptenceView = mFull.findViewById(R.id.competence_view);
+        mCompetenceView = root.findViewById(R.id.competence_info);
+        mTargetList = root.findViewById(R.id.target_list);
         mSearchBar = mFull.findViewById(R.id.search_bar);
         mAdvertisement = mFull.findViewById(R.id.advertisement);
         mListInternships = (ListView) mFull.findViewById(R.id.list_internships);
@@ -50,25 +52,35 @@ public class FragmentInternship extends FragmentBase
     }
 
     private void showView() {
-        if (mIsCompetenceEnough) {
+        if (isLoggedIn) {
+            mCompetenceView.setVisibility(View.VISIBLE);
+            if (mIsCompetenceEnough) {
+                mRefreshableView.setVisibility(View.VISIBLE);
+                mAdvertisement.setVisibility(View.VISIBLE);
+                mSearchBar.setVisibility(View.VISIBLE);
+                mNavigation.setVisibility(View.GONE);
+                mTargetList.setVisibility(View.GONE);
+            } else {
+                mRefreshableView.setVisibility(View.GONE);
+                mSearchBar.setVisibility(View.GONE);
+                mAdvertisement.setVisibility(View.GONE);
+                mNavigation.setVisibility(View.VISIBLE);
+                mTargetList.setVisibility(View.VISIBLE);
+            }
+        } else {
             mRefreshableView.setVisibility(View.VISIBLE);
             mSearchBar.setVisibility(View.VISIBLE);
             mNavigation.setVisibility(View.GONE);
-            mComptenceView.setVisibility(View.GONE);
             mAdvertisement.setVisibility(View.VISIBLE);
-        } else {
-            mRefreshableView.setVisibility(View.GONE);
-            mSearchBar.setVisibility(View.GONE);
-            mAdvertisement.setVisibility(View.GONE);
-            mNavigation.setVisibility(View.VISIBLE);
-            mComptenceView.setVisibility(View.VISIBLE);
+            mCompetenceView.setVisibility(View.GONE);
+            mTargetList.setVisibility(View.GONE);
         }
     }
 
     private void initListView() {
         mInternshipFullList = new ArrayList<InternshipFull>();
         for (int j = 0; j < 30; j++) {
-            if(j < 5) {
+            if (j < 5) {
                 mInternshipFullList.add(new InternshipFull("company" + j, "job" + j, "location" + j,
                         (20 - j) * 100, "test_url", "15-25K", true));
             } else {
