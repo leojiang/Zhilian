@@ -16,6 +16,7 @@
         android:icon="@drawable/ic_launcher"
         android:theme="@android:style/Theme.Light.NoTitleBar">
         <activity
+            android:launchMode="singleTask"
             android:name="com.zhi.gui.guide.activity.ActivityMainTab">
         </activity>
         <activity

@@ -58,7 +58,7 @@ public class InternshipFullAdapter extends BaseAdapter {
             viewHolder.salaryRange = (TextView) convertView.findViewById(R.id.salary);
             viewHolder.apply = (TextView) convertView.findViewById(R.id.apply);
             convertView.setTag(viewHolder);
-            Picasso.with(mContext).load(Uri.parse("http://img2.imgtn.bdimg.com/it/u=3534020278,4525102&fm=21&gp=0.jpg"))
+            Picasso.with(mContext).load(Uri.parse("http://img1.imgtn.bdimg.com/it/u=781850496,3957428669&fm=21&gp=0.jpg"))
                     .transform(new CropToCircleTransformation()).into(viewHolder.headImageUrl);
         } else {
             viewHolder = (ViewHolder) convertView.getTag();
