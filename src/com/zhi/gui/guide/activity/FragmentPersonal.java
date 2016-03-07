@@ -2,11 +2,15 @@ package com.zhi.gui.guide.activity;
 
 import android.content.DialogInterface;
 import android.content.Intent;
+import android.net.Uri;
 import android.view.LayoutInflater;
 import android.view.View;
+import android.widget.ImageView;
 
+import com.squareup.picasso.Picasso;
 import com.zhi.gui.guide.R;
 import com.zhi.gui.guide.common.Constants;
+import com.zhi.gui.guide.view.CropToCircleTransformation;
 
 public class FragmentPersonal extends FragmentBase implements View.OnClickListener {
     private View mViewUserInfo;
@@ -14,18 +18,24 @@ public class FragmentPersonal extends FragmentBase implements View.OnClickListen
     private View mEmptyText;
     private View mItemsVIew;
     private View mLoginBtn;
+    private ImageView mAvatar;
 
 
     @Override
     protected View createView(LayoutInflater inflater) {
         View root = inflater.inflate(R.layout.fragment_personal, null);
         mViewUserInfo = root.findViewById(R.id.user_info);
+        mAvatar = (ImageView) mViewUserInfo.findViewById(R.id.avatar);
         mLonginPrompt = root.findViewById(R.id.login_prompt);
         mEmptyText = root.findViewById(R.id.empty_text);
         mItemsVIew = root.findViewById(R.id.items);
         mLoginBtn = root.findViewById(R.id.login_btn);
         mLoginBtn.setOnClickListener(this);
         showView();
+
+        Picasso.with(getActivity()).load(Uri.parse("http://www.photophoto.cn/m6/018/030/0180300376.jpg"))
+                .transform(new CropToCircleTransformation()).into(mAvatar);
+
         return root;
     }
 

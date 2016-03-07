@@ -10,6 +10,7 @@ import android.widget.ImageView;
 
 import com.squareup.picasso.Picasso;
 import com.zhi.gui.guide.R;
+import com.zhi.gui.guide.view.CropToCircleTransformation;
 
 import java.util.List;
 
@@ -48,8 +49,6 @@ public class ImageListAdapter extends BaseAdapter {
             convertView = mInflater.inflate(R.layout.image_list_item, null);
         }
         ImageView imageView = (ImageView) convertView.findViewById(R.id.imageview);
-        Picasso.with(mContext).load(imageUrlList.get(position)).into(imageView);
-
         return convertView;
     }
 }

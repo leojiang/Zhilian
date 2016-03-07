@@ -34,17 +34,18 @@
 
     <RelativeLayout
         android:layout_width="match_parent"
-        android:layout_height="210dp" >
+        android:layout_height="wrap_content" >
 
         <ImageView
             android:id="@+id/imageview"
             android:layout_width="match_parent"
-            android:layout_height="194dp"
+            android:layout_height="wrap_content"
             android:scaleType="centerInside"
             android:src="@drawable/advertisement" >
         </ImageView>
 
         <include
+            android:visibility="gone"
             android:id="@+id/login_prompt"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -53,18 +54,17 @@
 
         <LinearLayout
             android:id="@+id/user_info"
-            android:visibility="gone"
+            android:visibility="visible"
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
+            android:layout_height="wrap_content"
             android:gravity="center_horizontal"
+            android:layout_centerInParent="true"
             android:orientation="vertical" >
 
             <ImageView
                 android:id="@+id/avatar"
                 android:layout_width="80dp"
-                android:layout_height="80dp"
-                android:layout_marginTop="30dp"
-                android:background="#00FF00" />
+                android:layout_height="80dp" />
 
             <TextView
                 android:id="@+id/real_name"
@@ -177,7 +177,6 @@
 
         <LinearLayout
             android:id="@+id/items"
-            android:padding="@dimen/padding_or_margin_size_5"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:orientation="vertical" >
@@ -185,67 +184,69 @@
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="@dimen/list_item_height_15"
-                android:layout_marginBottom="@dimen/padding_or_margin_size_5"
+                android:layout_marginBottom="@dimen/padding_or_margin_size_3"
                 android:background="@color/tab_page_content_bg"
-                android:drawableLeft="@drawable/test_img"
-                android:drawablePadding="@dimen/padding_or_margin_size_5"
+                android:drawableLeft="@drawable/my_message"
+                android:drawablePadding="@dimen/padding_or_margin_size_6"
                 android:drawableRight="@drawable/test_img"
                 android:gravity="center_vertical"
-                android:padding="@dimen/padding_or_margin_size_5"
+                android:paddingLeft="13dp"
+                android:paddingRight="13dp"
                 android:text="我的消息"
-                android:textSize="@dimen/text_size_15" />
+                android:textSize="@dimen/text_size_13.5" />
 
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="@dimen/list_item_height_15"
-                android:layout_marginBottom="@dimen/padding_or_margin_size_5"
+                android:layout_marginBottom="@dimen/padding_or_margin_size_3"
                 android:background="@color/tab_page_content_bg"
-                android:drawableLeft="@drawable/test_img"
-                android:drawablePadding="@dimen/padding_or_margin_size_5"
+                android:drawableLeft="@drawable/personal_information"
+                android:drawablePadding="@dimen/padding_or_margin_size_6"
                 android:drawableRight="@drawable/test_img"
                 android:gravity="center_vertical"
-                android:padding="@dimen/padding_or_margin_size_5"
+                android:paddingLeft="13dp"
+                android:paddingRight="13dp"
                 android:text="我的资料"
-                android:textSize="@dimen/text_size_15" />
-
+                android:textSize="@dimen/text_size_13.5" />
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="@dimen/list_item_height_15"
-                android:layout_marginBottom="@dimen/padding_or_margin_size_5"
+                android:layout_marginBottom="@dimen/padding_or_margin_size_3"
                 android:background="@color/tab_page_content_bg"
-                android:drawableLeft="@drawable/test_img"
-                android:drawablePadding="@dimen/padding_or_margin_size_5"
+                android:drawableLeft="@drawable/followed"
+                android:drawablePadding="@dimen/padding_or_margin_size_6"
                 android:drawableRight="@drawable/test_img"
                 android:gravity="center_vertical"
-                android:padding="@dimen/padding_or_margin_size_5"
+                android:paddingLeft="13dp"
+                android:paddingRight="13dp"
                 android:text="我的关注"
-                android:textSize="@dimen/text_size_15" />
-
+                android:textSize="@dimen/text_size_13.5" />
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="@dimen/list_item_height_15"
-                android:layout_marginBottom="@dimen/padding_or_margin_size_5"
+                android:layout_marginBottom="@dimen/padding_or_margin_size_3"
                 android:background="@color/tab_page_content_bg"
-                android:drawableLeft="@drawable/test_img"
-                android:drawablePadding="@dimen/padding_or_margin_size_5"
+                android:drawableLeft="@drawable/my_friends"
+                android:drawablePadding="@dimen/padding_or_margin_size_6"
                 android:drawableRight="@drawable/test_img"
                 android:gravity="center_vertical"
-                android:padding="@dimen/padding_or_margin_size_5"
+                android:paddingLeft="13dp"
+                android:paddingRight="13dp"
                 android:text="我的好友"
-                android:textSize="@dimen/text_size_15" />
-
+                android:textSize="@dimen/text_size_13.5" />
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="@dimen/list_item_height_15"
-                android:layout_marginBottom="@dimen/padding_or_margin_size_5"
+                android:layout_marginBottom="@dimen/padding_or_margin_size_3"
                 android:background="@color/tab_page_content_bg"
-                android:drawableLeft="@drawable/test_img"
-                android:drawablePadding="@dimen/padding_or_margin_size_5"
+                android:drawableLeft="@drawable/my_settings"
+                android:drawablePadding="@dimen/padding_or_margin_size_6"
                 android:drawableRight="@drawable/test_img"
                 android:gravity="center_vertical"
-                android:padding="@dimen/padding_or_margin_size_5"
+                android:paddingLeft="13dp"
+                android:paddingRight="13dp"
                 android:text="我的设置"
-                android:textSize="@dimen/text_size_15" />
+                android:textSize="@dimen/text_size_13.5" />
         </LinearLayout>
     </RelativeLayout>
 

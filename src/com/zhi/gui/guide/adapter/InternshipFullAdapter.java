@@ -2,12 +2,15 @@ package com.zhi.gui.guide.adapter;
 
 import java.util.List;
 
+import com.squareup.picasso.Picasso;
 import com.zhi.gui.guide.R;
 import com.zhi.gui.guide.data.InternshipBrief;
 import com.zhi.gui.guide.data.InternshipFull;
+import com.zhi.gui.guide.view.CropToCircleTransformation;
 
 import android.app.Service;
 import android.content.Context;
+import android.net.Uri;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -47,6 +50,7 @@ public class InternshipFullAdapter extends BaseAdapter {
         if (convertView == null) {
             viewHolder = new ViewHolder();
             convertView = mInflater.inflate(R.layout.internship_full_list_item, null);
+            viewHolder.headImageUrl = (ImageView) convertView.findViewById(R.id.avatar);
             viewHolder.companyName = (TextView) convertView.findViewById(R.id.companyName);
             viewHolder.jobTitle = (TextView) convertView.findViewById(R.id.jobTitle);
             viewHolder.location = (TextView) convertView.findViewById(R.id.location);
@@ -54,6 +58,8 @@ public class InternshipFullAdapter extends BaseAdapter {
             viewHolder.salaryRange = (TextView) convertView.findViewById(R.id.salary);
             viewHolder.apply = (TextView) convertView.findViewById(R.id.apply);
             convertView.setTag(viewHolder);
+            Picasso.with(mContext).load(Uri.parse("http://img2.imgtn.bdimg.com/it/u=3534020278,4525102&fm=21&gp=0.jpg"))
+                    .transform(new CropToCircleTransformation()).into(viewHolder.headImageUrl);
         } else {
             viewHolder = (ViewHolder) convertView.getTag();
         }

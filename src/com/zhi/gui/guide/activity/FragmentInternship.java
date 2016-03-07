@@ -21,9 +21,7 @@ public class FragmentInternship extends FragmentBase
 
     private ListView mListInternships;
     private List<InternshipFull> mInternshipFullList;
-    private InternshipBriefAdapter mBriefAdapter;
     private InternshipFullAdapter mFullAdapter;
-    private IndustryListAdapter mIndustryAdapter;
     private RefreshableView mRefreshableView;
     private View mCompetenceView;
     private View mTargetList;
