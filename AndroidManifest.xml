@@ -42,6 +42,9 @@
         <activity
             android:name="com.zhi.gui.guide.activity.CompanyActivity">
         </activity>
+        <activity
+            android:name="com.zhi.gui.guide.activity.ActivitySettings">
+        </activity>
     </application>
 
 </manifest>

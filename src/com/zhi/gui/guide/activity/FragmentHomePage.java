@@ -5,6 +5,7 @@ import android.os.Handler;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.widget.ListView;
+import android.widget.TextView;
 
 import com.zhi.gui.guide.R;
 import com.zhi.gui.guide.adapter.CompetenceListAdapter;
@@ -30,6 +31,7 @@ public class FragmentHomePage extends FragmentBase implements RefreshableView.Re
     @Override
     protected View createView(LayoutInflater inflater) {
         View root = inflater.inflate(R.layout.fragment_homepage, null);
+        ((TextView)root.findViewById(R.id.navigation_bar).findViewById(R.id.title)).setText("首页");
         mLookAround = root.findViewById(R.id.look_around_page);
         mCompetenceDetail = root.findViewById(R.id.self_competence_page);
         showView(root);

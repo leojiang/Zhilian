@@ -9,6 +9,7 @@ import com.zhi.gui.guide.data.CareerTarget;
 
 import android.os.Bundle;
 import android.widget.ListView;
+import android.widget.TextView;
 
 public class ActivityChooseIndustry extends BaseActivity {
     private ListView mListView;
@@ -19,6 +20,7 @@ public class ActivityChooseIndustry extends BaseActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.choose_career_target);
+        ((TextView)findViewById(R.id.navigation_bar).findViewById(R.id.title)).setText("就业方向推荐");
         mListView = (ListView) findViewById(R.id.list);
         initListView();
     }

@@ -94,6 +94,7 @@ public class ActivityLogin extends BaseActivity implements OnClickListener {
             case R.id.text_lookaround:
                 Preferences.setUserLoggedInState(getApplicationContext(), false);
                 startActivity(new Intent(getApplicationContext(), ActivityMainTab.class));
+                finish();
                 break;
             case R.id.btn_share_weixin:
                 break;

@@ -6,6 +6,7 @@ import android.net.Uri;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.widget.ImageView;
+import android.widget.TextView;
 
 import com.squareup.picasso.Picasso;
 import com.zhi.gui.guide.R;
@@ -19,11 +20,13 @@ public class FragmentPersonal extends FragmentBase implements View.OnClickListen
     private View mItemsVIew;
     private View mLoginBtn;
     private ImageView mAvatar;
+    private View settings;
 
 
     @Override
     protected View createView(LayoutInflater inflater) {
         View root = inflater.inflate(R.layout.fragment_personal, null);
+        ((TextView)root.findViewById(R.id.navigation_bar).findViewById(R.id.title)).setText("我的");
         mViewUserInfo = root.findViewById(R.id.user_info);
         mAvatar = (ImageView) mViewUserInfo.findViewById(R.id.avatar);
         mLonginPrompt = root.findViewById(R.id.login_prompt);
@@ -31,6 +34,8 @@ public class FragmentPersonal extends FragmentBase implements View.OnClickListen
         mItemsVIew = root.findViewById(R.id.items);
         mLoginBtn = root.findViewById(R.id.login_btn);
         mLoginBtn.setOnClickListener(this);
+        settings = root.findViewById(R.id.settings);
+        settings.setOnClickListener(this);
         showView();
 
         Picasso.with(getActivity()).load(Uri.parse("http://www.photophoto.cn/m6/018/030/0180300376.jpg"))
@@ -71,6 +76,9 @@ public class FragmentPersonal extends FragmentBase implements View.OnClickListen
                 Intent intent = new Intent(getActivity(), ActivityLogin.class);
                 intent.putExtra(Constants.KEY_IS_LOGIN_FROM_MAIN, true);
                 startActivity(intent);
+                break;
+            case R.id.settings:
+                startActivity(new Intent(getActivity(), ActivitySettings.class));
                 break;
             default:
                 break;

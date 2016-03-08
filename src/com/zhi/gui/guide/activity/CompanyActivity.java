@@ -30,6 +30,7 @@ public class CompanyActivity extends BaseActivity implements View.OnClickListene
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.company_detail);
+        ((TextView)findViewById(R.id.navigation_bar).findViewById(R.id.title)).setText("实习");
 
         mGallery = (HorizontalListView) findViewById(R.id.gallery);
         mJobLIstView = (ListView) findViewById(R.id.job_list);

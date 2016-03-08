@@ -15,6 +15,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ListView;
+import android.widget.TextView;
 
 public class FragmentInternship extends FragmentBase
         implements RefreshableView.RefreshAndLoadListener, AdapterView.OnItemClickListener {
@@ -34,6 +35,7 @@ public class FragmentInternship extends FragmentBase
     @Override
     protected View createView(LayoutInflater inflater) {
         View root = inflater.inflate(R.layout.fragment_internship, null);
+        ((TextView)root.findViewById(R.id.navigation).findViewById(R.id.title)).setText("实习");
         mNavigation = root.findViewById(R.id.navigation);
         mFull = root.findViewById(R.id.intership_full);
         mCompetenceView = root.findViewById(R.id.competence_info);

@@ -1,51 +1,28 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:layout_width="fill_parent"
-    android:layout_height="fill_parent"
-    android:orientation="vertical">
+              android:layout_width="fill_parent"
+              android:layout_height="fill_parent"
+              android:orientation="vertical">
 
-    <LinearLayout
+    <include
+        android:id="@+id/navigation_bar"
+        layout="@layout/navigation_bar_layout"
         android:layout_width="match_parent"
-        android:layout_height="44dp"
-        android:background="#fafafa">
-
-        <ImageView
-            android:layout_width="44dp"
-            android:layout_height="44dp"
-            android:background="@drawable/selector_navigation_bg"
-            android:clickable="true"
-            android:scaleType="centerInside"
-            android:src="@drawable/navigation_back_img" />
-
-        <TextView
-            android:layout_width="0dp"
-            android:layout_height="match_parent"
-            android:layout_weight="1"
-            android:gravity="center"
-            android:text="首页"
-            android:textColor="@color/text_black"
-            android:textSize="@dimen/text_size_15" />
-
-        <ImageView
-            android:layout_width="44dp"
-            android:layout_height="44dp"
-            android:background="@drawable/selector_navigation_bg"
-            android:clickable="true"
-            android:scaleType="centerInside"
-            android:src="@drawable/navigation_more_img" />
-    </LinearLayout>
+        android:layout_height="wrap_content"/>
 
     <FrameLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent">
+
         <include
-            android:visibility="visible"
             android:id="@+id/look_around_page"
-            layout="@layout/fragment_lookaround"/>
+            layout="@layout/fragment_lookaround"
+            android:visibility="visible"/>
+
         <include
-            android:visibility="gone"
             android:id="@+id/self_competence_page"
-            layout="@layout/fragment_competence"/>
+            layout="@layout/fragment_competence"
+            android:visibility="gone"/>
 
     </FrameLayout>
 

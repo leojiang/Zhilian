@@ -9,12 +9,15 @@ import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.TextView;
 
 public class FragmentDiscover extends FragmentBase {
 
     @Override
     protected View createView(LayoutInflater inflater) {
-        return inflater.inflate(R.layout.fragment_discovery, null);
+        View root= inflater.inflate(R.layout.fragment_discovery, null);
+        ((TextView)root.findViewById(R.id.navigation_bar).findViewById(R.id.title)).setText("发现");
+        return root;
     }
 
     @Override
