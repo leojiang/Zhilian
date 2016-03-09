@@ -8,12 +8,14 @@ import com.zhi.gui.guide.adapter.CareerTargetAdapter;
 import com.zhi.gui.guide.data.CareerTarget;
 
 import android.os.Bundle;
+import android.view.View;
 import android.widget.ListView;
 import android.widget.TextView;
 
-public class ActivityChooseIndustry extends BaseActivity {
+public class ActivityChooseIndustry extends BaseActivity implements View.OnClickListener{
     private ListView mListView;
     private List<CareerTarget> mData = new ArrayList<CareerTarget>();
+    private View mDone;
 
 
     @Override
@@ -22,6 +24,8 @@ public class ActivityChooseIndustry extends BaseActivity {
         setContentView(R.layout.choose_career_target);
         ((TextView)findViewById(R.id.navigation_bar).findViewById(R.id.title)).setText("就业方向推荐");
         mListView = (ListView) findViewById(R.id.list);
+        mDone = findViewById(R.id.choose_btn);
+        mDone.setOnClickListener(this);
         initListView();
     }
 
@@ -38,5 +42,10 @@ public class ActivityChooseIndustry extends BaseActivity {
         }
 
         mListView.setAdapter(new CareerTargetAdapter(this, mData));
+    }
+
+    @Override
+    public void onClick(View v) {
+//        start
     }
 }

@@ -76,10 +76,12 @@ public class InternshipFullAdapter extends BaseAdapter {
                 viewHolder.apply.setText("已投");
                 viewHolder.apply.setEnabled(false);
                 viewHolder.apply.setBackgroundResource(R.drawable.button_bg_gray);
+                viewHolder.apply.setClickable(false);
             } else {
                 viewHolder.apply.setText("投一发");
                 viewHolder.apply.setEnabled(true);
-                viewHolder.apply.setBackgroundResource(R.drawable.button_bg_green2);
+                viewHolder.apply.setBackgroundResource(R.drawable.button_bg_selector_oval_green);
+                viewHolder.apply.setClickable(true);
             }
         }
         return convertView;

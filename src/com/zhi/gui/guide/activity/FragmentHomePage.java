@@ -4,6 +4,7 @@ import android.os.Bundle;
 import android.os.Handler;
 import android.view.LayoutInflater;
 import android.view.View;
+import android.widget.AdapterView;
 import android.widget.ListView;
 import android.widget.TextView;
 
@@ -43,7 +44,16 @@ public class FragmentHomePage extends FragmentBase implements RefreshableView.Re
         for (int i = 0; i < 20; i++) {
             mIndustryList.add("行业类别" + i);
         }
-        mListIndustry.setAdapter(new IndustryListAdapter(getActivity(), mIndustryList));
+
+        final IndustryListAdapter industryAdapter = new IndustryListAdapter(getActivity(), mIndustryList);
+        mListIndustry.setAdapter(industryAdapter);
+        mListIndustry.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+            @Override
+            public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+                industryAdapter.setSelectedItem(position);
+                industryAdapter.notifyDataSetChanged();
+            }
+        });
         mCompetenceList = new ArrayList<Competence>();
         for (int j = 0; j < 30; j++) {
             mCompetenceList.add(new Competence(j, "路人" + j, (20 - j) * 100));

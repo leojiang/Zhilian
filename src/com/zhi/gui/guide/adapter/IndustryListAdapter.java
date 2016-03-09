@@ -6,6 +6,7 @@ import com.zhi.gui.guide.R;
 
 import android.app.Service;
 import android.content.Context;
+import android.graphics.Color;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -17,11 +18,20 @@ public class IndustryListAdapter extends BaseAdapter {
     private List<String> mIndustryList;
     private Context mContext;
     private LayoutInflater mInflater;
+    private int selectedItem = 0;
 
     public IndustryListAdapter(Context context, List<String> list) {
         mContext = context;
         setContent(list);
         mInflater = ((LayoutInflater) mContext.getSystemService(Service.LAYOUT_INFLATER_SERVICE));
+    }
+
+    public void setSelectedItem(int index) {
+        selectedItem = index;
+    }
+
+    public int getSelectedItem() {
+        return selectedItem;
     }
 
     @Override
@@ -40,6 +50,11 @@ public class IndustryListAdapter extends BaseAdapter {
 
         TextView textView = (TextView) convertView.findViewById(R.id.text);
         textView.setText((CharSequence) getItem(position));
+        if(position == selectedItem) {
+            textView.setBackgroundColor(Color.parseColor("#00b173"));
+        } else {
+            textView.setBackgroundColor(0);
+        }
         return convertView;
     }
 

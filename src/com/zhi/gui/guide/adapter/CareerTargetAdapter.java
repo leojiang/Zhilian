@@ -62,7 +62,7 @@ public class CareerTargetAdapter extends BaseAdapter {
     private void setLevel(TextView view, int level) {
         switch (level) {
             case 0:
-                view.setBackgroundColor(mContext.getResources().getColor(R.color.tab_page_content_bg));
+                view.setBackgroundColor(0);
                 view.setText(null);
                 break;
             case 1:
