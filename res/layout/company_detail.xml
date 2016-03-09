@@ -109,6 +109,8 @@
             android:visibility="gone">
 
             <ListView
+                android:background="@color/color_bg_white"
+                android:listSelector="@drawable/button_bg_selector_white"
                 android:id="@+id/job_list"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"

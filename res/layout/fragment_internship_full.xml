@@ -273,6 +273,8 @@
         android:visibility="visible">
 
         <ListView
+            android:listSelector="@drawable/button_bg_selector_white"
+            android:background="@color/color_bg_white"
             android:id="@+id/list_internships"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"

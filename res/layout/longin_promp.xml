@@ -16,7 +16,7 @@
         android:id="@+id/login_btn"
         android:layout_marginTop="@dimen/padding_or_margin_size_10"
         android:gravity="center"
-        android:background="@drawable/button_bg_white"
+        android:background="@drawable/button_bg_white1"
         android:layout_width="@dimen/list_item_width_12"
         android:layout_height="@dimen/list_item_height_12"
         android:text="登陆/注册"

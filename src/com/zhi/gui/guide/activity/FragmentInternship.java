@@ -4,8 +4,6 @@ import java.util.ArrayList;
 import java.util.List;
 
 import com.zhi.gui.guide.R;
-import com.zhi.gui.guide.adapter.IndustryListAdapter;
-import com.zhi.gui.guide.adapter.InternshipBriefAdapter;
 import com.zhi.gui.guide.adapter.InternshipFullAdapter;
 import com.zhi.gui.guide.data.InternshipFull;
 import com.zhi.gui.guide.view.RefreshableView;

@@ -86,10 +86,10 @@
         android:layout_height="@dimen/list_item_height_14"
         android:layout_gravity="center_horizontal"
         android:layout_marginTop="25dp"
-        android:background="@color/color_bg_green"
+        android:background="@drawable/button_bg_selector_green"
         android:clickable="true"
         android:gravity="center"
         android:text="注   册"
-        android:textColor="#a3e0c1"
+        android:textColor="@color/color_bg_white"
         android:textSize="@dimen/text_size_15" />
 </LinearLayout>

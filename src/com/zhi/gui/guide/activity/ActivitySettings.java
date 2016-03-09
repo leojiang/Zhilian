@@ -3,16 +3,11 @@ package com.zhi.gui.guide.activity;
 
 import android.content.Intent;
 import android.os.Bundle;
-import android.os.Handler;
-import android.text.TextUtils;
 import android.view.View;
 import android.view.View.OnClickListener;
-import android.widget.EditText;
 import android.widget.TextView;
-import android.widget.Toast;
 
 import com.zhi.gui.guide.R;
-import com.zhi.gui.guide.common.Constants;
 import com.zhi.gui.guide.common.Preferences;
 import com.zhi.gui.guide.network.NetRequestListener;
 import com.zhi.gui.guide.network.NetworkTask;
@@ -27,7 +22,7 @@ public class ActivitySettings extends BaseActivity implements OnClickListener {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.fragment_personal_settings);
+        setContentView(R.layout.activity_personal_settings);
         ((TextView)findViewById(R.id.navigation_bar).findViewById(R.id.title)).setText("我的设置");
         mBtnLogOut = findViewById(R.id.btn_log_out);
         mBtnLogOut.setOnClickListener(this);
