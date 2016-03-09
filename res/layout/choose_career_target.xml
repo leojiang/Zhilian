@@ -70,11 +70,12 @@
     </LinearLayout>
 
     <ListView
+        android:background="@color/color_bg_white"
+        android:listSelector="@drawable/button_bg_selector_white_to_green"
         android:id="@+id/list"
         android:layout_width="match_parent"
         android:layout_height="0dp"
         android:layout_weight="1"
-        android:divider="#00000000"
         android:overScrollMode="never" />
 
     <LinearLayout

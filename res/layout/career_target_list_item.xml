@@ -9,9 +9,7 @@
         android:id="@+id/index"
         android:layout_width="65dp"
         android:layout_height="match_parent"
-        android:layout_marginBottom="@dimen/padding_or_margin_size_1"
         android:layout_weight="1"
-        android:background="@color/tab_page_content_bg"
         android:gravity="center"
         android:textSize="@dimen/text_size_12"/>
 
@@ -19,10 +17,7 @@
         android:id="@+id/industry"
         android:layout_width="150dp"
         android:layout_height="match_parent"
-        android:layout_marginBottom="@dimen/padding_or_margin_size_1"
-        android:layout_marginLeft="@dimen/padding_or_margin_size_1"
         android:layout_weight="1"
-        android:background="@color/tab_page_content_bg"
         android:gravity="center"
         android:textSize="@dimen/text_size_12"/>
 
@@ -30,21 +25,15 @@
         android:id="@+id/percentage"
         android:layout_width="67dp"
         android:layout_height="match_parent"
-        android:layout_marginBottom="@dimen/padding_or_margin_size_1"
-        android:layout_marginLeft="@dimen/padding_or_margin_size_1"
         android:layout_weight="1"
-        android:background="@color/tab_page_content_bg"
         android:gravity="center"
         android:textSize="@dimen/text_size_12"/>
     <TextView
         android:id="@+id/career_level"
         android:layout_width="77dp"
         android:layout_height="match_parent"
-        android:layout_marginBottom="@dimen/padding_or_margin_size_1"
-        android:layout_marginLeft="@dimen/padding_or_margin_size_1"
         android:layout_weight="1"
         android:textColor="@color/color_bg_white"
-        android:background="@color/tab_page_content_bg"
         android:gravity="center"
         android:textSize="@dimen/text_size_12"/>
 

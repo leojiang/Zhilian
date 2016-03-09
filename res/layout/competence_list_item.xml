@@ -8,7 +8,6 @@
         android:id="@+id/rank"
         android:layout_width="50dp"
         android:layout_height="@dimen/list_item_height_12"
-        android:background="@color/tab_page_content_bg"
         android:gravity="center"
         android:textSize="@dimen/text_size_11"/>
 
@@ -18,7 +17,6 @@
         android:layout_height="@dimen/list_item_height_12"
         android:layout_marginLeft="@dimen/padding_or_margin_size_1"
         android:layout_weight="1"
-        android:background="@color/tab_page_content_bg"
         android:gravity="center"
         android:textSize="@dimen/text_size_11"/>
 
@@ -27,7 +25,6 @@
         android:layout_width="67dp"
         android:layout_height="@dimen/list_item_height_12"
         android:layout_marginLeft="@dimen/padding_or_margin_size_1"
-        android:background="@color/tab_page_content_bg"
         android:gravity="center"
         android:textSize="@dimen/text_size_11"/>
 

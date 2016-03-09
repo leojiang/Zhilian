@@ -49,7 +49,7 @@ public class CompetenceListAdapter extends BaseAdapter {
         }
 
         Competence competence = (Competence) getItem(i);
-        viewHolder.rank.setText(String.valueOf(competence.getRank()));
+        viewHolder.rank.setText("排名:" + String.valueOf(competence.getRank()));
         viewHolder.nickname.setText(competence.getNickname());
         viewHolder.competence.setText(String.valueOf(competence.getCompetence()));
 

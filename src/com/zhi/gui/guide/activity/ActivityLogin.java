@@ -139,17 +139,21 @@ public class ActivityLogin extends BaseActivity implements OnClickListener {
 
     @Override
     public void onBackPressed() {
-        if (mBackKeyPressedCount == 0) {
-            mBackKeyPressedCount++;
-            new Handler().postDelayed(new Runnable() {
-                @Override
-                public void run() {
-                    mBackKeyPressedCount = 0;
-                }
-            }, 2000);
-            Toast.makeText(this, "再按一次退出", Toast.LENGTH_SHORT).show();
+        if(mIsFromMain) {
+            super.onBackPressed();
         } else {
-            finish();
+            if (mBackKeyPressedCount == 0) {
+                mBackKeyPressedCount++;
+                new Handler().postDelayed(new Runnable() {
+                    @Override
+                    public void run() {
+                        mBackKeyPressedCount = 0;
+                    }
+                }, 2000);
+                Toast.makeText(this, "再按一次退出", Toast.LENGTH_SHORT).show();
+            } else {
+                finish();
+            }
         }
     }
 }

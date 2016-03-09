@@ -41,12 +41,12 @@ public class FragmentHomePage extends FragmentBase implements RefreshableView.Re
     private void initListView() {
         mIndustryList = new ArrayList<String>();
         for (int i = 0; i < 20; i++) {
-            mIndustryList.add("leo" + i);
+            mIndustryList.add("行业类别" + i);
         }
         mListIndustry.setAdapter(new IndustryListAdapter(getActivity(), mIndustryList));
         mCompetenceList = new ArrayList<Competence>();
         for (int j = 0; j < 30; j++) {
-            mCompetenceList.add(new Competence(j, "leo" + j, (20 - j) * 100));
+            mCompetenceList.add(new Competence(j, "路人" + j, (20 - j) * 100));
         }
 
         mCompetenceListAdapter = new CompetenceListAdapter(getActivity(), mCompetenceList);
