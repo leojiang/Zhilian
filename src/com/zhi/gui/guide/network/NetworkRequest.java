@@ -60,7 +60,7 @@ public class NetworkRequest {
         return "";
     }
 
-    public static JSONObject post(String url, JSONObject json, NetRequestListener listener) {
+    public static void post(String url, JSONObject json, NetRequestListener listener) {
         BasicHttpParams httpParams = new BasicHttpParams();
         HttpConnectionParams.setConnectionTimeout(httpParams, 5000);
         HttpConnectionParams.setSoTimeout(httpParams, 5000);
@@ -69,7 +69,6 @@ public class NetworkRequest {
         client.setParams(httpParams);
 
         HttpPost post = new HttpPost(url);
-        JSONObject response = null;
 
         try {
             StringEntity s = new StringEntity(json.toString());
@@ -81,31 +80,54 @@ public class NetworkRequest {
             int statusCode = res.getStatusLine().getStatusCode();
             Log.i(TAG, "response statusCode :" + statusCode);
             switch (statusCode) {
-            case 200:
-                String string = EntityUtils.toString(res.getEntity(), "utf-8");
-                response = new JSONObject(string);
-                Log.i(TAG, "response date :" + string);
-                break;
-            case 202:
-                String string1 = EntityUtils.toString(res.getEntity(), "utf-8");
-                response = new JSONObject(string1);
-                Log.i(TAG, "response date :" + string1);
-                break;
-            case 403:// 服务器拒绝请求
-                break;
-            case 404:// 找不到请求的页面
-                break;
-            case 408: // 请求超时
-                break;
-            default:
-                break;
+                case 200:
+                    String string = EntityUtils.toString(res.getEntity(), "utf-8");
+                    Log.i(TAG, "response data :" + string);
+                    JSONObject response = new JSONObject(string);
+                    int returnCode = response.getInt("retCode");
+                    if (returnCode == 0) {
+                        JSONObject object = new JSONObject(response.getString("data"));
+                        if (listener != null) {
+                            listener.onSucceed(object);
+                        }
+                    } else {
+                        if (listener != null) {
+                            listener.onFail(response.getString("reason"));
+                        }
+                    }
+                    break;
+                case 202:
+                    String string1 = EntityUtils.toString(res.getEntity(), "utf-8");
+                    Log.i(TAG, "response date :" + string1);
+                    break;
+                case 403:// 服务器拒绝请求
+                    if (listener != null) {
+                        listener.onError("Error Code: 403, 服务器拒绝请求");
+                    }
+                    break;
+                case 404:// 找不到请求的页面
+                    if (listener != null) {
+                        listener.onError("Error Code: 404, 所请求的地址不存在");
+                    }
+                    break;
+                case 408: // 请求超时
+                    if (listener != null) {
+                        listener.onTimeout();
+                    }
+                    break;
+                default:
+                    break;
             }
         } catch (IOException e) {
             e.printStackTrace();
+            if (listener != null) {
+                listener.onError("IOException");
+            }
         } catch (JSONException e) {
             e.printStackTrace();
+            if (listener != null) {
+                listener.onError("JSONException");
+            }
         }
-
-        return response;
     }
 }

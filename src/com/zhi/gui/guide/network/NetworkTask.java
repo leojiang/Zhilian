@@ -7,13 +7,11 @@ public class NetworkTask {
 
     private String url;
     private JSONObject json;
-    private FastJsonCommonHandler mJsonHandler;
     private NetRequestListener mRequestListener;
 
-    public NetworkTask(String url, JSONObject json, FastJsonCommonHandler handler) {
+    public NetworkTask(String url, JSONObject json) {
         this.url = url;
         this.json = json;
-        mJsonHandler = handler;
     }
 
     public void setNetRequestListener(NetRequestListener requestListener) {
@@ -22,9 +20,6 @@ public class NetworkTask {
 
 
     public void execute() {
-        JSONObject result = NetworkRequest.post(url, json, mRequestListener);
-        if (mJsonHandler != null) {
-            mJsonHandler.parse(result);
-        }
+        NetworkRequest.post(url, json, mRequestListener);
     }
 }

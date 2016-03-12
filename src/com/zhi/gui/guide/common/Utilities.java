@@ -3,6 +3,7 @@ package com.zhi.gui.guide.common;
 import android.content.Context;
 import android.net.ConnectivityManager;
 import android.net.NetworkInfo;
+import android.widget.Toast;
 
 public final class Utilities {
 
@@ -18,6 +19,10 @@ public final class Utilities {
             return true;
         }
         return false;
+    }
+
+    public static void showToast(Context context, String text) {
+        Toast.makeText(context, text, Toast.LENGTH_SHORT).show();
     }
 
 }

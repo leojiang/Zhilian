@@ -13,6 +13,8 @@ import android.widget.Toast;
 import com.zhi.gui.guide.R;
 import com.zhi.gui.guide.common.Constants;
 import com.zhi.gui.guide.common.Preferences;
+import com.zhi.gui.guide.common.Utilities;
+import com.zhi.gui.guide.network.FastJsonCommonHandler;
 import com.zhi.gui.guide.network.NetRequestListener;
 import com.zhi.gui.guide.network.NetworkTask;
 import com.zhi.gui.guide.network.ThreadPoolManager;
@@ -73,23 +75,24 @@ public class ActivityLogin extends BaseActivity implements OnClickListener {
         int id = view.getId();
         switch (id) {
             case R.id.button_login:
-//                login();
-                if (!TextUtils.isEmpty(mEditTextUsername.getText().toString())) {
-                    Preferences.setUserLoggedInState(getApplicationContext(), true);
-                } else {
-                    Preferences.setUserLoggedInState(getApplicationContext(), false);
-                }
-                if (mIsFromMain) {
-                    sendBroadcast(new Intent(FragmentBase.BROADCAST_USER_LOG_IN));
-                } else {
-                    startActivity(new Intent(this, ActivityMainTab.class));
-                }
-                finish();
+                login();
+//                if (!TextUtils.isEmpty(mEditTextUsername.getText().toString())) {
+//                    Preferences.setUserLoggedInState(getApplicationContext(), true);
+//                } else {
+//                    Preferences.setUserLoggedInState(getApplicationContext(), false);
+//                }
+//                if (mIsFromMain) {
+//                    sendBroadcast(new Intent(FragmentBase.BROADCAST_USER_LOG_IN));
+//                } else {
+//                    startActivity(new Intent(this, ActivityMainTab.class));
+//                }
+//                finish();
                 break;
             case R.id.forgot_password:
                 break;
             case R.id.btn_register:
                 startActivity(new Intent(getApplicationContext(), ActivityRegister.class));
+                finish();
                 break;
             case R.id.text_lookaround:
                 Preferences.setUserLoggedInState(getApplicationContext(), false);
@@ -105,30 +108,49 @@ public class ActivityLogin extends BaseActivity implements OnClickListener {
         }
     }
 
-    public void login() {
+    private boolean validation(String username, String passwd) {
+        return true;
+    }
+
+    private void login() {
         try {
-            JSONObject object = new JSONObject();
-            object.put("ACTION", "fuck zhuangzhuang");
-            NetworkTask task = new NetworkTask("http://139.196.240.222:55500/", object, null);
+            String username = mEditTextUsername.getText().toString();
+            String password = mEditTextPasswd.getText().toString();
+            if (!validation(username, password)) {
+                return;
+            }
+
+            JSONObject json = new JSONObject();
+            json.put("username", username);
+            json.put("passwd", password);
+            NetworkTask task = new NetworkTask(Constants.URL_BASE + Constants.SUFFIX_DIR_LOGIN, json);
             task.setNetRequestListener(new NetRequestListener() {
                 @Override
-                public void onSucceed() {
+                public void onSucceed(JSONObject json) {
+                    FastJsonCommonHandler handler = new FastJsonCommonHandler(null);
+                    handler.parse(json);
 
+                    Preferences.setUserLoggedInState(getApplicationContext(), true);
+                    if (mIsFromMain) {
+                        sendBroadcast(new Intent(FragmentBase.BROADCAST_USER_LOG_IN));
+                    } else {
+                        startActivity(new Intent(ActivityLogin.this, ActivityMainTab.class));
+                    }
+                    finish();
                 }
 
                 @Override
-                public void onFail() {
-
+                public void onFail(String reason) {
+                    Utilities.showToast(ActivityLogin.this, "登录失败：" + reason);
                 }
 
                 @Override
                 public void onTimeout() {
-
+                    Utilities.showToast(ActivityLogin.this, "登陆超时，请检查网络状况");
                 }
 
                 @Override
-                public void onError() {
-
+                public void onError(String reason) {
                 }
             });
             ThreadPoolManager.getInstance().runTask(task);
@@ -139,7 +161,7 @@ public class ActivityLogin extends BaseActivity implements OnClickListener {
 
     @Override
     public void onBackPressed() {
-        if(mIsFromMain) {
+        if (mIsFromMain) {
             super.onBackPressed();
         } else {
             if (mBackKeyPressedCount == 0) {
