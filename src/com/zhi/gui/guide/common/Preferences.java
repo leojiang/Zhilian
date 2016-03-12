@@ -9,10 +9,6 @@ public final class Preferences {
     public static final String KEY_PASSWORD = "login_password";
     public static final String KEY_IS_LOGGED_IN = "is_logged_in";
 
-    public static boolean isUserLoggedIn(Context context) {
-        return true;
-    }
-
     public static void setUserLoggedInState(Context context, boolean isLoggedIn) {
         SharedPreferences.Editor editor = context.getSharedPreferences(PREFERENCE_NAME, Context.MODE_APPEND).edit();
         editor.putBoolean(KEY_IS_LOGGED_IN, isLoggedIn);
