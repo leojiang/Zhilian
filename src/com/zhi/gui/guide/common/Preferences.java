@@ -20,14 +20,14 @@ public final class Preferences {
 
     public static void setUserBasicInfo(Context context, UserBasicInfo info) {
         SharedPreferences.Editor editor = context.getSharedPreferences(PREFERENCE_NAME, Context.MODE_APPEND).edit();
-        editor.putString(KEY_USERNAME, TextUtils.isEmpty(info.user_name) ? info.user_name : "");
-        editor.putString(KEY_COLLEGE, TextUtils.isEmpty(info.college) ? info.college : "");
-        editor.putString(KEY_EDUCATION, TextUtils.isEmpty(info.education) ? info.education : "");
-        editor.putString(KEY_GRADE, TextUtils.isEmpty(info.grade) ? info.grade : "");
-        editor.putString(KEY_MAIL, TextUtils.isEmpty(info.mail) ? info.mail : "");
-        editor.putString(KEY_MAJOR, TextUtils.isEmpty(info.major) ? info.major : "");
-        editor.putString(KEY_NICKNAME, TextUtils.isEmpty(info.nick_name) ? info.nick_name : "");
-        editor.putString(KEY_PHONE, TextUtils.isEmpty(info.phone) ? info.phone : "");
+        editor.putString(KEY_USERNAME, info.user_name);
+        editor.putString(KEY_COLLEGE, info.college);
+        editor.putString(KEY_EDUCATION, info.education);
+        editor.putString(KEY_GRADE, info.grade);
+        editor.putString(KEY_MAIL, info.mail);
+        editor.putString(KEY_MAJOR, info.major);
+        editor.putString(KEY_NICKNAME, info.nick_name);
+        editor.putString(KEY_PHONE, info.phone);
         editor.commit();
     }
 
