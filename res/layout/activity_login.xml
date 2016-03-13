@@ -38,7 +38,7 @@
         android:background="@drawable/edit_text_bottom_line" />
 
     <EditText
-        android:id="@+id/img_login_password"
+        android:id="@+id/login_password"
         android:layout_width="@dimen/list_item_width_15.5"
         android:layout_height="@dimen/list_item_height_14"
         android:layout_gravity="center_horizontal"

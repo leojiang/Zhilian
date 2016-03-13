@@ -32,42 +32,15 @@ public class ActivitySettings extends BaseActivity implements OnClickListener {
         int id = view.getId();
         switch (id) {
             case R.id.btn_log_out:
-                Preferences.setUserLoggedInState(getApplicationContext(), false);
-                sendBroadcast(new Intent(FragmentBase.BROADCAST_USER_LOG_OUT));
-                finish();
+                logout();
                 break;
         }
     }
 
     public void logout() {
-        try {
-            JSONObject object = new JSONObject();
-            object.put("ACTION", "fuck zhuangzhuang");
-            NetworkTask task = new NetworkTask("http://139.196.240.222:55500/", object, null);
-            task.setNetRequestListener(new NetRequestListener() {
-                @Override
-                public void onSucceed() {
-
-                }
-
-                @Override
-                public void onFail() {
-
-                }
-
-                @Override
-                public void onTimeout() {
-
-                }
-
-                @Override
-                public void onError() {
-
-                }
-            });
-            ThreadPoolManager.getInstance().runTask(task);
-        } catch (JSONException e) {
-            e.printStackTrace();
-        }
+        Preferences.setUserLoggedInState(getApplicationContext(), false);
+        Preferences.clearUserInfo(this);
+        sendBroadcast(new Intent(FragmentBase.BROADCAST_USER_LOG_OUT));
+        finish();
     }
 }

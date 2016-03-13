@@ -23,16 +23,7 @@ public class FastJsonCommonHandler<T extends JSONEntityBase> {
         return mData;
     }
 
-    public void parse(JSONObject object) {
-        if(null == object){
-            return;
-        }
-//        super.parse(object);
-
-//        this.code = object.optInt("code");
-//        this.message = object.optString("message");
-//        this.action = RequextMessageActions.fromString(object.optString("action"));
-        String content = object.optString("data");
+    public void parse(String content) {
         if (TextUtils.isEmpty(content)) {
             return;
         }

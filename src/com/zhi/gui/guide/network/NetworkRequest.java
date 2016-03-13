@@ -61,6 +61,7 @@ public class NetworkRequest {
     }
 
     public static void post(String url, JSONObject json, NetRequestListener listener) {
+        Log.i(TAG, "post :" + url);
         BasicHttpParams httpParams = new BasicHttpParams();
         HttpConnectionParams.setConnectionTimeout(httpParams, 5000);
         HttpConnectionParams.setSoTimeout(httpParams, 5000);
@@ -84,15 +85,15 @@ public class NetworkRequest {
                     String string = EntityUtils.toString(res.getEntity(), "utf-8");
                     Log.i(TAG, "response data :" + string);
                     JSONObject response = new JSONObject(string);
-                    int returnCode = response.getInt("retCode");
+                    int returnCode = response.optInt("ret_code");
                     if (returnCode == 0) {
-                        JSONObject object = new JSONObject(response.getString("data"));
+                        String  data = response.optString("data");
                         if (listener != null) {
-                            listener.onSucceed(object);
+                            listener.onSucceed(data);
                         }
                     } else {
                         if (listener != null) {
-                            listener.onFail(response.getString("reason"));
+                            listener.onFail(response.optInt("ret_code"));
                         }
                     }
                     break;
