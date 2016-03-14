@@ -6,4 +6,8 @@ public interface Constants {
     String URL_BASE = "http://139.196.240.222:55500/";
     String SUFFIX_DIR_LOGIN = "login";
     String SUFFIX_DIR_REGISTER = "register";
+    long CACHEMAXSIZE = 10 * 1024 * 1024;
+
+
+    String SD_CACHE_PATH = "/zhigui/cache/httpresponse";
 }
