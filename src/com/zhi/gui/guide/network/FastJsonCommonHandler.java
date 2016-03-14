@@ -4,6 +4,7 @@ import android.text.TextUtils;
 import android.util.Log;
 
 import com.alibaba.fastjson.JSON;
+import com.zhi.gui.guide.common.LogUtil;
 import com.zhi.gui.guide.data.JSONEntityBase;
 
 import org.json.JSONObject;
@@ -27,11 +28,11 @@ public class FastJsonCommonHandler<T extends JSONEntityBase> {
         if (TextUtils.isEmpty(content)) {
             return;
         }
-        Log.d(TAG, "content:" + content);
+        LogUtil.d(TAG, "content:" + content);
 
         mData = JSON.parseObject(content, mClass);
         if (mData != null) {
-            Log.d(TAG, "JSON:" + JSON.toJSONString(mData));
+            LogUtil.d(TAG, "JSON:" + JSON.toJSONString(mData));
             mData.onParsed();
         }
     }

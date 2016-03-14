@@ -2,6 +2,8 @@ package com.zhi.gui.guide.network;
 
 import android.util.Log;
 
+import com.zhi.gui.guide.common.LogUtil;
+
 import org.apache.http.HttpEntity;
 import org.apache.http.HttpResponse;
 import org.apache.http.NameValuePair;
@@ -45,23 +47,23 @@ public class NetworkRequest {
 
                 return response;
             } else {
-                Log.e(TAG, "Httpresponse error");
+                LogUtil.e(TAG, "Httpresponse error");
             }
         } catch (UnsupportedEncodingException e) {
-            Log.e(TAG, e.toString());
+            LogUtil.e(TAG, e.toString());
             e.printStackTrace();
         } catch (ClientProtocolException e) {
-            Log.e(TAG, e.toString());
+            LogUtil.e(TAG, e.toString());
             e.printStackTrace();
         } catch (IOException e) {
-            Log.e(TAG, e.toString());
+            LogUtil.e(TAG, e.toString());
             e.printStackTrace();
         }
         return "";
     }
 
     public static void post(String url, JSONObject json, NetRequestListener listener) {
-        Log.i(TAG, "post :" + url);
+        LogUtil.i(TAG, "post :" + url);
         BasicHttpParams httpParams = new BasicHttpParams();
         HttpConnectionParams.setConnectionTimeout(httpParams, 5000);
         HttpConnectionParams.setSoTimeout(httpParams, 5000);
@@ -79,11 +81,11 @@ public class NetworkRequest {
 
             HttpResponse res = client.execute(post);
             int statusCode = res.getStatusLine().getStatusCode();
-            Log.i(TAG, "response statusCode :" + statusCode);
+            LogUtil.i(TAG, "response statusCode :" + statusCode);
             switch (statusCode) {
                 case 200:
                     String string = EntityUtils.toString(res.getEntity(), "utf-8");
-                    Log.i(TAG, "response data :" + string);
+                    LogUtil.i(TAG, "response data :" + string);
                     JSONObject response = new JSONObject(string);
                     int returnCode = response.optInt("ret_code");
                     if (returnCode == 0) {
@@ -99,7 +101,7 @@ public class NetworkRequest {
                     break;
                 case 202:
                     String string1 = EntityUtils.toString(res.getEntity(), "utf-8");
-                    Log.i(TAG, "response date :" + string1);
+                    LogUtil.i(TAG, "response date :" + string1);
                     break;
                 case 403:// 服务器拒绝请求
                     if (listener != null) {

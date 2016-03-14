@@ -13,6 +13,7 @@ import android.widget.Toast;
 
 import com.zhi.gui.guide.R;
 import com.zhi.gui.guide.common.Constants;
+import com.zhi.gui.guide.common.LogUtil;
 import com.zhi.gui.guide.common.Preferences;
 import com.zhi.gui.guide.common.Utilities;
 import com.zhi.gui.guide.data.UserBasicInfo;
@@ -132,7 +133,7 @@ public class ActivityLogin extends BaseActivity implements OnClickListener {
             task.setNetRequestListener(new NetRequestListener() {
                 @Override
                 public void onSucceed(String json) {
-                    Log.d(TAG, "login succeed");
+                    LogUtil.d(TAG, "login succeed");
                     FastJsonCommonHandler handler = new FastJsonCommonHandler(UserBasicInfo.class);
                     handler.parse(json);
                     UserBasicInfo userBasicInfo = (UserBasicInfo) handler.getData();
@@ -148,7 +149,7 @@ public class ActivityLogin extends BaseActivity implements OnClickListener {
 
                 @Override
                 public void onFail(final int code) {
-                    Log.d(TAG, "login failed, code:" + code);
+                    LogUtil.d(TAG, "login failed, code:" + code);
                 }
 
                 @Override
@@ -158,7 +159,7 @@ public class ActivityLogin extends BaseActivity implements OnClickListener {
 
                 @Override
                 public void onError(String reason) {
-                    Log.d(TAG, "login error:" + reason);
+                    LogUtil.d(TAG, "login error:" + reason);
                 }
             });
             ThreadPoolManager.getInstance().runTask(task);

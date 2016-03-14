@@ -23,6 +23,7 @@ import android.widget.LinearLayout;
 import android.widget.TextView;
 
 import com.zhi.gui.guide.R;
+import com.zhi.gui.guide.common.LogUtil;
 
 public class ViewPagerIndicator extends LinearLayout {
     private Paint mPaint;
@@ -239,7 +240,7 @@ public class ViewPagerIndicator extends LinearLayout {
 
     @Override
     protected void onFinishInflate() {
-        Log.e("TAG", "onFinishInflate");
+        LogUtil.d("TAG", "onFinishInflate");
         super.onFinishInflate();
 
         int cCount = getChildCount();

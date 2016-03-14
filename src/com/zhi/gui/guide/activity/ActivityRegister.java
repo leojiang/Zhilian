@@ -8,6 +8,7 @@ import android.widget.EditText;
 
 import com.zhi.gui.guide.R;
 import com.zhi.gui.guide.common.Constants;
+import com.zhi.gui.guide.common.LogUtil;
 import com.zhi.gui.guide.common.Preferences;
 import com.zhi.gui.guide.common.Utilities;
 import com.zhi.gui.guide.data.UserBasicInfo;
@@ -63,7 +64,7 @@ public class ActivityRegister extends BaseActivity implements View.OnClickListen
             task.setNetRequestListener(new NetRequestListener() {
                 @Override
                 public void onSucceed(String json) {
-                    Log.d(TAG, "register succeed");
+                    LogUtil.d(TAG, "register succeed");
                     Preferences.setUserName(getApplicationContext(), username);
                     startActivity(new Intent(getApplicationContext(), ActivityAddBasicInfo.class));
                     finish();
@@ -71,7 +72,7 @@ public class ActivityRegister extends BaseActivity implements View.OnClickListen
 
                 @Override
                 public void onFail(final int code) {
-                    Log.d(TAG, "register failed, code:" + code);
+                    LogUtil.d(TAG, "register failed, code:" + code);
                 }
 
                 @Override
@@ -81,7 +82,7 @@ public class ActivityRegister extends BaseActivity implements View.OnClickListen
 
                 @Override
                 public void onError(String reason) {
-                    Log.d(TAG, "login error:" + reason);
+                    LogUtil.d(TAG, "login error:" + reason);
                 }
             });
             ThreadPoolManager.getInstance().runTask(task);
