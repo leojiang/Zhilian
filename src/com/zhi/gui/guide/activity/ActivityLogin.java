@@ -81,18 +81,18 @@ public class ActivityLogin extends BaseActivity implements OnClickListener {
         int id = view.getId();
         switch (id) {
             case R.id.button_login:
-                login();
-//                if (!TextUtils.isEmpty(mEditTextUsername.getText().toString())) {
-//                    Preferences.setUserLoggedInState(getApplicationContext(), true);
-//                } else {
-//                    Preferences.setUserLoggedInState(getApplicationContext(), false);
-//                }
-//                if (mIsFromMain) {
-//                    sendBroadcast(new Intent(FragmentBase.BROADCAST_USER_LOG_IN));
-//                } else {
-//                    startActivity(new Intent(this, ActivityMainTab.class));
-//                }
-//                finish();
+//                login();
+                if (!TextUtils.isEmpty(mEditTextUsername.getText().toString())) {
+                    Preferences.setUserLoggedInState(getApplicationContext(), true);
+                } else {
+                    Preferences.setUserLoggedInState(getApplicationContext(), false);
+                }
+                if (mIsFromMain) {
+                    sendBroadcast(new Intent(FragmentBase.BROADCAST_USER_LOG_IN));
+                } else {
+                    startActivity(new Intent(this, ActivityMainTab.class));
+                }
+                finish();
                 break;
             case R.id.forgot_password:
                 break;

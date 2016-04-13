@@ -55,7 +55,8 @@ public class ActivityAddBasicInfo extends BaseActivity implements OnClickListene
     @Override
     public void onClick(View arg0) {
         if(arg0.getId() == R.id.button_next_step) {
-            submitBasicInfo();
+//            submitBasicInfo();
+            startActivity(new Intent(ActivityAddBasicInfo.this, ActivityChooseIndustry.class));
         }
     }
 

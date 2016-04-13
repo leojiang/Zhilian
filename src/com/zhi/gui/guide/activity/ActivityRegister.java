@@ -42,7 +42,8 @@ public class ActivityRegister extends BaseActivity implements View.OnClickListen
 
     @Override
     public void onClick(View view) {
-        register();
+        startActivity(new Intent(getApplicationContext(), ActivityAddBasicInfo.class));
+//        register();
     }
 
     private boolean validation(String username, String passwd, String passwordConfirm) {
