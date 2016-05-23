@@ -272,7 +272,7 @@
         android:layout_weight="1"
         android:visibility="visible">
 
-        <ListView
+        <com.zhi.gui.guide.view.ListViewForScrollView
             android:listSelector="@drawable/button_bg_selector_white_to_green"
             android:background="@color/color_bg_white"
             android:id="@+id/list_internships"
